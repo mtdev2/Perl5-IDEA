@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@ package com.perl5.errorHandler;
 
 import com.intellij.diagnostic.DiagnosticBundle;
 import com.intellij.diagnostic.IdeErrorsDialog;
-import com.intellij.diagnostic.ReportMessages;
 import com.intellij.ide.BrowserUtil;
 import com.intellij.ide.DataManager;
+import com.intellij.notification.NotificationGroupManager;
 import com.intellij.notification.NotificationListener;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -86,16 +86,16 @@ public class YoutrackErrorHandler extends ErrorReportSubmitter {
     Task.Backgroundable task = new Task.Backgroundable(project, DiagnosticBundle.message("title.submitting.error.report")) {
       @Override
       public void run(@NotNull ProgressIndicator indicator) {
-        consumer.consume(doSubmit(events, additionalInfo, parentComponent));
+        consumer.consume(doSubmit(events, additionalInfo, project));
       }
     };
     task.queue();
     return true;
   }
 
-  private SubmittedReportInfo doSubmit(IdeaLoggingEvent[] ideaLoggingEvents, String addInfo, Component component) {
-    final DataContext dataContext = DataManager.getInstance().getDataContext(component);
-    final Project project = CommonDataKeys.PROJECT.getData(dataContext);
+  private SubmittedReportInfo doSubmit(IdeaLoggingEvent @NotNull [] ideaLoggingEvents,
+                                       @Nullable String addInfo,
+                                       @Nullable Project project) {
     final IdeaLoggingEvent ideaLoggingEvent = ideaLoggingEvents[0];
     final String throwableText = ideaLoggingEvent.getThrowableText();
     String description = throwableText.substring(0, Math.min(80, throwableText.length()));
@@ -107,7 +107,6 @@ public class YoutrackErrorHandler extends ErrorReportSubmitter {
       .append('\n');
     descBuilder.append("Java Vendor: ").append(SystemInfo.JAVA_VENDOR).append('\n');
     descBuilder.append("Java Version: ").append(SystemInfo.JAVA_VERSION).append('\n');
-    descBuilder.append("Java Arch: ").append(SystemInfo.is32Bit ? "32 bit" : "64 bit").append('\n');
     descBuilder.append("Java Runtime Version: ").append(SystemInfo.JAVA_RUNTIME_VERSION).append('\n');
     descBuilder.append("Perl Plugin Version: ").append(PerlPluginUtil.getPluginVersion()).append('\n');
     descBuilder.append("Description: ").append(StringUtil.notNullize(addInfo, "<none>"));
@@ -220,7 +219,7 @@ public class YoutrackErrorHandler extends ErrorReportSubmitter {
     return null;
   }
 
-  private static void popupResultInfo(final SubmittedReportInfo reportInfo, final Project project) {
+  private static void popupResultInfo(@NotNull SubmittedReportInfo reportInfo, final @Nullable Project project) {
     ApplicationManager.getApplication().invokeLater(() -> {
       StringBuilder text = new StringBuilder("<html>");
       final String url = reportInfo.getStatus() == SubmittedReportInfo.SubmissionStatus.FAILED || reportInfo.getLinkText() == null
@@ -250,7 +249,8 @@ public class YoutrackErrorHandler extends ErrorReportSubmitter {
         BrowserUtil.browse(url);
         notification.expire();
       } : null;
-      ReportMessages.GROUP.createNotification(ReportMessages.ERROR_REPORT, text.toString(), type, listener).notify(project);
+      NotificationGroupManager.getInstance().getNotificationGroup("Error Report")
+        .createNotification(DiagnosticBundle.message("error.report.title"), text.toString(), type, listener).notify(project);
     });
   }
 }

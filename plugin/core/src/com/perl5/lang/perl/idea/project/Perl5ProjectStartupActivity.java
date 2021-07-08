@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,9 +43,8 @@ public class Perl5ProjectStartupActivity implements StartupActivity {
     if (settings.shouldShowAnnounce()) {
       StartupManager.getInstance(project).runWhenProjectIsInitialized(() -> {
         settings.setAnnounceShown();
-        NotificationGroup group =
-          new NotificationGroup(PerlBundle.message("plugin.update.baloon.group"), NotificationDisplayType.STICKY_BALLOON, true);
-        Notification notification = group.createNotification(
+        Notification notification = new Notification(
+          "perl5.plugin.update.notification.group",
           PerlBundle.message("plugin.update.baloon.title", PerlPluginUtil.getPluginVersion()),
           PerlBundle.message("plugin.update.baloon.text"),
           NotificationType.INFORMATION,
@@ -63,10 +62,15 @@ public class Perl5ProjectStartupActivity implements StartupActivity {
         Notifications.Bus.notify(notification);
       });
     }
-    StartupManager.getInstance(project).runWhenProjectIsInitialized(() -> Perl5ProjectStartupActivity.initNamesWithRestart(project));
+    StartupManager.getInstance(project).runWhenProjectIsInitialized(() -> scheduleNamesUpdateWithReparse(project));
   }
 
-  private static void initNamesWithRestart(@NotNull Project project) {
+  private static void scheduleNamesUpdateWithReparse(@NotNull Project project) {
+    ApplicationManager.getApplication().executeOnPooledThread(() -> initNamesWithReparse(project));
+  }
+
+
+  private static void initNamesWithReparse(@NotNull Project project) {
     if (project.isDisposed()) {
       return;
     }
@@ -76,7 +80,7 @@ public class Perl5ProjectStartupActivity implements StartupActivity {
     }
     catch (ServiceNotReadyException e) {
       LOG.warn(e);
-      DumbService.getInstance(project).smartInvokeLater(() -> Perl5ProjectStartupActivity.initNamesWithRestart(project));
+      DumbService.getInstance(project).smartInvokeLater(() -> scheduleNamesUpdateWithReparse(project));
     }
   }
 }

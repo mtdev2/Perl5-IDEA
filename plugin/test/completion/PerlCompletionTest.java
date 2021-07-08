@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,12 +20,16 @@ package completion;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.testFramework.fixtures.impl.CodeInsightTestFixtureImpl;
+import com.perl5.PerlBundle;
 import com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettings;
 import com.perl5.lang.perl.internals.PerlVersion;
+import com.perl5.lang.perl.util.PerlPackageUtil;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
 public class PerlCompletionTest extends PerlCompletionTestCase {
+
+  private static final String BUILT_IN = PerlBundle.message("built.in.type.text");
 
   @Override
   protected String getBaseDataPath() {
@@ -33,7 +37,25 @@ public class PerlCompletionTest extends PerlCompletionTestCase {
   }
 
   @Test
-  public void testUnicodeNames() {doTest();}
+  public void testScalarUtilFqn() {
+    withPerl532();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testScalarUtilImported() {
+    withPerl532();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseVersion() { doTest(); }
+
+  @Test
+  public void testMooGenerated() { doTestWithTypeText(); }
+
+  @Test
+  public void testUnicodeNames() { doTest(); }
 
   @Test
   public void testHandleInOpen() {doTest();}
@@ -810,6 +832,85 @@ public class PerlCompletionTest extends PerlCompletionTestCase {
 
   @Test
   public void testGlobSlots() {doTest();}
+
+  @Test
+  public void testUseMoo() {
+    withMoo();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooRole() {
+    withMoo();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMoose() {
+    withMoose();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseRole() {
+    withMoose();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseUtilTypeConstraints() {
+    withMoose();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXClassAttirubte() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXMethodAttirbutes() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXMethodAttirbutesRole() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXRoleParametrized() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXRoleWithOverloading() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseMooseXTypesCheckedUtilExports() {
+    withMooseX();
+    doTestWithTypeText();
+  }
+
+  @Test
+  public void testUseRoleTiny() {
+    withRoleTiny();
+    doTestWithTypeText();
+  }
+
+  private void doTestWithTypeText() {
+    doTestCompletion((lookup, presentation) -> {
+      var typeText = presentation.getTypeText();
+      return StringUtil.isNotEmpty(typeText) && !typeText.equals(BUILT_IN) && !typeText.equals(PerlPackageUtil.CORE_NAMESPACE);
+    });
+  }
 
 
   protected void doTest() {

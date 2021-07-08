@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,143 +17,57 @@
 package com.perl5.lang.tt2.formatter;
 
 import com.intellij.formatting.*;
-import com.intellij.formatting.templateLanguages.DataLanguageBlockWrapper;
-import com.intellij.formatting.templateLanguages.TemplateLanguageBlock;
-import com.intellij.formatting.templateLanguages.TemplateLanguageFormattingModelBuilder;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.codeStyle.CodeStyleSettings;
-import com.intellij.psi.codeStyle.CommonCodeStyleSettings;
-import com.intellij.psi.formatter.DocumentBasedFormattingModel;
-import com.intellij.psi.formatter.FormattingDocumentModelImpl;
-import com.intellij.psi.formatter.common.DefaultInjectedLanguageBlockBuilder;
-import com.intellij.psi.formatter.common.InjectedLanguageBlockBuilder;
-import com.intellij.psi.formatter.xml.HtmlPolicy;
-import com.intellij.psi.templateLanguages.SimpleTemplateLanguageFormattingModelBuilder;
-import com.perl5.lang.perl.PerlLanguage;
+import com.intellij.psi.formatter.xml.XmlFormattingPolicy;
+import com.intellij.psi.util.PsiUtilCore;
+import com.perl5.lang.perl.idea.formatter.PerlXmlTemplateFormattingModelBuilder;
+import com.perl5.lang.perl.idea.formatter.blocks.PerlFormattingBlock;
 import com.perl5.lang.tt2.TemplateToolkitLanguage;
 import com.perl5.lang.tt2.elementTypes.TemplateToolkitElementTypes;
-import gnu.trove.THashMap;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-import java.util.Map;
+import static com.perl5.lang.tt2.formatter.TemplateToolkitFormattingTokenSets.PERL_BLOCKS;
 
-import static com.perl5.lang.tt2.lexer.TemplateToolkitSyntaxElements.ALL_OPERATORS_TOKENSET;
-import static com.perl5.lang.tt2.lexer.TemplateToolkitSyntaxElements.KEYWORDS_TOKENSET;
-
-/**
- * based on handlebars plugin formatter
- */
-public class TemplateToolkitFormattingModelBuilder extends TemplateLanguageFormattingModelBuilder implements TemplateToolkitElementTypes {
-  private final Map<ASTNode, Alignment> myAssignAlignmentMap = new THashMap<>();
-  private SpacingBuilder mySpacingBuilder;
-  private InjectedLanguageBlockBuilder myInjectedLanguageBlockBuilder;
-
-  /**
-   * We have to override {@link com.intellij.formatting.templateLanguages.TemplateLanguageFormattingModelBuilder#createModel}
-   * since after we delegate to some templated languages, those languages (xml/html for sure, potentially others)
-   * delegate right back to us to format the TemplateToolkitElementTypes.TT2_OUTER token we tell them to ignore,
-   * causing a stack-overflowing loop of polite format-delegation.
-   */
-
+public class TemplateToolkitFormattingModelBuilder
+  extends PerlXmlTemplateFormattingModelBuilder<TemplateToolkitFormattingContext, TemplateToolkitFormattingBlock> {
   @Override
-  public @NotNull FormattingModel createModel(PsiElement element, CodeStyleSettings settings) {
-    if (mySpacingBuilder == null) {
-      createSpacingBuilder(settings);
-    }
-    if (myInjectedLanguageBlockBuilder == null) {
-      myInjectedLanguageBlockBuilder = new DefaultInjectedLanguageBlockBuilder(settings);
-    }
-
-    final PsiFile file = element.getContainingFile();
-    Block rootBlock;
-
-    ASTNode node = element.getNode();
-
-    if (node.getElementType() == TemplateToolkitElementTypes.TT2_OUTER) {
-      // If we're looking at a TemplateToolkitElementTypes.TT2_OUTER element, then we've been invoked by our templated
-      // language.  Make a dummy block to allow that formatter to continue
-      return new SimpleTemplateLanguageFormattingModelBuilder().createModel(element, settings);
-    }
-    else {
-      rootBlock = getRootBlock(file, file.getViewProvider(), settings);
-    }
-    return new DocumentBasedFormattingModel(rootBlock, element.getProject(), settings, file.getFileType(), file);
-  }
-
-  public SpacingBuilder getSpacingBuilder() {
-    return mySpacingBuilder;
-  }
-
-  public InjectedLanguageBlockBuilder getInjectedLanguageBlockBuilder() {
-    return myInjectedLanguageBlockBuilder;
-  }
-
-  protected void createSpacingBuilder(CodeStyleSettings settings) {
-    CommonCodeStyleSettings commonSettings = settings.getCommonSettings(PerlLanguage.INSTANCE);
-    //		PerlCodeStyleSettings perlSettings = settings.getCustomSettings(PerlCodeStyleSettings.class);
-
-    mySpacingBuilder = new SpacingBuilder(commonSettings.getRootSettings(), TemplateToolkitLanguage.INSTANCE)
-      .around(TT2_PERIOD).spaces(0)
-      .after(TT2_MINUS_UNARY).spaces(0)
-      .after(TT2_OUTLINE_TAG).spaces(1)
-      .after(TT2_OPEN_TAG).spaces(1)
-      .before(TT2_SEMI).spaces(0)
-      .after(TT2_SEMI).spaces(1)
-      .afterInside(TT2_NOT, UNARY_EXPR).spaces(0)
-      .before(TT2_COMMA).spaces(0)
-      .after(TT2_COMMA).spaces(1)
-      .before(TT2_CLOSE_TAG).spaces(1)
-      .around(KEYWORDS_TOKENSET).spaces(1)
-      .before(MACRO_CONTENT).spaces(1)
-      .before(DIRECTIVE_POSTFIX).spaces(1)
-      .beforeInside(ASSIGN_EXPR, PROCESS_DIRECTIVE).spaces(1)
-      .beforeInside(ASSIGN_EXPR, EXCEPTION_ARGS).spaces(1)
-      .beforeInside(ASSIGN_EXPR, WRAPPER_DIRECTIVE).spaces(1)
-      .before(PAIR_EXPR).spaces(1)
-      .between(ASSIGN_EXPR, ASSIGN_EXPR).spaces(1)
-      .between(PAIR_EXPR, PAIR_EXPR).spaces(1)
-      .around(EXCEPTION_TYPE).spaces(1)
-      .around(EXCEPTION_MESSAGE).spaces(1)
-      .after(TT2_LEFT_BRACE).spaces(0)
-      .after(TT2_LEFT_BRACKET).spaces(0)
-      .after(TT2_LEFT_PAREN).spaces(0)
-      .before(TT2_RIGHT_BRACE).spaces(0)
-      .before(TT2_RIGHT_BRACKET).spaces(0)
-      .before(TT2_RIGHT_PAREN).spaces(0)
-      .around(ALL_OPERATORS_TOKENSET).spaces(1)
-    ;
+  protected boolean isTemplateFile(PsiFile file) {
+    return file.getLanguage().isKindOf(TemplateToolkitLanguage.INSTANCE);
   }
 
   @Override
-  public TemplateLanguageBlock createTemplateLanguageBlock(
-    @NotNull ASTNode node,
-    @Nullable Wrap wrap,
-    @Nullable Alignment alignment,
-    @Nullable List<DataLanguageBlockWrapper> foreignChildren,
-    @NotNull CodeStyleSettings codeStyleSettings
-  ) {
-    final FormattingDocumentModelImpl documentModel = FormattingDocumentModelImpl.createOn(node.getPsi().getContainingFile());
-    return new TemplateToolkitFormattingBlock(this, codeStyleSettings, node, foreignChildren,
-                                              new HtmlPolicy(codeStyleSettings, documentModel));
+  public boolean isOuterLanguageElement(PsiElement element) {
+    return PsiUtilCore.getElementType(element) == TemplateToolkitElementTypes.TT2_OUTER;
   }
 
   @Override
-  public boolean dontFormatMyModel() {
-    return false;
+  public boolean isMarkupLanguageElement(PsiElement element) {
+    return PsiUtilCore.getElementType(element) == TemplateToolkitElementTypes.TT2_HTML;
   }
 
-  public @NotNull Alignment getAssignAlignment(@NotNull ASTNode defaultDirectiveNode) {
-    Alignment result = myAssignAlignmentMap.get(defaultDirectiveNode);
-    if (result != null) {
-      return result;
+  @Override
+  protected Block createTemplateLanguageBlock(ASTNode node,
+                                              CodeStyleSettings settings,
+                                              XmlFormattingPolicy xmlFormattingPolicy,
+                                              Indent indent,
+                                              @Nullable Alignment alignment,
+                                              @Nullable Wrap wrap,
+                                              @NotNull TemplateToolkitFormattingContext context) {
+    var nodeType = PsiUtilCore.getElementType(node);
+    if (PERL_BLOCKS.contains(nodeType)) {
+      var perlBlock = new PerlFormattingBlock(node, context.getPurePerlContext());
+      perlBlock.setIndent(Indent.getNoneIndent());
+      return perlBlock;
     }
+    return new TemplateToolkitFormattingBlock(this, node, wrap, alignment, settings, xmlFormattingPolicy, indent, context);
+  }
 
-    result = Alignment.createAlignment(true);
-    myAssignAlignmentMap.put(defaultDirectiveNode, result);
-    return result;
+  @Override
+  protected @NotNull TemplateToolkitFormattingContext createContext(@NotNull FormattingContext formattingContext) {
+    return new TemplateToolkitFormattingContext(formattingContext);
   }
 }

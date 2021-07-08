@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,14 +15,10 @@
  */
 
 buildscript {
-  repositories {
-    maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
-  }
   dependencies{
     classpath 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
     classpath 'org.apache.httpcomponents:httpmime:4.5.11'
     classpath 'org.eclipse.jgit:org.eclipse.jgit:5.5.1.201910021850-r'
-    classpath files("lib/coveralls-gradle-plugin-2020.1.jar")
   }
 }
 
@@ -31,6 +27,7 @@ plugins {
   id 'jacoco'
   id 'org.jetbrains.grammarkit' version "$grammarKitGradlePluginVersion"
   id 'idea'
+  id 'com.github.kt3k.coveralls' version "$coverallsGradlePluginVersion"
 }
 
 repositories {
@@ -40,13 +37,13 @@ repositories {
 def isCI = System.getenv("CI")
 
 Set pluginProjectsNames = [
-  "perl5.plugin",
-  "perl5.lang.tt2",
-  "perl5.lang.mojo",
-  "perl5.lang.embedded",
-  "perl5.lang.mason.framework",
-  "perl5.lang.mason.htmlmason",
-  "perl5.lang.mason.mason2"
+  "plugin",
+  "lang.tt2",
+  "lang.mojo",
+  "lang.embedded",
+  "lang.mason.framework",
+  "lang.mason.htmlmason",
+  "lang.mason.mason2"
 ]
 
 def pluginProjects = allprojects.findAll {
@@ -92,8 +89,12 @@ allprojects {
   version = "${pluginVersion}${platformBranch}${pluginBuild}"
 
   def isPlugin = pluginProjectsNames.contains(project.name)
+  def isRoot = project == rootProject
 
+  jar { onlyIf { isPlugin || isRoot } }
   buildPlugin { onlyIf { isPlugin } }
+  prepareSandbox { onlyIf { isPlugin || isRoot } }
+  prepareTestingSandbox { onlyIf { isPlugin } }
   patchPluginXml{ onlyIf { isPlugin } }
   buildSearchableOptions{ onlyIf { isPlugin } }
   publishPlugin{
@@ -161,6 +162,11 @@ pluginProjects.forEach {
     pluginDescription(description.text)
     changeNotes(changes.text)
   }
+
+  def projectModules = it.subprojects
+  it.jar {
+    from projectModules.sourceSets.main.output
+  }
 }
 
 apply plugin: 'idea'
@@ -172,20 +178,20 @@ idea {
 }
 
 task jacocoMerge(type: JacocoMerge) {
-  dependsOn(subprojects.jacocoTestReport.dependsOn)
-  mustRunAfter(subprojects.jacocoTestReport.mustRunAfter)
+  dependsOn(allprojects.jacocoTestReport.dependsOn)
+  mustRunAfter(allprojects.jacocoTestReport.mustRunAfter)
   destinationFile = file("${buildDir}/jacoco/test.exec")
-  executionData = files(subprojects.jacocoTestReport.executionData)
+  executionData = files(allprojects.jacocoTestReport.executionData)
     .filter { f -> f.exists() }
 }
 
 task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
-  description = 'Generates an aggregate report from all subprojects'
+  description = 'Generates an aggregate report from all projects'
   dependsOn jacocoMerge
 
-  additionalSourceDirs.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
-  sourceDirectories.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
-  classDirectories.setFrom files(subprojects.sourceSets.main.output)
+  additionalSourceDirs.setFrom files(allprojects.sourceSets.main.allSource.srcDirs)
+  sourceDirectories.setFrom files(allprojects.sourceSets.main.allSource.srcDirs)
+  classDirectories.setFrom files(allprojects.sourceSets.main.output)
   executionData jacocoMerge.destinationFile
 
   reports {
@@ -207,15 +213,19 @@ tasks.coveralls {
 }
 
 intellij {
-  def pluginList = ["PsiViewer:$psiViewerVersion", intelliLangPlugin,
-                    project(':perl5.plugin'),
-                    project(':perl5.lang.tt2'),
-                    project(':perl5.lang.mojo'),
-                    project(':perl5.lang.embedded'),
-                    project(':perl5.lang.mason.framework'),
-                    project(':perl5.lang.mason.htmlmason'),
-                    project(':perl5.lang.mason.mason2'),
+  def pluginList = [intelliLangPlugin,
+                    project(':plugin'),
+                    project(':lang.tt2'),
+                    project(':lang.mojo'),
+                    project(':lang.embedded'),
+                    project(':lang.mason.framework'),
+                    project(':lang.mason.htmlmason'),
+                    project(':lang.mason.mason2'),
   ]
+
+  if(!isCI){
+    pluginList.add("PsiViewer:$psiViewerVersion")
+  }
 
   def runWith = project.hasProperty("runWith") ? project.property("runWith") : ""
 
@@ -255,12 +265,6 @@ runIde {
     args("traverseUI", "$project.rootDir.canonicalPath/resources/search/searchableOptions.xml")
   }
   jvmArgs("-Xmx2048m")
-}
-
-sourceSets {
-  test {
-    resources.srcDirs file('testData')
-  }
 }
 
 task publishAllPlugins {

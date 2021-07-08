@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,23 +15,25 @@
  */
 
 dependencies{
-  compile project(":perl5.core")
-  compile project(":perl5.core.idea")
-  compile project(":perl5.core.profiler")
-  compile project(":perl5.core.coverage")
-  compile project(":perl5.core.debugger")
-  compile project(":perl5.core.copyright")
-  compile project(":perl5.core.intelliLang")
-  compile project(":perl5.core.docker")
-  compile project(":perl5.core.wsl")
-  compile project(":perl5.core.perlbrew")
-  compile project(":perl5.core.berrybrew")
-  compile project(":perl5.core.plenv")
+  [
+    ":plugin:core",
+    ":plugin:idea",
+    ":plugin:profiler",
+    ":plugin:coverage",
+    ":plugin:debugger",
+    ":plugin:copyright",
+    ":plugin:intelliLang",
+    ":plugin:docker",
+    ":plugin:wsl",
+    ":plugin:perlbrew",
+    ":plugin:berrybrew",
+    ":plugin:plenv",
+  ].each {compile project(it).sourceSets.main.output}
 }
 
 intellij {
   type 'IU'
-  intellij.plugins = ["PsiViewer:$psiViewerVersion", intelliLangPlugin, 'copyright', 'coverage', 'java']
+  intellij.plugins = [intelliLangPlugin, 'copyright', 'coverage', 'java']
 }
 
 prepareTestingSandbox{

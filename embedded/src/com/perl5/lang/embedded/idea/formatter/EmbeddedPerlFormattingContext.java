@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,24 +16,18 @@
 
 package com.perl5.lang.embedded.idea.formatter;
 
-import com.intellij.formatting.FormattingMode;
-import com.intellij.openapi.util.TextRange;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.codeStyle.CodeStyleSettings;
-import com.perl5.lang.perl.idea.formatter.PerlFormattingContext;
+import com.intellij.formatting.FormattingContext;
 import com.perl5.lang.perl.idea.formatter.PerlIndentProcessor;
+import com.perl5.lang.perl.idea.formatter.PurePerlFormattingContext;
 import org.jetbrains.annotations.NotNull;
 
-public class EmbeddedPerlFormattingContext extends PerlFormattingContext {
-  public EmbeddedPerlFormattingContext(@NotNull PsiElement element,
-                                       @NotNull TextRange textRange,
-                                       @NotNull CodeStyleSettings settings,
-                                       @NotNull FormattingMode formattingMode) {
-    super(element, textRange, settings, formattingMode);
+public class EmbeddedPerlFormattingContext extends PurePerlFormattingContext {
+  public EmbeddedPerlFormattingContext(@NotNull FormattingContext formattingContext) {
+    super(formattingContext, formattingContext.getPsiElement().getTextRange());
   }
 
   @Override
-  public PerlIndentProcessor getIndentProcessor() {
+  public @NotNull PerlIndentProcessor getIndentProcessor() {
     return EmbeddedPerlIndentProcessor.INSTANCE;
   }
 }

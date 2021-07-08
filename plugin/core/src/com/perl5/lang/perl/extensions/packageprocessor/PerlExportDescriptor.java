@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.perl5.PerlIcons;
 import com.perl5.lang.perl.idea.completion.providers.processors.PerlCompletionProcessor;
 import com.perl5.lang.perl.util.PerlPackageUtil;
+import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -144,13 +145,13 @@ public class PerlExportDescriptor {
     return mySigil + myImportedName + " => " + mySigil + PerlPackageUtil.join(myRealPackage, myRealName);
   }
 
-  public static PerlExportDescriptor create(@NotNull String sourcePackageName, @NotNull String sourceSubName) {
+  public static PerlExportDescriptor create(@NonNls @NotNull String sourcePackageName, @NonNls @NotNull String sourceSubName) {
     return new PerlExportDescriptor(sourcePackageName, sourceSubName, sourceSubName);
   }
 
-  public static PerlExportDescriptor create(@NotNull String sourcePackageName,
-                                            @NotNull String sourceSubName,
-                                            @NotNull String importedSubName) {
+  public static PerlExportDescriptor create(@NonNls @NotNull String sourcePackageName,
+                                            @NonNls @NotNull String sourceSubName,
+                                            @NonNls @NotNull String importedSubName) {
     return new PerlExportDescriptor(sourcePackageName, importedSubName, sourceSubName);
   }
 }

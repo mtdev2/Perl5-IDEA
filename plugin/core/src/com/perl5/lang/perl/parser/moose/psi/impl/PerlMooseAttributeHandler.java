@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +41,7 @@ import com.perl5.lang.perl.util.PerlArrayUtil;
 import com.perl5.lang.perl.util.PerlHashEntry;
 import com.perl5.lang.perl.util.PerlHashUtil;
 import com.perl5.lang.perl.util.PerlPackageUtil;
+import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -51,12 +52,25 @@ import static com.perl5.lang.perl.psi.stubs.PerlStubElementTypes.LIGHT_ATTRIBUTE
 import static com.perl5.lang.perl.psi.stubs.PerlStubElementTypes.LIGHT_METHOD_DEFINITION;
 
 public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
-  private static final String MUTATOR_KEY = "writer";
-  private static final String ACCESSOR_KEY = "accessor";
-  private static final String READER_KEY = "reader";
-  private static final List<String> MOOSE_SUB_NAMES_KEYS = Arrays.asList(
-    READER_KEY, MUTATOR_KEY, ACCESSOR_KEY, "predicate", "clearer"
+  @NonNls private static final String WRITER_KEY = "writer";
+  @NonNls private static final String ACCESSOR_KEY = "accessor";
+  @NonNls private static final String READER_KEY = "reader";
+  @NonNls private static final String PREDICATE_KEY = "predicate";
+  @NonNls private static final String CLEARER_KEY = "clearer";
+  @NonNls private static final List<String> MOOSE_SUB_NAMES_KEYS = Arrays.asList(
+    READER_KEY, WRITER_KEY, ACCESSOR_KEY, PREDICATE_KEY, CLEARER_KEY
   );
+  @NonNls private static final String RW_KEY = "rw";
+  @NonNls private static final String RWP_KEY = "rwp";
+  @NonNls private static final String IS_KEY = "is";
+  @NonNls private static final String ISA_KEY = "isa";
+  @NonNls private static final String DOES_KEY = "does";
+  @NonNls private static final String HANDLES_KEY = "handles";
+  @NonNls private static final String PROTECTED_MUTATOR_PREFIX = "_set_";
+  @NonNls private static final String MOO_CLEARER_PREFIX = "clear_";
+  @NonNls private static final String _MOO_CLEARER_PREFIX = "_" + MOO_CLEARER_PREFIX;
+  @NonNls private static final String MOO_PREDICATE_PREFIX = "has_";
+  @NonNls private static final String _MOO_PREDICATE_PREFIX = "_" + MOO_PREDICATE_PREFIX;
 
   @Override
   public @NotNull List<? extends PerlDelegatingLightNamedElement<?>> computeLightElementsFromPsi(@NotNull PerlSubCallElement subCallElement) {
@@ -128,10 +142,10 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
         LIGHT_METHOD_DEFINITION,
         identifier,
         namespaceName,
-        Arrays.asList(PerlSubArgument.self(), PerlSubArgument.optionalScalar("new_value")),
+        Arrays.asList(PerlSubArgument.self(), PerlSubArgument.optionalScalar(PerlSubArgument.NEW_VALUE_VALUE)),
         PerlSubAnnotations.tryToFindAnnotations(identifier, subCallElement.getParent()),
         valueProvider,
-        subExpr == null ? null : subExpr.getBlockSmart()
+        subExpr == null ? null : subExpr.getBlock()
       );
       result.add(newMethod);
     }
@@ -157,18 +171,20 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
 
     Map<String, PerlHashEntry> parameters = PerlHashUtil.packToHash(listElements.subList(1, listElements.size()));
     // handling is
-    PerlHashEntry isParameter = parameters.get("is");
-    boolean isWritable = isParameter != null && StringUtil.equals("rw", isParameter.getValueString());
+    PerlHashEntry isParameter = parameters.get(IS_KEY);
+    boolean isWritableProtected = isParameter != null && StringUtil.equals(RWP_KEY, isParameter.getValueString());
+    boolean isWritable = isParameter != null && (StringUtil.equals(RW_KEY, isParameter.getValueString()) || isWritableProtected);
+
     PsiElement forcedIdentifier = null;
 
     // handling isa and does
-    PerlHashEntry isaEntry = parameters.get("isa");
+    PerlHashEntry isaEntry = parameters.get(ISA_KEY);
     String valueClass = null;
     if (isaEntry == null) {
-      isaEntry = parameters.get("does");
+      isaEntry = parameters.get(DOES_KEY);
     }
 
-    if (isaEntry != null && isaEntry.valueElement != null && subCallElement.isAcceptableIdentifierElement(isaEntry.valueElement)) {
+    if (isaEntry != null && subCallElement.isAcceptableIdentifierElement(isaEntry.valueElement)) {
       valueClass = isaEntry.getValueString();
       if (StringUtil.isEmpty(valueClass)) {
         valueClass = null;
@@ -176,6 +192,9 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
     }
 
     // handling accessor, reader, etc.
+    boolean createMooClearer = false;
+    boolean createMooPredicate = false;
+
     List<PerlLightMethodDefinitionElement<?>> secondaryResult = new ArrayList<>();
     for (String key : MOOSE_SUB_NAMES_KEYS) {
       PerlHashEntry entry = parameters.get(key);
@@ -185,10 +204,18 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
 
       String methodName = entry.getValueString();
       if (StringUtil.isEmpty(methodName)) {
+        if (entry.valueElement instanceof PsiPerlNumberConstant && "1".equals(entry.valueElement.getText())) {
+          if (key.equals(CLEARER_KEY)) {
+            createMooClearer = true;
+          }
+          else if (key.equals(PREDICATE_KEY)) {
+            createMooPredicate = true;
+          }
+        }
         continue;
       }
 
-      if (!isWritable && key.equals(MUTATOR_KEY)) {
+      if (!isWritable && key.equals(WRITER_KEY)) {
         continue;
       }
 
@@ -209,8 +236,9 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
         LIGHT_METHOD_DEFINITION,
         identifier,
         packageName,
-        key.equals(MUTATOR_KEY) ? Arrays.asList(PerlSubArgument.self(), PerlSubArgument.optionalScalar("new_value", valueClass))
-                                : Collections.emptyList(),
+        key.equals(WRITER_KEY) ? Arrays
+          .asList(PerlSubArgument.self(), PerlSubArgument.optionalScalar(PerlSubArgument.NEW_VALUE_VALUE, valueClass))
+                               : Collections.emptyList(),
         PerlSubAnnotations.tryToFindAnnotations(identifier, entry.keyElement, subCallElement.getParent())
       );
 
@@ -224,7 +252,7 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
     }
 
     // handle handles
-    PerlHashEntry handlesEntry = parameters.get("handles");
+    PerlHashEntry handlesEntry = parameters.get(HANDLES_KEY);
     if (handlesEntry != null) {
       // to show proper signatures, we need an access to delegates, what requires indexes; we should do this in runtime, not indexing, but store delegation target
       if (handlesEntry.valueElement instanceof PsiPerlAnonHash) {
@@ -277,22 +305,68 @@ public class PerlMooseAttributeHandler extends PerlSubCallHandlerWithEmptyData {
       if (!subCallElement.isAcceptableIdentifierElement(identifier)) {
         continue;
       }
+      List<PerlSubArgument> subArguments = isWritable && !isWritableProtected
+                                           ? Arrays
+                                             .asList(PerlSubArgument.self(),
+                                                     PerlSubArgument.optionalScalar(PerlSubArgument.NEW_VALUE_VALUE, valueClass))
+                                           : Collections.emptyList();
+      var identifierText = ElementManipulators.getValueText(identifier);
+      var identifierAnnotations = PerlSubAnnotations.tryToFindAnnotations(identifier, subCallElement.getParent());
       PerlAttributeDefinition newElement = new PerlAttributeDefinition(
         subCallElement,
-        PerlAttributeDefinition.DEFAULT_NAME_COMPUTATION.fun(ElementManipulators.getValueText(identifier)),
+        PerlAttributeDefinition.DEFAULT_NAME_COMPUTATION.fun(identifierText),
         LIGHT_ATTRIBUTE_DEFINITION,
         identifier,
         packageName,
-        isWritable
-        ? Arrays.asList(PerlSubArgument.self(), PerlSubArgument.optionalScalar("new_value", valueClass))
-        : Collections.emptyList(),
-        PerlSubAnnotations.tryToFindAnnotations(identifier, subCallElement.getParent())
+        subArguments,
+        identifierAnnotations
       );
       if (valueClass != null) {
         PerlValue returnValue = PerlScalarValue.create(valueClass);
         newElement.setReturnValueFromCode(returnValue);
       }
       result.add(newElement);
+
+      if (isWritableProtected) {
+        result.add(new PerlLightMethodDefinitionElement<>(
+          subCallElement,
+          PROTECTED_MUTATOR_PREFIX + identifierText,
+          LIGHT_METHOD_DEFINITION,
+          identifier,
+          packageName,
+          Arrays.asList(PerlSubArgument.self(),
+                        PerlSubArgument.mandatoryScalar(PerlSubArgument.NEW_VALUE_VALUE, StringUtil.notNullize(valueClass))),
+          identifierAnnotations
+        ));
+      }
+
+      if (createMooClearer) {
+        var clearerName = identifierText.startsWith("_") ?
+                          _MOO_CLEARER_PREFIX + identifierText.substring(1) : MOO_CLEARER_PREFIX + identifierText;
+        result.add(new PerlLightMethodDefinitionElement<>(
+          subCallElement,
+          clearerName,
+          LIGHT_METHOD_DEFINITION,
+          identifier,
+          packageName,
+          Collections.emptyList(),
+          identifierAnnotations
+        ));
+      }
+      if (createMooPredicate) {
+        var predicateName = identifierText.startsWith("_") ?
+                            _MOO_PREDICATE_PREFIX + identifierText.substring(1) : MOO_PREDICATE_PREFIX + identifierText;
+        result.add(new PerlLightMethodDefinitionElement<>(
+          subCallElement,
+          predicateName,
+          LIGHT_METHOD_DEFINITION,
+          identifier,
+          packageName,
+          Collections.emptyList(),
+          identifierAnnotations
+        ));
+      }
+
       result.addAll(secondaryResult);
       secondaryResult.clear();
     }

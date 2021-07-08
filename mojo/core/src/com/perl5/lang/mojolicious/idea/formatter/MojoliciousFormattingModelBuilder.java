@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,27 +16,54 @@
 
 package com.perl5.lang.mojolicious.idea.formatter;
 
-import com.intellij.formatting.FormattingMode;
-import com.intellij.formatting.FormattingModel;
-import com.intellij.formatting.FormattingModelProvider;
-import com.intellij.openapi.util.TextRange;
+import com.intellij.formatting.Alignment;
+import com.intellij.formatting.FormattingContext;
+import com.intellij.formatting.Indent;
+import com.intellij.formatting.Wrap;
+import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiFile;
 import com.intellij.psi.codeStyle.CodeStyleSettings;
+import com.intellij.psi.formatter.xml.XmlFormattingPolicy;
+import com.intellij.psi.util.PsiUtilCore;
+import com.perl5.lang.mojolicious.MojoliciousElementTypes;
+import com.perl5.lang.mojolicious.MojoliciousLanguage;
 import com.perl5.lang.mojolicious.idea.formatter.blocks.MojoliciousFormattingBlock;
-import com.perl5.lang.perl.idea.formatter.PerlTemplatingFormattingModelBuilder;
-import com.perl5.lang.perl.idea.formatter.blocks.PerlFormattingBlock;
+import com.perl5.lang.perl.idea.formatter.PerlXmlTemplateFormattingModelBuilder;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 
-public class MojoliciousFormattingModelBuilder extends PerlTemplatingFormattingModelBuilder {
+public class MojoliciousFormattingModelBuilder
+  extends PerlXmlTemplateFormattingModelBuilder<MojoliciousFormattingContext, MojoliciousFormattingBlock> {
   @Override
-  public @NotNull FormattingModel createModel(@NotNull PsiElement element,
-                                              @NotNull TextRange range,
-                                              @NotNull CodeStyleSettings settings,
-                                              @NotNull FormattingMode mode) {
-    PerlFormattingBlock block = new MojoliciousFormattingBlock(
-      element.getNode(), new MojoliciousFormattingContext(element, element.getTextRange(), settings,
-                                                          mode));
-    return FormattingModelProvider.createFormattingModelForPsiFile(element.getContainingFile(), block, settings);
+  protected MojoliciousFormattingBlock createTemplateLanguageBlock(ASTNode node,
+                                                                   CodeStyleSettings settings,
+                                                                   XmlFormattingPolicy xmlFormattingPolicy,
+                                                                   Indent indent,
+                                                                   @Nullable Alignment alignment,
+                                                                   @Nullable Wrap wrap,
+                                                                   @NotNull MojoliciousFormattingContext context) {
+    return new MojoliciousFormattingBlock(this, node, wrap, alignment, settings, xmlFormattingPolicy, indent, context);
+  }
+
+  @Override
+  protected @NotNull MojoliciousFormattingContext createContext(@NotNull FormattingContext formattingContext) {
+    return new MojoliciousFormattingContext(formattingContext);
+  }
+
+  @Override
+  protected boolean isTemplateFile(PsiFile file) {
+    return file.getLanguage().isKindOf(MojoliciousLanguage.INSTANCE);
+  }
+
+  @Override
+  public boolean isOuterLanguageElement(PsiElement element) {
+    return PsiUtilCore.getElementType(element) == MojoliciousElementTypes.MOJO_OUTER_ELEMENT_TYPE;
+  }
+
+  @Override
+  public boolean isMarkupLanguageElement(PsiElement element) {
+    return PsiUtilCore.getElementType(element) == MojoliciousElementTypes.MOJO_TEMPLATE_BLOCK_HTML;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2019 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,27 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import org.jetbrains.grammarkit.tasks.GenerateLexer
-import org.jetbrains.grammarkit.tasks.GenerateParser
-
 dependencies{
-  compile project(":perl5.lang.mojo.core")
-  compile project(":perl5.lang.mojo.idea")
-  testCompile project(":perl5.plugin").sourceSets.test.output
-}
-
-sourceSets {
-  main {
-    resources.srcDir file('resources')
-  }
-  test {
-    java.srcDir file('test')
-    resources.srcDirs file('testData')
-  }
+  [
+    ":lang.mojo:core",
+    ":lang.mojo:idea",
+  ].each {compile project(it).sourceSets.main.output}
+  [":plugin"].each { testCompile project(it).sourceSets.test.output }
 }
 
 intellij{
   type 'IC'
-  plugins = [project(':perl5.plugin'), 'java']
+  plugins = [project(':plugin'), 'java']
 }

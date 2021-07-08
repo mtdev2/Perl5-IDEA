@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,7 +86,7 @@ public abstract class PerlReparseableElementType extends IReparseableElementType
       newChars);
 
     ASTNode result = PerlParserImpl.INSTANCE.parse(this, builder).getFirstChildNode();
-    logger.debug("Parsed: ", PerlTimeLogger.kb(newChars.length()), " kb of ", this);
+    logger.trace("Parsed: ", PerlTimeLogger.kb(newChars.length()), " kb of ", this);
     return result;
   }
 
@@ -129,13 +129,6 @@ public abstract class PerlReparseableElementType extends IReparseableElementType
                                               @NotNull CharSequence buffer,
                                               @NotNull Language fileLanguage,
                                               @NotNull Project project);
-
-
-  @Override
-  public final boolean isParsable(@NotNull CharSequence buffer, @NotNull Language fileLanguage, @NotNull Project project) {
-    LOG.error("Should not be used");
-    return super.isParsable(buffer, fileLanguage, project);
-  }
 
   @Override
   public String toString() {

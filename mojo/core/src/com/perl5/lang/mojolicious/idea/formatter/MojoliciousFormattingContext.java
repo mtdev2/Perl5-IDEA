@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,37 +16,32 @@
 
 package com.perl5.lang.mojolicious.idea.formatter;
 
-import com.intellij.formatting.FormattingMode;
+import com.intellij.formatting.FormattingContext;
 import com.intellij.lang.ASTNode;
 import com.intellij.openapi.editor.Document;
-import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.PsiDocumentManager;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiWhiteSpace;
-import com.intellij.psi.codeStyle.CodeStyleSettings;
 import com.intellij.psi.tree.TokenSet;
 import com.intellij.psi.util.PsiUtilCore;
-import com.perl5.lang.perl.idea.formatter.PerlFormattingContext;
 import com.perl5.lang.perl.idea.formatter.PerlIndentProcessor;
+import com.perl5.lang.perl.idea.formatter.PurePerlFormattingContext;
 import org.jetbrains.annotations.NotNull;
 
 import static com.perl5.lang.mojolicious.MojoliciousElementTypes.*;
 
-public class MojoliciousFormattingContext extends PerlFormattingContext {
+public class MojoliciousFormattingContext extends PurePerlFormattingContext {
   private static final TokenSet LINE_OPENERS = TokenSet.create(
     MOJO_LINE_OPENER, MOJO_LINE_EXPR_OPENER, MOJO_LINE_EXPR_ESCAPED_OPENER
   );
 
-  public MojoliciousFormattingContext(@NotNull PsiElement element,
-                                      @NotNull TextRange range,
-                                      @NotNull CodeStyleSettings settings,
-                                      @NotNull FormattingMode mode) {
-    super(element, range, settings, mode);
+  public MojoliciousFormattingContext(@NotNull FormattingContext formattingContext) {
+    super(formattingContext, formattingContext.getPsiElement().getTextRange());
   }
 
   @Override
-  public PerlIndentProcessor getIndentProcessor() {
+  public @NotNull PerlIndentProcessor getIndentProcessor() {
     return MojoliciousIndentProcessor.INSTANCE;
   }
 

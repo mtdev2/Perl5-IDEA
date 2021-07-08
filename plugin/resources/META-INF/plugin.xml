@@ -25,17 +25,25 @@
 
   <depends>com.intellij.modules.lang</depends>
 
-  <depends optional="true" config-file="plugin-ultimate.xml">com.intellij.modules.ultimate</depends>
-  <depends optional="true" config-file="perl-intellilang.xml">org.intellij.intelliLang</depends>
-  <depends optional="true" config-file="perl-idea.xml">com.intellij.modules.java</depends>
-  <depends optional="true" config-file="perl-copyright.xml">com.intellij.copyright</depends>
-  <depends optional="true" config-file="perl-coverage.xml">com.intellij.modules.coverage</depends>
-
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="/META-INF/perl-pod.xml" xpointer="xpointer(/idea-plugin/*)"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="/META-INF/perl-berrybrew.xml" xpointer="xpointer(/idea-plugin/*)"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="/META-INF/perl-debugger.xml" xpointer="xpointer(/idea-plugin/*)"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="/META-INF/perl-perlbrew.xml" xpointer="xpointer(/idea-plugin/*)"/>
-  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="/META-INF/perl-plenv.xml" xpointer="xpointer(/idea-plugin/*)"/>
+
+  <content>
+    <module name="perl5.plugin.copyright"/>
+    <module name="perl5.plugin.intelliLang"/>
+
+    <module name="perl5.plugin.idea"/>
+
+    <module name="perl5.plugin.berrybrew"/>
+    <module name="perl5.plugin.perlbrew"/>
+    <module name="perl5.plugin.plenv"/>
+
+    <module name="perl5.plugin.coverage"/>
+    <module name="perl5.plugin.debugger"/>
+    <module name="perl5.plugin.profiler"/>
+
+    <module name="perl5.plugin.docker"/>
+    <module name="perl5.plugin.wsl"/>
+  </content>
 
   <extensionPoints>
     <extensionPoint name="packageProcessor" beanClass="com.perl5.lang.perl.idea.EP.PerlPackageProcessorEP">
@@ -91,27 +99,36 @@
     <packageProcessor key="Mojolicious::Lite"
                       implementationClass="com.perl5.lang.perl.extensions.mojo.MojoliciousLitePackageProcessor"/>
     <packageProcessor key="Moose"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseProcessor"/>
     <packageProcessor key="Moose::Role"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseRoleProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseRoleProcessor"/>
     <packageProcessor key="Moose::Util::TypeConstraints"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseUtilTypeConstraintsProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseUtilTypeConstraintsProcessor"/>
     <packageProcessor key="MooseX::Types::CheckedUtilExports"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseXTypesCheckedUtilExportsProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXTypesCheckedUtilExportsProcessor"/>
     <packageProcessor key="MooseX::ClassAttribute"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseXClassAttributeProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXClassAttributeProcessor"/>
     <packageProcessor key="MooseX::Role::Parameterized"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseXRoleParametrized"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXRoleParametrized"/>
     <packageProcessor key="MooseX::MethodAttributes::Role"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseRoleDelegatedProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXMethodAttributesRoleProcessor"/>
     <packageProcessor key="MooseX::Role::WithOverloading"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseRoleDelegatedProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXRoleWithOverloadingProcessor"/>
     <packageProcessor key="MooseX::MethodAttributes"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooseDelegatedProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moose.MooseXMethodAttributesProcessor"/>
 
 
     <packageProcessor key="Moo"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.MooProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.moo.MooProcessor"/>
+    <packageProcessor key="Moo::Role"
+                      implementationClass="com.perl5.lang.perl.extensions.moo.MooRoleProcessor"/>
+
+    <packageProcessor key="Role::Tiny"
+                      implementationClass="com.perl5.lang.perl.extensions.role.tiny.RoleTinyProcessor"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.role.tiny.RoleTinyImplicitSubsProvider"/>
+
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.scalar.util.ScalarUtilImplicitSubsProvider"/>
+
     <packageProcessor key="Dancer"
                       implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.DancerPackageProcessor"/>
     <packageProcessor key="Dancer2"
@@ -121,7 +138,15 @@
     <packageProcessor key="POSIX"
                       implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.POSIXPackageProcessor"/>
     <packageProcessor key="strictures"
-                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.StricturesPackageProcessor"/>
+                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.BaseStrictWarningsProvidingProcessor"/>
+    <packageProcessor key="Test2::Bundle::More"
+                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.BaseStrictWarningsProvidingProcessor"/>
+    <packageProcessor key="Test2::Bundle::Extended"
+                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.BaseStrictWarningsProvidingProcessor"/>
+    <packageProcessor key="Test2::Bundle::Simple"
+                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.BaseStrictWarningsProvidingProcessor"/>
+    <packageProcessor key="Test2::V0"
+                      implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.BaseStrictWarningsProvidingProcessor"/>
     <packageProcessor key="constant"
                       implementationClass="com.perl5.lang.perl.extensions.packageprocessor.impl.ConstantProcessor"/>
     <packageProcessor key="Exception::Class"
@@ -161,6 +186,7 @@
     <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.typesStandard.TypesStandardImplicitDeclarationsProvider"/>
     <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.readonly.ReadonlyImplicitDeclarationsProvider"/>
     <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.log4perl.Log4PerlImplicitDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.moo.MooImplicitSubsProvider"/>
   </extensions>
 
   <extensions defaultExtensionNs="com.intellij">
@@ -201,6 +227,8 @@
     <editorNotificationProvider
         implementation="com.perl5.lang.perl.idea.editor.notification.PerlInterpreterEditorNotification"/>
     <editorNotificationProvider implementation="com.perl5.lang.perl.idea.editor.notification.PerlAssociationEditorNotification"/>
+    <notificationGroup displayType="STICKY_BALLOON" id="perl5.plugin.update.notification.group" bundle="messages.PerlBundle"
+                       key="plugin.update.baloon.group" isLogByDefault="true"/>
 
     <virtualFileSystem key="perlhost" implementationClass="com.perl5.lang.perl.idea.sdk.host.PerlHostVirtualFileSystem"/>
 
@@ -681,8 +709,6 @@
       <action id="perl5.FormatWithPerlTidy" class="com.perl5.lang.perl.idea.actions.PerlFormatWithPerlTidyAction"/>
       <action id="perl5.DeparseFile" class="com.perl5.lang.perl.idea.actions.PerlDeparseFileAction"/>
       <action id="perl5.sync.interpreter" class="com.perl5.lang.perl.idea.actions.PerlSynInterpreterAction"/>
-      <action id="perl5.perlbrew.createlib" class="com.perl5.lang.perl.idea.sdk.versionManager.perlbrew.PerlBrewCreateLibraryAction"
-              icon="/icons/perlbrew.png"/>
     </group>
 
     <group id="perl5.install" text="Install" popup="true">
@@ -691,8 +717,6 @@
       <action id="perl5.install.with.cpan" class="com.perl5.lang.perl.idea.actions.PerlInstallPackagesWithCpanAction"/>
       <action id="perl5.intsall.cpanm" class="com.perl5.lang.perl.idea.actions.PerlInstallCpanmAction"/>
       <action id="perl5.install.perl" class="com.perl5.lang.perl.idea.sdk.versionManager.PerlInstallAction"/>
-      <action id="perl5.perlbrew.install.patchperl"
-              class="com.perl5.lang.perl.idea.sdk.versionManager.perlbrew.PerlBrewInstallPatchPerlAction" icon="/icons/perlbrew.png"/>
     </group>
 
     <action id="Perl5.NewFile" class="com.perl5.lang.perl.idea.actions.PerlFileFromTemplateAction">

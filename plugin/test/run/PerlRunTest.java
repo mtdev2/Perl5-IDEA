@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@ import com.intellij.execution.process.CapturingProcessAdapter;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.ui.RunContentDescriptor;
-import com.intellij.openapi.util.Disposer;
 import com.intellij.testFramework.UsefulTestCase;
 import com.perl5.lang.perl.idea.run.GenericPerlRunConfiguration;
 import com.pty4j.util.Pair;
@@ -43,6 +42,17 @@ public class PerlRunTest extends PerlPlatformTestCase {
   }
 
   @Test
+  public void testArgsPassing() {
+    copyDirToModule("argsInspector");
+    var runConfiguration = createOnlyRunConfiguration("script.pl");
+    assertNotNull(runConfiguration);
+    assertInstanceOf(runConfiguration, GenericPerlRunConfiguration.class);
+    runConfiguration.setProgramParameters(
+      "arg1 \"arg2 arg3\" \"arg4\\\"arg5\" \"arg6'arg7\" 'arg8 arg9' \"'arg10 arg11'\" \"arg12 arg13\" \\\"arg14 arg15\\\"");
+    runAndCompareOutput(runConfiguration);
+  }
+
+  @Test
   public void testRunTestDir() {
     copyDirToModule("testMore");
     runTestConfigurationWithExecutorAndCheckResultsWithFile(createTestRunConfiguration("t"), DefaultRunExecutor.EXECUTOR_ID);
@@ -51,7 +61,10 @@ public class PerlRunTest extends PerlPlatformTestCase {
   @Test
   public void testRunSimpleScript() {
     copyDirToModule("simple");
-    GenericPerlRunConfiguration runConfiguration = createOnlyRunConfiguration("simplescript.pl");
+    runAndCompareOutput(createOnlyRunConfiguration("simplescript.pl"));
+  }
+
+  private void runAndCompareOutput(GenericPerlRunConfiguration runConfiguration) {
     Pair<ExecutionEnvironment, RunContentDescriptor> execResult;
     try {
       execResult = executeConfiguration(runConfiguration, DefaultRunExecutor.EXECUTOR_ID);
@@ -60,7 +73,6 @@ public class PerlRunTest extends PerlPlatformTestCase {
       throw new RuntimeException(e);
     }
     RunContentDescriptor contentDescriptor = execResult.second;
-    Disposer.register(myPerlLightTestCaseDisposable, contentDescriptor);
     ProcessHandler processHandler = contentDescriptor.getProcessHandler();
     assertNotNull(processHandler);
     waitForProcessFinish(processHandler);
@@ -68,5 +80,4 @@ public class PerlRunTest extends PerlPlatformTestCase {
     assertNotNull(capturingProcessAdapter);
     UsefulTestCase.assertSameLinesWithFile(getTestResultsFilePath(""), serializeOutput(capturingProcessAdapter.getOutput()));
   }
-
 }

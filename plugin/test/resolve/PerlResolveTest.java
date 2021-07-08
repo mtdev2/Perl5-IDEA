@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,84 @@ public class PerlResolveTest extends PerlLightTestCase {
   @Override
   protected String getBaseDataPath() {
     return "testData/resolve/perl";
+  }
+
+  @Test
+  public void testScalarUtil() {
+    withPerl532();
+    doTest();
+  }
+
+  @Test
+  public void testUseMoo() {
+    withMoo();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooRole() {
+    withMoo();
+    doTest();
+  }
+
+  @Test
+  public void testUseMoose() {
+    withMoose();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseRole() {
+    withMoose();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseUtilTypeConstraints() {
+    withMoose();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXClassAttirubte() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXMethodAttirbutes() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXMethodAttirbutesRole() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXRoleParametrized() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXRoleWithOverloading() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseMooseXTypesCheckedUtilExports() {
+    withMooseX();
+    doTest();
+  }
+
+  @Test
+  public void testUseRoleTiny() {
+    withRoleTiny();
+    doTest();
   }
 
   @Test
@@ -60,13 +138,19 @@ public class PerlResolveTest extends PerlLightTestCase {
   public void testSimpleMainTrue() {doTestSimpleMain(true);}
 
   @Test
-  public void testSimpleMainFalse() {doTestSimpleMain(false);}
+  public void testSimpleMainFalse() { doTestSimpleMain(false); }
 
   private void doTestSimpleMain(boolean value) {
     myFixture.copyFileToProject("simpleMain2.pl");
     initWithFileSmartWithoutErrors("simpleMain");
     PerlSharedSettings.getInstance(getProject()).SIMPLE_MAIN_RESOLUTION = value;
     checkSerializedReferencesWithFile();
+  }
+
+  @Test
+  public void testMooseKeywords() {
+    withMoose();
+    doTest();
   }
 
   @Test

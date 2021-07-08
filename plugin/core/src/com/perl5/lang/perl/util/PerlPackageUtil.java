@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -63,8 +63,8 @@ import com.perl5.lang.perl.psi.stubs.namespaces.PerlNamespaceIndex;
 import com.perl5.lang.perl.psi.stubs.namespaces.PerlNamespaceReverseIndex;
 import com.perl5.lang.perl.psi.utils.PerlPsiUtil;
 import gnu.trove.THashSet;
-import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -86,6 +86,9 @@ public class PerlPackageUtil implements PerlElementTypes, PerlCorePackages {
   public static final String __PACKAGE__ = "__PACKAGE__";
   public static final String PACKAGE_CARP = "Carp";
   public static final String PACKAGE_SCALAR_UTIL = "Scalar::Util";
+  @NonNls public static final String PACKAGE_MOO = "Moo";
+  @NonNls public static final String MOO_ROLE = PACKAGE_MOO + NAMESPACE_SEPARATOR + "Role";
+  public static final String PACKAGE_CLASS_MOP_MIXIN = "Class::MOP::Mixin";
   public static final String PACKAGE_MOOSE = "Moose";
   public static final String PACKAGE_MOOSE_BASE = "Moose" + NAMESPACE_SEPARATOR;
   public static final String PACKAGE_MOOSE_X = PACKAGE_MOOSE + "X";
@@ -195,7 +198,7 @@ public class PerlPackageUtil implements PerlElementTypes, PerlCorePackages {
    */
   public static String getCanonicalNamespaceName(@NotNull String name) {
     String canonicalName = getCanonicalName(name);
-    return StringUtils.startsWith(canonicalName, MAIN_NAMESPACE_FULL) ?
+    return StringUtil.startsWith(canonicalName, MAIN_NAMESPACE_FULL) ?
            canonicalName.substring(MAIN_NAMESPACE_FULL.length()) : canonicalName;
   }
 
@@ -217,7 +220,7 @@ public class PerlPackageUtil implements PerlElementTypes, PerlCorePackages {
       chunks[0] = MAIN_NAMESPACE_NAME;
     }
 
-    newName = StringUtils.join(chunks, NAMESPACE_SEPARATOR);
+    newName = StringUtil.join(chunks, NAMESPACE_SEPARATOR);
 
     CANONICAL_NAMES_CACHE.put(originalName, newName);
 
@@ -406,7 +409,7 @@ public class PerlPackageUtil implements PerlElementTypes, PerlCorePackages {
    * @return package path
    */
   public static String getPackagePathByName(String packageName) {
-    return StringUtils.join(packageName.split(":+"), '/') + "." + PerlFileTypePackage.EXTENSION;
+    return StringUtil.join(packageName.split(":+"), "/") + "." + PerlFileTypePackage.EXTENSION;
   }
 
   /**
@@ -420,7 +423,7 @@ public class PerlPackageUtil implements PerlElementTypes, PerlCorePackages {
 
     if (result == null) {
       String path = packagePath.replaceAll("\\\\", "/");
-      result = getCanonicalNamespaceName(StringUtils.join(path.replaceFirst("\\.pm$", "").split("/"), NAMESPACE_SEPARATOR));
+      result = getCanonicalNamespaceName(StringUtil.join(path.replaceFirst("\\.pm$", "").split("/"), NAMESPACE_SEPARATOR));
       PATH_TO_PACKAGE_NAME_MAP.put(packagePath, result);
     }
     return result;

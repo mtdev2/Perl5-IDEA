@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ import com.intellij.psi.util.PsiUtilCore;
 import com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettings;
 import com.perl5.lang.perl.lexer.PerlLexer;
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -40,6 +41,7 @@ import static com.perl5.lang.perl.util.PerlScalarUtil.DEFAULT_SELF_NAME;
 
 public class PerlSubArgument {
 
+  @NonNls public static final String NEW_VALUE_VALUE = "new_value";
   private final @NotNull PerlVariableType myArgumentType;
   private final @NotNull String myArgumentName;
 
@@ -157,7 +159,11 @@ public class PerlSubArgument {
   }
 
   public static PerlSubArgument mandatoryScalar(@NotNull String variableName) {
-    return mandatory(PerlVariableType.SCALAR, variableName);
+    return mandatoryScalar(variableName, "");
+  }
+
+  public static @NotNull PerlSubArgument mandatoryScalar(@NotNull String variableName, @NotNull String variableClass) {
+    return mandatory(PerlVariableType.SCALAR, variableName, variableClass);
   }
 
   public static PerlSubArgument mandatory(@NotNull PerlVariableType variableType, @NotNull String variableName) {

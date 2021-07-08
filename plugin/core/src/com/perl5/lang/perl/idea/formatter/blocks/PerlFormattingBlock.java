@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,12 @@ import com.intellij.lang.ASTNode;
 import com.intellij.openapi.util.AtomicNotNullLazyValue;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.TokenType;
-import com.intellij.psi.formatter.FormatterUtil;
 import com.intellij.psi.formatter.common.AbstractBlock;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.tree.TokenSet;
 import com.intellij.psi.util.PsiUtilCore;
 import com.intellij.util.containers.ContainerUtil;
-import com.perl5.lang.perl.idea.formatter.PerlFormattingContext;
+import com.perl5.lang.perl.idea.formatter.PurePerlFormattingContext;
 import com.perl5.lang.perl.lexer.PerlElementTypes;
 import com.perl5.lang.perl.parser.PerlParserUtil;
 import org.jetbrains.annotations.NotNull;
@@ -51,19 +50,17 @@ public class PerlFormattingBlock extends AbstractBlock implements PerlElementTyp
       PerlParserUtil.DUMMY_BLOCK
     );
 
-  protected final @NotNull PerlFormattingContext myContext;
+  protected final @NotNull PurePerlFormattingContext myContext;
   private Indent myIndent;
-  private Boolean myIsFirst;
-  private Boolean myIsLast;
-  private Boolean myIsIncomple;
+  private Boolean myIsIncomplete;
   private final AtomicNotNullLazyValue<List<Block>> mySubBlocksProvider = AtomicNotNullLazyValue.createValue(
     () -> ContainerUtil.immutableList(buildSubBlocks())
   );
 
-  public PerlFormattingBlock(@NotNull ASTNode node, @NotNull PerlFormattingContext context) {
+  public PerlFormattingBlock(@NotNull ASTNode node, @NotNull PurePerlFormattingContext context) {
     super(node, context.getWrap(node), context.getAlignment(node));
     myContext = context;
-    myIndent = context.getIndentProcessor().getNodeIndent(node);
+    myIndent = context.getNodeIndent(node);
   }
 
   @Override
@@ -71,7 +68,7 @@ public class PerlFormattingBlock extends AbstractBlock implements PerlElementTyp
     myIndent = indent;
   }
 
-  protected final @NotNull PerlFormattingContext getContext() {
+  protected final @NotNull PurePerlFormattingContext getContext() {
     return myContext;
   }
 
@@ -250,29 +247,15 @@ public class PerlFormattingBlock extends AbstractBlock implements PerlElementTyp
     return myContext.getChildAttributes(this, newChildIndex);
   }
 
-  public boolean isLast() {
-    if (myIsLast == null) {
-      myIsLast = FormatterUtil.getNextNonWhitespaceSibling(myNode) == null;
-    }
-    return myIsLast;
-  }
-
-  public boolean isFirst() {
-    if (myIsFirst == null) {
-      myIsFirst = FormatterUtil.getPreviousNonWhitespaceSibling(myNode) == null;
-    }
-    return myIsFirst;
-  }
-
   @Override
   public final boolean isIncomplete() {
-    if (myIsIncomple == null) {
-      myIsIncomple = myContext.isIncomplete(this);
-      if (myIsIncomple == null) {
-        myIsIncomple = super.isIncomplete();
+    if (myIsIncomplete == null) {
+      myIsIncomplete = myContext.isIncomplete(this);
+      if (myIsIncomplete == null) {
+        myIsIncomplete = super.isIncomplete();
       }
     }
-    return myIsIncomple;
+    return myIsIncomplete;
   }
 
   protected boolean shouldCreateSubBlockFor(ASTNode node) {

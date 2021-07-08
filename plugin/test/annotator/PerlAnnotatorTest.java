@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2020 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@ import com.intellij.testFramework.ExpectedHighlightingData;
 import com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettings;
 import com.perl5.lang.perl.idea.inspections.*;
 import com.perl5.lang.perl.parser.moose.idea.inspections.MooseMultiAttributeAccessorInspection;
-import com.perl5.lang.perl.psi.PerlFile;
 import org.junit.Test;
 public class PerlAnnotatorTest extends PerlLightTestCase {
   @Override
@@ -115,6 +114,7 @@ public class PerlAnnotatorTest extends PerlLightTestCase {
   // duplicates caused by injection (double check)
   @Test
   public void testSpellChecker() {
+    //noinspection deprecation
     ExpectedHighlightingData.expectedDuplicatedHighlighting(() -> doInspectionTest(SpellCheckingInspection.class));
   }
 
@@ -153,23 +153,7 @@ public class PerlAnnotatorTest extends PerlLightTestCase {
   public void testFileLevelVariableInspection() {doInspectionTest(PerlFileLevelVariableInspection.class);}
 
   @Test
-  public void testBuiltInVariableRedeclarationInspection() {doInspectionTest(PerlBuiltinVariableRedeclarationInspection.class);}
-
-  @Test
-  public void testCpanfile() {
-    initWithCpanFile();
-    assertInstanceOf(myFixture.getFile(), PerlFile.class);
-    addVirtualFileFilter();
-    myFixture.enableInspections(PerlUseStrictInspection.class, PerlUseWarningsInspection.class);
-    myFixture.checkHighlighting(true, false, false);
-    removeVirtualFileFilter();
-  }
-
-  @Test
-  public void testUseStrictInspection() {doInspectionTest(PerlUseStrictInspection.class);}
-
-  @Test
-  public void testUseWarningsInspection() {doInspectionTest(PerlUseWarningsInspection.class);}
+  public void testBuiltInVariableRedeclarationInspection() { doInspectionTest(PerlBuiltinVariableRedeclarationInspection.class); }
 
   @Test
   public void testUnusedTypeGlobInspection() {doInspectionTest(PerlUnusedTypeGlobInspection.class);}
@@ -284,6 +268,7 @@ public class PerlAnnotatorTest extends PerlLightTestCase {
   // Caused by multiple entities created from one identifier
   @Test
   public void testClassAccessorDeprecation() {
+    //noinspection deprecation
     ExpectedHighlightingData.expectedDuplicatedHighlighting(this::doDeprecationTest);
   }
 

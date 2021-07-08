@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2019 Alexandr Evstigneev
+ * Copyright 2015-2021 Alexandr Evstigneev
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,72 @@ public class PerlFindUsagesTest extends PerlLightTestCase {
   protected String getBaseDataPath() {
     return "testData/findusages/perl";
   }
+
+  @Test
+  public void testMkAccessor() {doTest();}
+
+  @Test
+  public void testMkAccessorFbp() {doTest();}
+
+  @Test
+  public void testMkAccessorRo() {doTest();}
+
+  @Test
+  public void testMkAccessorRoFbp() {doTest();}
+
+  @Test
+  public void testMkAccessorWo() {doTest();}
+
+  @Test
+  public void testMkAccessorWoFbp() {doTest();}
+
+  @Test
+  public void testMooRwpAttr() {doTest();}
+
+  @Test
+  public void testMooRwpAttrAll() {doTest();}
+
+  @Test
+  public void testMooGeneratedClearer() {doTest();}
+
+  @Test
+  public void testMooGeneratedPredicate() {doTest();}
+
+  @Test
+  public void testMooCustomClearer() {doTest();}
+
+  @Test
+  public void testMooCustomClearerBase() {doTest();}
+
+  @Test
+  public void testMooCustomClearerBaseRwp() {doTest();}
+
+  @Test
+  public void testMooCustomPredicate() {doTest();}
+
+  @Test
+  public void testMooCustomPredicateBase() {doTest();}
+
+  @Test
+  public void testMooCustomPredicateBaseRwp() {doTest();}
+
+  @Test
+  public void testMooGeneratedClearerAll() {doTest();}
+
+  @Test
+  public void testMooGeneratedClearerUnderscored() {doTest();}
+
+  @Test
+  public void testMooGeneratedClearerUnderscoredAll() {doTest();}
+
+  @Test
+  public void testMooGeneratedPredicateAll() {doTest();}
+
+  @Test
+  public void testMooGeneratedPredicateUnderscored() {doTest();}
+
+  @Test
+  public void testMooGeneratedPredicateUnderscoredAll() {doTest();}
 
   @Test
   public void testPodIndexWithAngles() {doTest();}
