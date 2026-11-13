@@ -1,2 +1,0 @@
-Foo::Bar::SINGLE_CONST(<caret>)
-No element

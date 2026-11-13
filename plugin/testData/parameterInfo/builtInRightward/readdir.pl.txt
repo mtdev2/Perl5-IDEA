@@ -1,2 +1,0 @@
-readdir <caret> 
-No element

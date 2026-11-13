@@ -1,2 +1,0 @@
-die <caret> 
-No element

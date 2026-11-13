@@ -1,0 +1,152 @@
+/*
+ * Copyright 2015-2025 Alexandr Evstigneev
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.perl5.lang.perl.idea.sdk.versionManager;
+
+import com.intellij.openapi.util.NlsSafe;
+import com.intellij.ui.CollectionComboBoxModel;
+import com.intellij.ui.ColoredListCellRenderer;
+import com.intellij.ui.ComboboxSpeedSearch;
+import com.intellij.ui.SimpleTextAttributes;
+import com.intellij.util.ObjectUtils;
+import com.perl5.PerlBundle;
+import org.jetbrains.annotations.Nls;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class PerlInstallForm {
+  private final @NotNull InstallFormHelper myHelper;
+
+  private @NotNull JComboBox<String> myDistributionsComboBox;
+  private @NotNull JPanel myRootPanel;
+  private @NotNull JPanel myOptionsPanel;
+  private @NotNull JCheckBox myAddInstalledPerl5ToCheckBox;
+  private @NotNull JCheckBox mySetInstalledPerl5ForCheckBox;
+
+  public PerlInstallForm(@Nullable PerlInstallFormOptions optionsForm,
+                         @NotNull InstallFormHelper helper,
+                         @NotNull List<String> distributionsList) {
+    if (optionsForm != null) {
+      myOptionsPanel.add(optionsForm.getRootPanel(), BorderLayout.CENTER);
+    }
+    myHelper = helper;
+
+    distributionsList.sort(helper);
+
+    myDistributionsComboBox.setModel(new CollectionComboBoxModel<>(distributionsList));
+    myDistributionsComboBox.addActionListener(e -> updateState());
+    myDistributionsComboBox.setRenderer(new ColoredListCellRenderer<>() {
+      @Override
+      protected void customizeCellRenderer(@NotNull JList<? extends String> list,
+                                           @Nls @Nullable String value,
+                                           int index,
+                                           boolean selected,
+                                           boolean hasFocus) {
+        if (value == null) {
+          return;
+        }
+        setIcon(myHelper.getIcon(value));
+        if (myHelper.isInstalled(value)) {
+          append(myHelper.cleanDistributionItem(value)).append(PerlBundle.message("installed"), SimpleTextAttributes.GRAY_ATTRIBUTES);
+        }
+        else {
+          append(value);
+        }
+      }
+    });
+    ComboboxSpeedSearch.installSpeedSearch(myDistributionsComboBox, it -> it);
+    myAddInstalledPerl5ToCheckBox.addChangeListener(e -> updateState());
+    updateState();
+  }
+
+  public void disableChooseCheckbox() {
+    mySetInstalledPerl5ForCheckBox.setEnabled(false);
+  }
+
+  protected void updateState() {
+    myAddInstalledPerl5ToCheckBox.setEnabled(isAddInstalledPerl());
+    myHelper.changed(this);
+  }
+
+  public boolean isAddInstalledPerl() {
+    return myAddInstalledPerl5ToCheckBox.isSelected();
+  }
+
+  public boolean isChooseInstalledPerl() {
+    return mySetInstalledPerl5ForCheckBox.isSelected();
+  }
+
+  public @NotNull String getSelectedDistributionId() {
+    return myHelper.cleanDistributionItem(ObjectUtils.notNull((String)myDistributionsComboBox.getSelectedItem(), ""));
+  }
+
+  public @NotNull JPanel getRootPanel() {
+    return myRootPanel;
+  }
+
+  public static void configureThreadsCombobox(@NotNull JComboBox<Integer> threadsComboBox) {
+    var coresCount = Runtime.getRuntime().availableProcessors();
+    List<Integer> threadsList = new ArrayList<>(coresCount);
+    for (int i = 1; i <= coresCount; i++) {
+      threadsList.add(i);
+    }
+    threadsComboBox.setModel(new CollectionComboBoxModel<>(threadsList));
+    threadsComboBox.setRenderer(new ColoredListCellRenderer<>() {
+      @Override
+      protected void customizeCellRenderer(@NotNull JList<? extends Integer> list,
+                                           Integer value,
+                                           int index,
+                                           boolean selected,
+                                           boolean hasFocus) {
+        if (value == 1) {
+          append(PerlBundle.message("single.thread"));
+        }
+        else {
+          append(Integer.toString(value)).append(PerlBundle.message("threads"));
+        }
+      }
+    });
+    threadsComboBox.setSelectedIndex(0);
+    ComboboxSpeedSearch.installSpeedSearch(threadsComboBox, Object::toString);
+  }
+
+  public interface InstallFormHelper extends Comparator<String> {
+    /**
+     * Invoked on sdk combobox change
+     */
+    void changed(@NotNull PerlInstallForm form);
+
+    /**
+     * Cleans {@code rawItem} from tech information, like {@code '(installed)'}
+     */
+    @NlsSafe
+    String cleanDistributionItem(@NotNull String rawItem);
+
+    /**
+     * @return true iff rawItem is marked as installed
+     */
+    boolean isInstalled(@NotNull String rawItem);
+
+    @Nullable
+    Icon getIcon(@NotNull String distribution);
+  }
+}

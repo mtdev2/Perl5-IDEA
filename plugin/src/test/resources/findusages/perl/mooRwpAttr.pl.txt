@@ -1,0 +1,7 @@
+Target: PerlLightSubDefinitionElement{myName='_set_test', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[$self, $new_value], myReturnValueFromCode=UNKNOWN_VALUE}($self, $new_value); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooRwpAttr.pl
+Total usages: 2
+	PerlSubNameElementImpl(Perl5: subname) at 81 in mooRwpAttr.pl, via: PerlSubReference at (81,85); text in range: 'test' => 1 results:
+	PerlLightSubDefinitionElement{myName='test', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooRwpAttr.pl
+
+	PerlSubNameElementImpl(Perl5: subname) at 96 in mooRwpAttr.pl, via: PerlSubReference at (96,105); text in range: '_set_test' => 1 results:
+	PerlLightSubDefinitionElement{myName='_set_test', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[$self, $new_value], myReturnValueFromCode=UNKNOWN_VALUE}($self, $new_value); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooRwpAttr.pl

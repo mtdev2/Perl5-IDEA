@@ -1,0 +1,288 @@
+/*
+ * Copyright 2015-2026 Alexandr Evstigneev
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+{
+  generate=[psi-factory="no"]
+  psiVisitorName="PodVisitorGenerated"
+  elementTypeHolderClass="com.perl5.lang.pod.parser.PodElementTypesGenerated"
+  fallbackStubElementType="com.intellij.psi.tree.IElementType"
+
+  elementTypeFactory="com.perl5.lang.pod.elementTypes.PodElementTypeFactory.getElementType"
+  tokenTypeFactory="com.perl5.lang.pod.elementTypes.PodElementTypeFactory.getTokenType"
+
+  parserClass="com.perl5.lang.pod.parser.PodParser"
+  extends="com.perl5.lang.pod.parser.psi.mixin.PodCompositeElementMixin"
+
+  stubClass("pod_format_index|head1_section|head2_section|head3_section|head4_section|item_section|pod_paragraph|unknown_section")="com.perl5.lang.pod.parser.psi.stubs.PodSectionStub"
+
+  mixin("head1_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionH1"
+  mixin("head2_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionH2"
+  mixin("head3_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionH3"
+  mixin("head4_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionH4"
+  mixin("pod_paragraph")="com.perl5.lang.pod.parser.psi.mixin.PodSectionParagraph"
+  mixin("pod_verbatim_paragraph")="com.perl5.lang.pod.parser.psi.mixin.PodSectionVerbatimParagraphMixin"
+  mixin("unknown_section")="com.perl5.lang.pod.parser.psi.mixin.PodUnknownSectionMixIn"
+
+  mixin("over_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionOver"
+  mixin("over_section_content")="com.perl5.lang.pod.parser.psi.mixin.PodOverSectionContent"
+  mixin("item_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionItem"
+  mixin("begin_section|for_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionFormattedMixin"
+
+  mixin("link_section")="com.perl5.lang.pod.parser.psi.mixin.PodCompositeElementMixin"
+  mixin(".+_section")="com.perl5.lang.pod.parser.psi.mixin.PodSectionMixin"
+
+  mixin("item_section_title")="com.perl5.lang.pod.parser.psi.mixin.PodSectionItemTitleMixin"
+
+  mixin("pod_format_bold")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterB"
+  mixin("pod_format_code")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterC"
+  mixin("pod_format_escape")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterE"
+  mixin("pod_format_file")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterF"
+  mixin("pod_format_italic")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterI"
+
+  mixin("pod_format_link")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterL"
+
+  mixin("pod_format_nbsp")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterS"
+  mixin("pod_format_index")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterX"
+  mixin("pod_format_null")="com.perl5.lang.pod.parser.psi.mixin.PodFormatterZ"
+
+  implements(".+section_content")="com.perl5.lang.pod.parser.psi.PodSectionContent"
+  implements("section_title")="com.perl5.lang.pod.parser.psi.PodSectionTitle"
+
+  psiClassPrefix="Psi"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.perl5.lang.pod.psi"
+  psiImplPackage="com.perl5.lang.pod.psi.impl"
+
+  elementTypeClass="com.perl5.lang.pod.elementTypes.PodElementType"
+  tokenTypeClass="com.perl5.lang.pod.elementTypes.PodTokenType"
+  parserUtilClass="com.perl5.lang.pod.parser.PodParserUtil"
+
+
+//  psiImplUtilClass="com.perl5.lang.pod.psi.impl.PodPsiImplUtil"
+
+    tokens=[
+        POD_NEWLINE='NL'
+
+        POD_POD='=pod'
+
+        POD_HEAD1='=head1'
+        POD_HEAD2='=head2'
+        POD_HEAD3='=head3'
+        POD_HEAD4='=head4'
+
+        POD_OVER='=over'
+        POD_ITEM='=item'
+        POD_BACK='=back'
+
+	POD_UNKNOWN='=unknown'
+
+        POD_BEGIN='=begin'
+        POD_FORMATTED_BLOCK='formatted_block'
+        POD_END='=end'
+        POD_FORMAT_NAME='format_name'
+        POD_FOR='=for'
+
+        POD_ENCODING='=encoding'
+        POD_ENCODING_NAME='encoding_name'
+
+        POD_CUT='=cut'
+
+        POD_CODE='code'
+
+        POD_ANGLE_LEFT='<'
+        POD_ANGLE_RIGHT='>'
+        POD_PAREN_LEFT='('
+        POD_PAREN_RIGHT=')'
+        POD_BRACKET_LEFT='['
+        POD_BRACKET_RIGHT=']'
+        POD_BRACE_LEFT='{'
+        POD_BRACE_RIGHT='}'
+
+        POD_QUOTE_DOUBLE='"'
+        POD_QUOTE_SINGLE="'"
+        POD_QUOTE_TICK='`'
+
+        POD_I='I'	// italic
+        POD_B='B'	// bold
+        POD_C='C'	// code
+        POD_L='L'	// hyperlink
+        POD_E='E'	// escape
+        POD_F='F'	// filename
+        POD_S='S'	// nbsp
+        POD_X='X'	// index
+        POD_Z='Z'	// null
+
+        POD_IDENTIFIER='identifier'
+        POD_PACKAGE='package'
+        POD_NUMBER='number'
+        POD_INDENT_LEVEL='indent_level'
+        POD_SYMBOL='symbol'
+
+        POD_DIV='/'
+        POD_BACKREF='\'
+        POD_ASTERISK='*'
+        POD_PIPE='|'
+        POD_COLON=':'
+    ]
+
+}
+
+root ::= pod_file_item *
+
+private pod_file_item ::=
+!<<eof>>
+{
+	head1_section
+	| head2_section
+	| head3_section
+	| head4_section
+	| any_level_item
+	| item_section
+}
+
+private any_level_item ::=
+	pod_section
+	| over_section
+	| pod_format_indexes
+	| for_section
+	| encoding_section
+	| unknown_section
+	| cut_section
+	| pod_paragraph
+	| pod_verbatim_paragraph
+	| 'NL'+
+
+private pod_format_indexes ::= pod_format_index+ {'NL'+ | <<eof>>}
+
+pod_paragraph ::= pod_paragraph_content
+pod_verbatim_paragraph ::= 'code'
+
+private pod_paragraph_content ::= pod_term+ 'NL'*
+
+pod_section ::= '=pod'
+
+private parse_section_title ::= section_title 'NL'*
+section_title ::= pod_term*
+
+private parse_item_section_title ::= '*' pod_format_index* | POD_NUMBER pod_format_index* | item_section_title 'NL'*
+item_section_title ::= pod_term+
+
+head1_section ::= '=head1' [ parse_section_title [head1_section_content]] {pin=1}
+head1_section_content ::= head1_section_item *
+private head1_section_item ::= head2_section | head3_section | head4_section | any_level_item
+
+//private recover_pod_section ::= !(POD_HEAD1|POD_HEAD2|POD_HEAD3|POD_HEAD4|POD_OVER|POD_CUT|POD_POD|POD_FOR|POD_BEGIN|POD_ENCODING|POD_UNKNOWN)
+
+head2_section ::= '=head2' [parse_section_title [head2_section_content]] {pin=1}
+head2_section_content ::= head2_section_item *
+private head2_section_item ::= head3_section | head4_section | any_level_item
+
+head3_section ::= '=head3' [parse_section_title [head3_section_content]] {pin=1}
+head3_section_content ::= head3_section_item *
+private head3_section_item ::= head4_section | any_level_item
+
+head4_section ::= '=head4' [parse_section_title [head4_section_content]] {pin=1}
+head4_section_content ::= head4_section_item *
+private head4_section_item ::= any_level_item
+
+over_section ::= over_section_opener  over_section_content over_section_closer {pin=1}
+private over_section_opener ::= '=over' [<<checkAndConvert 'POD_NUMBER, POD_INDENT_LEVEL'>>] 'NL'+ {pin=1}
+private over_section_closer ::= '=back' 'NL'* {pin=1}
+over_section_content ::= over_section_item* {recoverWhile=recover_over_section}
+private over_section_item ::=
+ 	item_section
+	| any_level_item
+item_section ::= '=item' {
+        parse_item_section_title [item_section_content] |
+        'NL' + [item_section_content]
+        } {pin=1}
+item_section_content ::= any_level_item +
+private recover_over_section ::= !(<<eof>>|'=back'|'=head1'|'=head2'|'=head3'|'=head4')
+
+pod_section_format ::= ':' ? <<collapseNonSpaceTo 'POD_FORMAT_NAME '>>
+
+for_section ::= {'=for'|'=begin'|'=end'} parse_for_section_content 'NL'* {pin=1}
+private parse_for_section_content ::=
+	&':' pod_section_format for_section_content
+	 | pod_section_format <<parsePodSectionContent 'POD_NEWLINE, FOR_SECTION_CONTENT, "Unclosed for section"'>>
+
+for_section_content ::=	pod_term * // fixme we should merge when no colon in format
+
+encoding_section ::= '=encoding' <<collapseNonSpaceTo 'POD_ENCODING_NAME '>> 'NL'+ {pin=1}
+
+cut_section ::= '=cut' [parse_section_title] 'NL'* {pin=1}
+
+unknown_section ::= '=unknown' [parse_section_title] 'NL'*  {pin=1}
+
+
+private pod_term ::= pod_format | pod_token
+private pod_token ::= '/' | '\' | '*' | '|' | ':'
+                      | '"' | "'" | '`'
+                      | '(' | ')' | '[' | ']' | '{' | '}' | '<' | '>'
+                      | 'identifier' | 'number' | 'symbol'
+
+private pod_format ::=
+ 	pod_format_italic
+ 	| pod_format_bold
+ 	| pod_format_code
+ 	| pod_format_link
+ 	| pod_format_escape
+ 	| pod_format_file
+ 	| pod_format_nbsp
+ 	| pod_format_index
+ 	| pod_format_null
+
+pod_format_italic ::= 'I' parse_default_section_content {pin=1}
+pod_format_bold ::= 'B' parse_default_section_content {pin=1}
+pod_format_code ::= 'C' parse_default_section_content {pin=1}
+pod_format_escape ::= 'E' parse_default_section_content {pin=1}
+pod_format_file ::= 'F' parse_default_section_content {pin=1}
+pod_format_nbsp ::= 'S' parse_default_section_content {pin=1}
+pod_format_index ::= 'X' parse_default_section_content {pin=1}
+pod_format_null ::= 'Z' parse_default_section_content {pin=1}
+pod_format_link ::= 'L' <<parse_section_content link_formatting_section>> {pin=1}
+
+private parse_default_section_content ::= <<parse_section_content default_formatting_section_item>>
+private meta parse_section_content ::= '<' <<formatting_section_content <<x1>>>> ? <<completeOrReport 'POD_ANGLE_RIGHT, "Malformed formatter"'>> {pin=1}
+meta formatting_section_content ::=  <<x1>>
+private default_formatting_section_item ::= {&formatting_section_allowed_tokens pod_term}+
+private formatting_section_allowed_tokens ::= !('NL'|'>')
+
+private link_formatting_section ::= link_with_title | link_after_title
+private link_with_title ::= link_text '|'  link_after_title {pin=2}
+
+private link_after_title ::= {
+     link_url |
+     link_name [parse_link_section] |
+     parse_link_section |
+     parse_quoted_section |
+     parse_unquoted_section
+   } & '>'
+
+//          | default_formatting_section_item // falling back to default
+
+link_text ::= {&link_text_negation pod_term}+ &'|'
+private link_text_negation ::= !('>'|'NL'|'/'|'|'|'L')
+
+link_name ::= {&link_name_negation pod_token}+ &('/'|'>')
+private link_name_negation ::=  !('"'|'>'|'NL'|'/')
+
+private parse_link_section ::= '/' {parse_quoted_section | parse_unquoted_section} {pin=1}
+private parse_unquoted_section ::= <<link_section section_negation>>
+private parse_quoted_section ::= '"' <<link_section quoted_section_negation>> '"' &'>'
+meta link_section ::= {&<<x1>> pod_term}+
+private section_negation ::= !('>'|'NL'|'L')
+private quoted_section_negation ::= !('"' '>'|'>'|'NL'|'L')
+link_url ::= 'identifier' ':' '/' '/' {!('>'|'NL') pod_token}+ &'>'

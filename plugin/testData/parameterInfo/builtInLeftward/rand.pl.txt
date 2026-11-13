@@ -1,2 +1,0 @@
-rand(<caret>);
-No element

@@ -1,0 +1,42 @@
+Text: _clear_underfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: _clear_underfield
+	PsiElement: PerlLightSubDefinitionElement{myName='_clear_underfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 99 in mooGenerated.pl
+Text: _has_underfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: _has_underfield
+	PsiElement: PerlLightSubDefinitionElement{myName='_has_underfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 99 in mooGenerated.pl
+Text: _set__underfield; Tail: ($new_value); Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: _set__underfield
+	PsiElement: PerlLightSubDefinitionElement{myName='_set__underfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[$self, $new_value], myReturnValueFromCode=UNKNOWN_VALUE}($self, $new_value); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 99 in mooGenerated.pl
+Text: _set_testfield; Tail: ($new_value); Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: _set_testfield
+	PsiElement: PerlLightSubDefinitionElement{myName='_set_testfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[$self, $new_value], myReturnValueFromCode=UNKNOWN_VALUE}($self, $new_value); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 39 in mooGenerated.pl
+Text: _underfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: _underfield
+	PsiElement: PerlLightSubDefinitionElement{myName='_underfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 99 in mooGenerated.pl
+Text: after; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: after
+	PsiElement: Implicit sub: after()
+Text: around; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: around
+	PsiElement: Implicit sub: around()
+Text: before; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: before
+	PsiElement: Implicit sub: before()
+Text: clear_testfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: clear_testfield
+	PsiElement: PerlLightSubDefinitionElement{myName='clear_testfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 39 in mooGenerated.pl
+Text: extends; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: extends
+	PsiElement: Implicit sub: extends()
+Text: has; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: has
+	PsiElement: Implicit sub: has()
+Text: has_testfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: has_testfield
+	PsiElement: PerlLightSubDefinitionElement{myName='has_testfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 39 in mooGenerated.pl
+Text: testfield; Tail: null; Type: Test::Namespace; Icon: /method_gutter_icon.png; Type Icon: null
+	Lookups: testfield
+	PsiElement: PerlLightSubDefinitionElement{myName='testfield', myNamespaceName='Test::Namespace', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 39 in mooGenerated.pl
+Text: with; Tail: null; Type: Moo; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: with
+	PsiElement: Implicit sub: with()

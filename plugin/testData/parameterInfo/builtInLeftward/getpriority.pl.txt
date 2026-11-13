@@ -1,2 +1,0 @@
-getpriority(<caret>);
-No element

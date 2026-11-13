@@ -1,0 +1,126 @@
+Subtree: HTML (HTML)
+HtmlFile:issue1262.tt
+  PsiElement(HTML_DOCUMENT)
+    PsiElement(XML_PROLOG)
+      <empty list>
+    HtmlTag:script
+      XmlToken:XML_START_TAG_START('<')
+      XmlToken:XML_NAME('script')
+      PsiElement(XML_ATTRIBUTE)
+        XmlToken:XML_NAME('type')
+        XmlToken:XML_EQ('=')
+        PsiElement(XML_ATTRIBUTE_VALUE)
+          XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+          XmlToken:XML_ATTRIBUTE_VALUE_TOKEN('text/javascript')
+          XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+      XmlToken:XML_TAG_END('>')
+      JSEmbeddedContent
+        JSExpressionStatement
+          JSOuterLanguageElementExpression
+            PsiElement(TT2: TT2_OUTER)('[% comments = 1 %]\n    [% IF comments # some comment here %]')
+        PsiComment(JS:END_OF_LINE_COMMENT)('//javacript comment')
+        JSExpressionStatement
+          JSOuterLanguageElementExpression
+            PsiElement(TT2: TT2_OUTER)('[% END %]')
+        JSFunction
+          JSAttributeList
+            <empty list>
+          PsiElement(JS:FUNCTION_KEYWORD)('function')
+          PsiElement(JS:IDENTIFIER)('calculate')
+          JSParameterList
+            PsiElement(JS:LPAR)('(')
+            JSParameter
+              PsiElement(JS:IDENTIFIER)('a')
+            PsiElement(JS:RPAR)(')')
+          JSBlockStatement
+            PsiElement(JS:LBRACE)('{')
+            JSExpressionStatement
+              JSOuterLanguageElementExpression
+                PsiElement(TT2: TT2_OUTER)('[% IF negative %]')
+            JSIfStatement
+              PsiElement(JS:IF_KEYWORD)('if')
+              PsiElement(JS:LPAR)('(')
+              JSBinaryExpression
+                JSReferenceExpression
+                  PsiElement(JS:IDENTIFIER)('a')
+                PsiElement(JS:LT)('<')
+                JSLiteralExpression
+                  PsiElement(JS:NUMERIC_LITERAL)('0')
+              PsiElement(JS:RPAR)(')')
+              JSBlockStatement
+                PsiElement(JS:LBRACE)('{')
+                JSExpressionStatement
+                  JSCallExpression
+                    JSReferenceExpression
+                      PsiElement(JS:IDENTIFIER)('alert')
+                    JSArgumentList
+                      PsiElement(JS:LPAR)('(')
+                      JSLiteralExpression
+                        PsiElement(JS:STRING_LITERAL)(''Negative'')
+                      PsiElement(JS:RPAR)(')')
+                  PsiElement(JS:SEMICOLON)(';')
+                JSReturnStatement
+                  PsiElement(JS:RETURN_KEYWORD)('return')
+                  JSLiteralExpression
+                    PsiElement(JS:FALSE_KEYWORD)('false')
+                  PsiElement(JS:SEMICOLON)(';')
+                PsiElement(JS:RBRACE)('}')
+            JSExpressionStatement
+              JSOuterLanguageElementExpression
+                PsiElement(TT2: TT2_OUTER)('[% END %]')
+            JSReturnStatement
+              PsiElement(JS:RETURN_KEYWORD)('return')
+              JSBinaryExpression
+                JSReferenceExpression
+                  PsiElement(JS:IDENTIFIER)('a')
+                PsiElement(JS:PLUS)('+')
+                JSLiteralExpression
+                  PsiElement(JS:NUMERIC_LITERAL)('10')
+              PsiElement(JS:SEMICOLON)(';')
+            PsiElement(JS:RBRACE)('}')
+      XmlToken:XML_END_TAG_START('</')
+      XmlToken:XML_NAME('script')
+      XmlToken:XML_TAG_END('>')
+--------------------------------------------------------------------------------
+Subtree: Template Toolkit 2 (Template Toolkit 2)
+Template Toolkit File
+  PsiComment(TT2: TT2_HTML)('<script type="text/javascript">\n    ')
+  PsiElement(TT2: [%)('[%')
+  PsiSetDirectiveImpl(TT2: SET_DIRECTIVE)
+    PsiAssignExprImpl(TT2: ASSIGN_EXPR)
+      PsiIdentifierExprImpl(TT2: IDENTIFIER_EXPR)
+        PsiElement(TT2: TT2_IDENTIFIER)('comments')
+      PsiElement(TT2: =)('=')
+      PsiTermExprImpl(TT2: TERM_EXPR)
+        PsiElement(TT2: TT2_NUMBER_SIMPLE)('1')
+  PsiElement(TT2: %])('%]')
+  PsiIfBlockImpl(TT2: IF_BLOCK)
+    PsiIfBranchImpl(TT2: IF_BRANCH)
+      PsiElement(TT2: [%)('[%')
+      PsiIfDirectiveImpl(TT2: IF_DIRECTIVE)
+        PsiElement(TT2: IF)('IF')
+        PsiIdentifierExprImpl(TT2: IDENTIFIER_EXPR)
+          PsiElement(TT2: TT2_IDENTIFIER)('comments')
+      PsiComment(TT2: LINE_COMMENT)('# some comment here ')
+      PsiElement(TT2: %])('%]')
+      PsiComment(TT2: TT2_HTML)('\n     //javacript comment\n    ')
+    PsiElement(TT2: [%)('[%')
+    PsiEndDirectiveImpl(TT2: END_DIRECTIVE)
+      PsiElement(TT2: END)('END')
+    PsiElement(TT2: %])('%]')
+  PsiComment(TT2: TT2_HTML)('\n\n    function calculate(a){\n    ')
+  PsiIfBlockImpl(TT2: IF_BLOCK)
+    PsiIfBranchImpl(TT2: IF_BRANCH)
+      PsiElement(TT2: [%)('[%')
+      PsiIfDirectiveImpl(TT2: IF_DIRECTIVE)
+        PsiElement(TT2: IF)('IF')
+        PsiIdentifierExprImpl(TT2: IDENTIFIER_EXPR)
+          PsiElement(TT2: TT2_IDENTIFIER)('negative')
+      PsiElement(TT2: %])('%]')
+      PsiComment(TT2: TT2_HTML)('\n        if( a < 0){\n            alert('Negative');\n            return false;\n        }\n    ')
+    PsiElement(TT2: [%)('[%')
+    PsiEndDirectiveImpl(TT2: END_DIRECTIVE)
+      PsiElement(TT2: END)('END')
+    PsiElement(TT2: %])('%]')
+  PsiComment(TT2: TT2_HTML)('\n        return a+10;\n    }\n\n</script>')
+--------------------------------------------------------------------------------

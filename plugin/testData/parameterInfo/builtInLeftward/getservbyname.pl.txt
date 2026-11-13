@@ -1,2 +1,0 @@
-getservbyname(<caret>);
-No element

@@ -1,2 +1,0 @@
-sysopen(<caret>);
-No element

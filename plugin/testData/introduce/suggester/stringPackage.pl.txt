@@ -1,9 +1,0 @@
-scalar
-value
-string
-package
-namespace
-module
-> baz
-bar_baz
-foo_bar_baz

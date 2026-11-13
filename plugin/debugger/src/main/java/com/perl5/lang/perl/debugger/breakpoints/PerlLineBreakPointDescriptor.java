@@ -1,0 +1,98 @@
+/*
+ * Copyright 2015-2026 Alexandr Evstigneev
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.perl5.lang.perl.debugger.breakpoints;
+
+import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.openapi.vfs.VirtualFileManager;
+import com.intellij.xdebugger.XExpression;
+import com.intellij.xdebugger.XSourcePosition;
+import com.intellij.xdebugger.breakpoints.SuspendPolicy;
+import com.intellij.xdebugger.breakpoints.XLineBreakpoint;
+import com.perl5.lang.perl.debugger.PerlDebugThread;
+import org.jetbrains.annotations.Nullable;
+
+
+public class PerlLineBreakPointDescriptor {
+  @SuppressWarnings("unused") private String path;
+  @SuppressWarnings("unused") private int line;
+  @SuppressWarnings("unused") private boolean enabled;
+  @SuppressWarnings("unused") private String condition;
+  @SuppressWarnings("unused") private boolean remove;
+  @SuppressWarnings("unused") private String action;
+  @SuppressWarnings("unused") private boolean suspend;
+
+  public static @Nullable PerlLineBreakPointDescriptor createFromBreakpoint(XLineBreakpoint<PerlLineBreakpointProperties> breakpoint,
+                                                                            PerlDebugThread debugThread) {
+    String fileUrl = breakpoint.getFileUrl();
+
+    VirtualFile virtualFile = VirtualFileManager.getInstance().findFileByUrl(fileUrl);
+    if (virtualFile == null) {
+      return null;
+    }
+    String virtualFilePath = virtualFile.getCanonicalPath();
+    if (virtualFilePath == null) {
+      return null;
+    }
+    String filePath = debugThread.getDebugProfileState().mapPathToRemote(virtualFilePath);
+    if (filePath == null) {
+      return null;
+    }
+    PerlLineBreakPointDescriptor descriptor = new PerlLineBreakPointDescriptor();
+    descriptor.path = filePath;
+    descriptor.line = breakpoint.getLine();
+    descriptor.enabled = breakpoint.isEnabled();
+    descriptor.remove = false;
+    XExpression logExpressionObject = breakpoint.getLogExpressionObject();
+    if (logExpressionObject != null) {
+      descriptor.action = logExpressionObject.getExpression();
+    }
+    SuspendPolicy suspendPolicy = breakpoint.getSuspendPolicy();
+    descriptor.suspend = suspendPolicy != SuspendPolicy.NONE;
+
+    XExpression conditionExpression = breakpoint.getConditionExpression();
+    descriptor.condition = conditionExpression != null ? conditionExpression.getExpression() : "";
+    return descriptor;
+  }
+
+  public static @Nullable PerlLineBreakPointDescriptor createRemoveFromBreakpoint(XLineBreakpoint<PerlLineBreakpointProperties> breakpoint,
+                                                                                  PerlDebugThread debugThread) {
+    PerlLineBreakPointDescriptor descriptor = createFromBreakpoint(breakpoint, debugThread);
+
+    if (descriptor != null) {
+      descriptor.remove = true;
+    }
+
+    return descriptor;
+  }
+
+  public static @Nullable PerlLineBreakPointDescriptor createFromSourcePosition(XSourcePosition position, PerlDebugThread debugThread) {
+    VirtualFile virtualFile = position.getFile();
+    String virtualFilePath = virtualFile.getCanonicalPath();
+    if (virtualFilePath == null) {
+      return null;
+    }
+    String filePath = debugThread.getDebugProfileState().mapPathToRemote(virtualFilePath);
+    if (filePath == null) {
+      return null;
+    }
+
+    PerlLineBreakPointDescriptor descriptor = new PerlLineBreakPointDescriptor();
+    descriptor.path = filePath;
+    descriptor.line = position.getLine();
+    return descriptor;
+  }
+}

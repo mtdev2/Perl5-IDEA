@@ -1,16 +1,34 @@
 # Perl5 plugins for IntelliJ IDEA
 
-[![Java CI with Gradle](https://github.com/Camelcade/Perl5-IDEA/workflows/Java%20CI%20with%20Gradle/badge.svg)](https://github.com/Camelcade/Perl5-IDEA/actions?query=workflow%3A%22Java+CI+with+Gradle%22)
-[![Coverage Status](https://coveralls.io/repos/github/Camelcade/Perl5-IDEA/badge.svg?branch=master)](https://coveralls.io/github/Camelcade/Perl5-IDEA?branch=master)
-[![Chat on gitter](https://badges.gitter.im/Camelcade/Perl5-IDEA.png)](https://gitter.im/IntelliJ-Plugin-Perl5/Lobby)
+[![Project Validation](https://github.com/Camelcade/Perl5-IDEA/actions/workflows/push_and_pr.yml/badge.svg)](https://github.com/Camelcade/Perl5-IDEA/actions/workflows/push_and_pr.yml)
+[![Coverage Status](https://coveralls.io/repos/github/Camelcade/Perl5-IDEA/badge.svg?branch=master&dummy)](https://coveralls.io/github/Camelcade/Perl5-IDEA?branch=master)
+[![Translate Camelcade](https://img.shields.io/badge/Translate-Camelcade-blue.svg)](https://explore.transifex.com/camelcade/perl5-plugin-for-intellij-idea/)
 
-[Support with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HJCUADZKY5G7E)
-|
-[Support with Yandex.Money](https://money.yandex.ru/to/41001227135087)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/7796)](https://plugins.jetbrains.com/plugin/7796-perl)
+[![Rating](https://img.shields.io/jetbrains/plugin/r/rating/7796)](https://plugins.jetbrains.com/plugin/7796-perl/reviews)
+[![Version](https://img.shields.io/jetbrains/plugin/v/7796)](https://plugins.jetbrains.com/plugin/7796-perl/versions)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Camelcade_Perl5-IDEA&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Camelcade_Perl5-IDEA)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Camelcade_Perl5-IDEA&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Camelcade_Perl5-IDEA)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Camelcade_Perl5-IDEA&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Camelcade_Perl5-IDEA)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Camelcade_Perl5-IDEA&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Camelcade_Perl5-IDEA)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Camelcade_Perl5-IDEA&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Camelcade_Perl5-IDEA)
 
 This repo contains a bundle of Perl5-related plugins for [JetBrains IDEs](https://www.jetbrains.com/).
 
-Current versions of plugins may be found in [JetBrains repo](https://plugins.jetbrains.com/).
+[![Project view](images/readme/project_tn.png)](/images/readme/project.png)
+[![Debugging](images/readme/debugging_tn.png)](/images/readme/debugging.png)
+[![Profiling, call tree](images/readme/profile_calltree_tn.png)](/images/readme/profile_calltree.png)
+[![Profiling, flame graph](images/readme/profile_flamegraph_tn.png)](/images/readme/profile_flamegraph.png)
+[![Running tests with coverage](images/readme/testwithcoverage_tn.png)](/images/readme/testwithcoverage.png)
+[![Perl settings](images/readme/settings_tn.png)](/images/readme/settings.png)
+
+Current versions of plugins may be found in the JetBrains
+repo: [Stable builds](https://plugins.jetbrains.com/plugin/7796-perl/versions/stable)
+or [EAP Builds](https://plugins.jetbrains.com/plugin/7796-perl/versions/eap).
+
+In order to get updates to EAP builds from the IDE, you need to add the EAP repository to the list of plugin
+repositories: `https://plugins.jetbrains.com/plugins/eap/list`
 
 #### This repository contains following plugins:
 
@@ -19,8 +37,8 @@ Current versions of plugins may be found in [JetBrains repo](https://plugins.jet
 - [Template Toolkit](http://www.template-toolkit.org/) Support (`lang.tt2`)
 - [Mojolicious](https://mojolicious.org/) Support (`lang.mojo`)
 - Mason framework (`lang.mason.framework`) - core plugin of Mason plugins:
-  - [HTML::Mason](https://metacpan.org/pod/HTML::Mason) Support (`lang.mason.htmlmason`) 
-  - [Mason2](https://metacpan.org/pod/Mason) Support (`lang.mason.mason2`) 
+  - [HTML::Mason](https://metacpan.org/pod/HTML::Mason) Support (`lang.mason.htmlmason`)
+  - [Mason2](https://metacpan.org/pod/Mason) Support (`lang.mason.mason2`)
 - Embedded Perl Support (`lang.embedded`) - adds support for php-like perl syntax with `<?` and `?>` markers.
 
 You can always build and install current development version of any plugin:
@@ -35,9 +53,7 @@ If you want to participate in development, don't forget to read our [contributio
 
 * [Camelcade twitter](https://twitter.com/CamelcadeIDE) - here you may find links to the most recent dev builds
 * [Camelcade wiki](https://github.com/hurricup/Perl5-IDEA/wiki)
-* [Gitter chat](https://gitter.im/IntelliJ-Plugin-Perl5/Lobby)
-* [Google group](https://groups.google.com/forum/#!forum/camelcade)
-* [Onion parsing comparison](http://evstigneev.com/onion_all.png)
+* [Discussions](https://github.com/Camelcade/Perl5-IDEA/discussions)
 
 YourKit supports open source projects with its full-featured <a href="https://www.yourkit.com/java/profiler/index.jsp">Java Profiler</a>.
 

@@ -1,2 +1,0 @@
-getprotoent <caret> 
-No element

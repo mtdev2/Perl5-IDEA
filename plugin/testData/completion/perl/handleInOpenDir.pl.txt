@@ -1,3 +1,0 @@
-Text: so; Tail: null; Type: sort expression; Icon: null; Type Icon: null
-	Lookups: so
-	Live template: Perl5/so

@@ -1,2 +1,0 @@
-seekdir <caret> 
-No element

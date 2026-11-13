@@ -1,2 +1,0 @@
-endhostent(<caret>);
-No element

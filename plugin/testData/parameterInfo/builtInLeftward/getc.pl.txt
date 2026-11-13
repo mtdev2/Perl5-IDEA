@@ -1,2 +1,0 @@
-getc(<caret>);
-No element

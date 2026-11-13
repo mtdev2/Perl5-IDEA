@@ -1,0 +1,7 @@
+Poly-named provider: PsiPerlSubCallImpl(SUB_CALL) at 24 in mooGeneratedPredicate.pl
+	PerlLightSubDefinitionElement{myName='test', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[$self, [$new_value]], myReturnValueFromCode=UNKNOWN_VALUE}($self, [$new_value]); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooGeneratedPredicate.pl
+	PerlLightSubDefinitionElement{myName='has_test', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooGeneratedPredicate.pl
+
+Poly-named provider: PsiPerlSubCallImpl(SUB_CALL) at 65 in mooGeneratedPredicate.pl
+	PerlLightSubDefinitionElement{myName='_underscored', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[$self, [$new_value]], myReturnValueFromCode=UNKNOWN_VALUE}($self, [$new_value]); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 69 in mooGeneratedPredicate.pl
+	PerlLightSubDefinitionElement{myName='_has_underscored', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 69 in mooGeneratedPredicate.pl

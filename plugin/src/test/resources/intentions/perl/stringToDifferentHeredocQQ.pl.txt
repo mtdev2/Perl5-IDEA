@@ -1,0 +1,10 @@
+<<"TESTM<caret>ARKER";
+this is a test of last
+TESTMARKER
+
+
+######################### PREVIEW #########################
+
+<<"CUSTOM_MARKER";
+this is a test of last
+CUSTOM_MARKER

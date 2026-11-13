@@ -1,0 +1,4 @@
+our (<caret>$scalar, @array, %hash);
+
+######################### PREVIEW #########################
+our ($scalar, @array, %hash);

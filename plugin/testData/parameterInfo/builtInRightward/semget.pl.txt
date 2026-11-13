@@ -1,2 +1,0 @@
-semget <caret> 
-No element

@@ -1,2 +1,0 @@
-readpipe(<caret>);
-No element

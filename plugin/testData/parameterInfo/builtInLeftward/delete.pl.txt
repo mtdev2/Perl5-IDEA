@@ -1,2 +1,0 @@
-delete(<caret>);
-No element

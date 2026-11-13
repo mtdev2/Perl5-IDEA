@@ -1,0 +1,38 @@
+<!--
+  ~ Copyright 2015-2020 Alexandr Evstigneev
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!--suppress PluginXmlPluginLogo -->
+<idea-plugin url="https://github.com/hurricup/Perl5-IDEA">
+  <id>com.perl5.lang.tt2</id>
+  <name>Template Toolkit Support</name>
+  <vendor email="hurricup@gmail.com" url="https://github.com/hurricup">Alexandr Evstigneev</vendor>
+  <category>Custom Languages</category>
+
+  <!-- please  see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products  -->
+
+  <dependencies>
+    <plugin id="com.perl5"/>
+    <plugin id="com.intellij.modules.lang"/>
+  </dependencies>
+
+  <content>
+    <module name="perl5.lang.tt2.common.main" loading="required"/>
+    <module name="perl5.lang.tt2.backend.main"/>
+    <module name="perl5.lang.tt2.frontend.main"/>
+    <module name="perl5.lang.tt2.frontend.split.main"/>
+  </content>
+</idea-plugin>

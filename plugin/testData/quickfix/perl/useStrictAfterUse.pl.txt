@@ -1,7 +1,0 @@
-package FooBar42;
-
-use warnings;
-use strict;
-use Foo::Bar;
-
-say 'hi';

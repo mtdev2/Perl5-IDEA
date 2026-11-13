@@ -1,0 +1,343 @@
+Usage: "var"; (18,21); writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 18 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: Implicit namespace: Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307
+
+
+Usage: "var"; (32,35); reading; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 32 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value read; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: Implicit namespace: Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307
+
+
+Usage: "var"; (39,42); reading; writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 39 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: Implicit namespace: Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307
+
+
+Usage: "var"; (125,128); writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 125 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PerlLightSubDefinitionElement{myName='somehelper', myNamespaceName='Mojolicious::Controller', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 100 in basic.ep
+
+
+Usage: "var"; (143,146); reading; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 143 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value read; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PerlLightSubDefinitionElement{myName='somehelper', myNamespaceName='Mojolicious::Controller', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 100 in basic.ep
+
+
+Usage: "var"; (154,157); reading; writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 154 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PerlLightSubDefinitionElement{myName='somehelper', myNamespaceName='Mojolicious::Controller', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 100 in basic.ep
+
+
+Usage: "var"; (185,188); writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 185 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307::somesub at 166 in basic.ep
+
+
+Usage: "var"; (203,206); reading; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 203 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value read; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307::somesub at 166 in basic.ep
+
+
+Usage: "var"; (214,217); reading; writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 214 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Mojo::Template::Sandbox::C67667C3630237E958EE90F12A11F307::somesub at 166 in basic.ep
+
+
+Usage: "var"; (245,248); writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 245 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlNamespaceDefinitionImpl(NAMESPACE)@Foo::Bar at 224 in basic.ep
+
+
+Usage: "var"; (259,262); reading; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 259 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value read; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlNamespaceDefinitionImpl(NAMESPACE)@Foo::Bar at 224 in basic.ep
+
+
+Usage: "var"; (266,269); reading; writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 266 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlNamespaceDefinitionImpl(NAMESPACE)@Foo::Bar at 224 in basic.ep
+
+
+Usage: "var"; (293,296); writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 293 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Foo::Bar::somesub at 274 in basic.ep
+
+
+Usage: "var"; (311,314); reading; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 311 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value read; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Foo::Bar::somesub at 274 in basic.ep
+
+
+Usage: "var"; (322,325); reading; writing; PerlVariableNameElementImpl(Perl5: SCALAR_NAME) at 322 in basic.ep
+ - Rule: NonCodeUsageGroupingRule
+    CodeUsageGroup: Code usages; null
+
+ - Rule: UsageScopeGroupingRule
+    : Production; /package.svg
+
+ - Rule: UsageTypeGroupingRule
+    UsageTypeGroup: Value write; null
+
+ - Rule: ModuleGroupingRule
+    ModuleUsageGroup: light_idea_test_case; /Module.svg
+
+ - Rule: PackageGroupingRule
+    PackageGroup: ; Package
+
+ - Rule: NonJavaFileGroupingRule
+    FileUsageGroup: basic.ep; /mojolicious.png
+
+ - Rule: PerlUsageGroupingRule
+    PsiElement: PsiPerlSubDefinitionImpl(SUB_DEFINITION)@Foo::Bar::somesub at 274 in basic.ep

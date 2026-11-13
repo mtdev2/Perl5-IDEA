@@ -1,0 +1,6 @@
+my $<selection>sec_ond<caret></selection> = q<sec'ond>;
+('first', $sec_ond, 'third');
+
+================ AFTER RENAME =================
+my $test_name<caret> = q<sec'ond>;
+('first', $test_name, 'third');

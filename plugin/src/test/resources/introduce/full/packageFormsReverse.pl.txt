@@ -1,0 +1,11 @@
+package Foo::Bar;
+
+my $<selection>foo_bar<caret></selection> = 'Foo::Bar';
+$foo_bar->method;
+$foo_bar->method;
+================ AFTER RENAME =================
+package Foo::Bar;
+
+my $test_name<caret> = 'Foo::Bar';
+$test_name->method;
+$test_name->method;

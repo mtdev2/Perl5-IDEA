@@ -1,2 +1,0 @@
-quotemeta(<caret>);
-No element

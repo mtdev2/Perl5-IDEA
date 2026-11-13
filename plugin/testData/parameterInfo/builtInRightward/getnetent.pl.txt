@@ -1,2 +1,0 @@
-getnetent <caret> 
-No element

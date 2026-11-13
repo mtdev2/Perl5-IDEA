@@ -1,2 +1,0 @@
-ucfirst(<caret>);
-No element

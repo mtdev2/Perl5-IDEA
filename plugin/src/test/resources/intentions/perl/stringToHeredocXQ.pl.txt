@@ -1,0 +1,10 @@
+<<`HERED<caret>OC`;
+this is a $variable test
+HEREDOC
+
+
+######################### PREVIEW #########################
+
+<<`HEREDOC`;
+this is a $variable test
+HEREDOC

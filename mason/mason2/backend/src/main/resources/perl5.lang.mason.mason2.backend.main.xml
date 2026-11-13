@@ -1,0 +1,78 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.plugin.backend.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.mason2.common.main"/>
+    <module name="perl5.lang.mason.framework.backend.main" namespace="hurricup"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.framework.common.main" namespace="hurricup"/>
+  </dependencies>
+
+  <resource-bundle>messages.MasonBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <namespaceDefinitionHalder forClass="com.perl5.lang.mason2.psi.impl.MasonNamespaceDefinitionImpl"
+                               implementationClass="com.perl5.lang.mason2.psi.impl.MasonBackendNamespaceDefinitionHandler"/>
+    <codeGenerator forClass="com.perl5.lang.mason2.psi.impl.MasonTemplatingFileImpl"
+                   implementationClass="com.perl5.lang.mason2.idea.generation.Mason2TemplatingCodeGeneratorImpl"/>
+    <settings.configurable.extension implementation="com.perl5.lang.mason2.idea.configuration.Mason2SettingsConfigurableExtension"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <jps.plugin/>
+
+    <!--Mason2 settings -->
+    <applicationService serviceImplementation="com.perl5.lang.mason2.psi.impl.MasonNamespaceDefinitionBackendService"
+                        serviceInterface="com.perl5.lang.mason2.psi.impl.MasonNamespaceDefinitionService"/>
+
+    <annotator language="Perl5" implementationClass="com.perl5.lang.mason2.idea.annotator.MasonAnnotator"
+               order="after PERL_SUBS_ANNOTATOR"/>
+
+    <stubElementTypeHolder class="com.perl5.lang.mason2.elementType.Mason2ElementTypes"/>
+    <stubElementRegistryExtension implementation="com.perl5.lang.mason2.stubs.Mason2StubRegistryExtension"/>
+    <languageStubDefinition language="Mason2" implementationClass="com.perl5.lang.perl.psi.stubs.PerlStubDefinition"/>
+    <languageStubDefinition language="Mason2 Templating Language"
+                            implementationClass="com.perl5.lang.perl.psi.stubs.PerlTemplatingStubDefinition"/>
+
+    <stubIndex implementation="com.perl5.lang.mason2.psi.stubs.MasonNamespaceDefitnitionsStubIndex"/>
+    <stubIndex implementation="com.perl5.lang.mason2.psi.stubs.MasonParentNamespacesStubIndex"/>
+
+    <completion.contributor language="Perl5"
+                            implementationClass="com.perl5.lang.mason2.idea.completion.MasonCompletionContributor"/>
+
+    <liveTemplateContext contextId="PERL5_MASON"
+                         implementation="com.perl5.lang.mason2.idea.livetemplates.MasonTemplateContextType"/>
+    <liveTemplatePreprocessor implementation="com.perl5.lang.mason2.idea.livetemplates.MasonTemplatePreprocessor"/>
+    <defaultLiveTemplates file="liveTemplates/Perl5Mason2.xml"/>
+
+    <editorNotificationProvider
+        implementation="com.perl5.lang.mason2.idea.editor.notification.MasonPathsNotification"/>
+
+
+    <typeHierarchyProvider language="Mason2 Templating Language"
+                           implementationClass="com.perl5.lang.mason2.idea.hierarchy.MasonTemplatingTypeHierarchyProvider"/>
+    <typeHierarchyProvider language="Mason2"
+                           implementationClass="com.perl5.lang.mason2.idea.hierarchy.MasonTypeHierarchyProvider"/>
+
+    <lang.findUsagesProvider language="Mason2"
+                             implementationClass="com.perl5.lang.perl.idea.findusages.PerlFindUsagesProvider"/>
+
+    <psi.referenceContributor language="Mason2"
+                              implementation="com.perl5.lang.mason2.psi.references.MasonReferenceContributor"/>
+    <lang.refactoringSupport language="Mason2"
+                             implementationClass="com.perl5.lang.perl.idea.refactoring.PerlRefactoringSupportProvider"/>
+    <lang.findUsagesProvider language="Mason2 Templating Language"
+                             implementationClass="com.perl5.lang.mason2.idea.findusages.MasonTemplatingFindUsagesProvider"/>
+    <lang.findUsagesProvider language="Mason2 Templating Language"
+                             implementationClass="com.perl5.lang.mason2.idea.findusages.MasonTemplatingFindUsagesProvider"/>
+    <liveTemplateOptionalProcessor
+        implementation="com.perl5.lang.mason2.idea.livetemplates.MasonLiveTemplatesProcessor"/>
+    <backgroundPostStartupActivity implementation="com.perl5.lang.mason2.idea.components.MasonPostStartupActivity"/>
+    <!--Mason2 settings end -->
+  </extensions>
+
+  <actions>
+    <action id="Perl.MarkMason2Root" class="com.perl5.lang.mason2.idea.configuration.Mason2MarkSourceRootAction">
+      <add-to-group group-id="MarkRootGroup"/>
+    </action>
+  </actions>
+</idea-plugin>

@@ -1,0 +1,12 @@
+
+package Foo::B<caret>ar;
+use parent qw/MyTest::Constants/;
+
+
+package Foo::OtherBar;
+use parent qw/Foo::Bar MyTest::Constants/;
+
+package Foo::SomethingElse;
+use parent qw/Foo::OtherBar Foo::Bar MyTest::Constants/;
+
+1;

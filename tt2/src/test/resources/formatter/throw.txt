@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+
+[% THROW food 'eggs' 'flour' msg = 'Missing Ingredients' %]
+[% THROW
+        food
+        'eggs'
+        'flour'
+        msg    = 'Missing Ingredients'
+        orelse = 'Missing Ingredients'
+%]
+
+
+<div>
+[% THROW food 'eggs' 'flour' msg = 'Missing Ingredients' %]
+[% THROW
+        food
+        'eggs'
+        'flour'
+        msg    = 'Missing Ingredients'
+        orelse = 'Missing Ingredients'
+%]
+    <div>
+    [% THROW food 'eggs' 'flour' msg = 'Missing Ingredients' %]
+    [% THROW
+            food
+            'eggs'
+            'flour'
+            msg    = 'Missing Ingredients'
+            orelse = 'Missing Ingredients'
+    %]
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,2 +1,0 @@
-msgrcv(<caret>);
-No element

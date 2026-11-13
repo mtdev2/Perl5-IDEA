@@ -2,20 +2,23 @@
 use File::Find;
 use B::Deparse;
 
+# Redirect STDOUT to STDERR temporarily to prevent loaded modules from mixing
+# their output into our intended output (which must be valid perl)
+open my $initial_stdout, '>&', \*STDOUT or die $!;
+open STDOUT, '>&', \*STDERR or die $!;
+
 File::Find::find( \&file_processor, @INC );
 
 my @packages = ();
 sub file_processor
 {
-    if ($File::Find::name =~ m{auto/(.+?)/([^/]+)(dll|so)$})
-    {
+    if ($File::Find::name =~ m{auto/(.+?)/([^/]+)(dll|so|bundle)$}) {
         my $name = $1;
         $name =~ s{/+}{::}g;
         return if $name =~ /\QType::Tiny::XS\E/; # see https://github.com/tobyink/p5-type-tiny-xs/issues/4
         #        print STDERR "Processing $name\n";
         eval "require $name;";
-        if (my $e = $@)
-        {
+        if (my $e = $@) {
             print STDERR "Error loading $name:\n$e\n";
         }
     }
@@ -23,6 +26,10 @@ sub file_processor
 
 my $deparser = B::Deparse->new();
 my %sub_map = ();
+
+# Undo the redirection
+open STDOUT, '>&', $initial_stdout or die $!;
+close $initial_stdout;
 
 print <<'EOM';
 #
@@ -61,7 +68,7 @@ foreach my $globname (sort @{get_typeglobs_snapshot()})
 foreach my $package (sort keys %sub_map)
 {
 
-    print "package $package {\n";
+    print "package\n$package {\n";
     foreach my $sub_name (sort @{$sub_map{$package}})
     {
         print "sub $sub_name\n";

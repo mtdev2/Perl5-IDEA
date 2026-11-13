@@ -1,3 +1,0 @@
-my ($key, $value);
-say "$key => $value" while (($key, $value) = each %hash);
-

@@ -1,2 +1,0 @@
-getpwent(<caret>);
-No element

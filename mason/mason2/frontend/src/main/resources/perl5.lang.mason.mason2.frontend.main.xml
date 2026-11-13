@@ -1,0 +1,8 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.lang.mason.framework.frontend.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.mason2.common.main"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.framework.common.main" namespace="hurricup"/>
+  </dependencies>
+</idea-plugin>

@@ -1,0 +1,59 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.plugin.backend.main" namespace="hurricup"/>
+    <module name="perl5.lang.mojo.common.main"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+  </dependencies>
+
+  <resource-bundle>messages.MojoBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <subCallHandler key="helper" implementationClass="com.perl5.lang.mojolicious.psi.impl.MojoHelperHandler"/>
+
+    <importsProvider implementation="com.perl5.lang.mojolicious.extensions.MojoImplicitImportsProvider"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <jps.plugin/>
+
+    <internalFileTemplate name="Perl5 mojolicious"/>
+
+    <stubElementTypeHolder class="com.perl5.lang.mojolicious.MojoliciousElementTypes"/>
+    <stubElementRegistryExtension implementation="com.perl5.lang.mojolicious.stubs.MojoStubRegistryExtension"/>
+    <languageStubDefinition language="Mojolicious Perl" implementationClass="com.perl5.lang.perl.psi.stubs.PerlTemplatingStubDefinition"/>
+
+    <lang.findUsagesProvider language="Mojolicious Perl"
+                             implementationClass="com.perl5.lang.mojolicious.idea.findusages.MojoliciousFindUsagesProvider"/>
+
+    <lang.refactoringSupport language="Mojolicious Perl"
+                             implementationClass="com.perl5.lang.perl.idea.refactoring.PerlRefactoringSupportProvider"/>
+
+    <liveTemplateOptionalProcessor
+        implementation="com.perl5.lang.mojolicious.idea.liveTemplates.MojoliciousLiveTemplateProcessor"/>
+    <projectStructure.sourceRootEditHandler
+        implementation="com.perl5.lang.mojolicious.idea.modules.MojoTemplateSourceRootEditHandler"/>
+
+    <projectService serviceImplementation="com.perl5.lang.mojolicious.model.MojoProjectManager"/>
+    <postStartupActivity implementation="com.perl5.lang.mojolicious.model.MojoProjectManagerStarter"/>
+
+    <treeStructureProvider implementation="com.perl5.lang.mojolicious.idea.projectView.MojoTreeStructureProvider"/>
+  </extensions>
+
+  <actions>
+    <action id="perl5.mojo.install" class="com.perl5.lang.mojolicious.idea.actions.InstallMojoliciousAction">
+      <add-to-group group-id="perl5.install"/>
+    </action>
+
+    <group id="perl5.mojo.NewGroup">
+      <add-to-group group-id="NewGroup" relative-to-action="Perl5.NewFile" anchor="after"/>
+      <action id="perl5.mojo.new.file" class="com.perl5.lang.mojolicious.idea.ide.MojoCreateFileFromTemplateAction"/>
+      <action id="perl5.mojo.generate.app" class="com.perl5.lang.mojolicious.idea.actions.MojoGenerateAppAction"/>
+      <action id="perl5.mojo.generate.lite.app" class="com.perl5.lang.mojolicious.idea.actions.MojoGenerateLiteAppAction"/>
+      <action id="perl5.mojo.generate.plugin" class="com.perl5.lang.mojolicious.idea.actions.MojoGeneratePluginAction"/>
+    </group>
+
+    <action id="perl5.mojo.mark.root" class="com.perl5.lang.mojolicious.idea.modules.MojoTemplateMarkSourceRootAction">
+      <add-to-group group-id="MarkRootGroup"/>
+    </action>
+  </actions>
+</idea-plugin>

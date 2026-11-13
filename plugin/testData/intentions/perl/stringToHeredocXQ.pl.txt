@@ -1,5 +1,0 @@
-
-<<`HEREDOC`;
-this is a $variable test
-HEREDOC
-

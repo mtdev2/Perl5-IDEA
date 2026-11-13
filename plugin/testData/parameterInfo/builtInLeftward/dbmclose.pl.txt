@@ -1,2 +1,0 @@
-dbmclose(<caret>);
-No element

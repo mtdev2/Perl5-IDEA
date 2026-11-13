@@ -1,0 +1,203 @@
+<idea-plugin visibility="public">
+  <resource-bundle>messages.PerlBundle</resource-bundle>
+  <dependencies>
+    <module name="intellij.regexp"/>
+    <module name="intellij.spellchecker"/>
+    <module name="intellij.xml.parser"/>
+    <module name="intellij.xml.ui.common"/>
+  </dependencies>
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.perl5.subCallHandler" beanClass="com.intellij.util.KeyedLazyInstanceEP" dynamic="true">
+      <with attribute="implementationClass" implements="com.perl5.lang.perl.psi.PerlSubCallHandler"/>
+    </extensionPoint>
+    <extensionPoint qualifiedName="com.perl5.packageProcessor" beanClass="com.intellij.util.KeyedLazyInstanceEP" dynamic="true">
+      <with attribute="implementationClass"
+            implements="com.perl5.lang.perl.extensions.packageprocessor.PerlPackageProcessor"/>
+    </extensionPoint>
+    <extensionPoint qualifiedName="com.perl5.namespaceDefinitionHalder" beanClass="com.intellij.openapi.util.ClassExtensionPoint"
+                    dynamic="true">
+      <with attribute="implementationClass" implements="com.perl5.lang.perl.psi.PerlNamespaceDefinitionHandler"/>
+    </extensionPoint>
+    <extensionPoint qualifiedName="com.perl5.codeGenerator" beanClass="com.intellij.openapi.util.ClassExtensionPoint"
+                    dynamic="true">
+      <with attribute="implementationClass" implements="com.perl5.lang.perl.extensions.PerlCodeGenerator"/>
+    </extensionPoint>
+    <extensionPoint qualifiedName="com.perl5.parserExtension" interface="com.perl5.lang.perl.extensions.parser.PerlParserExtension"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.perl5.importsProvider" interface="com.perl5.lang.perl.extensions.imports.PerlImportsProvider"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.perl5.implicitSubsProvider"
+                    interface="com.perl5.lang.perl.psi.references.PerlImplicitDeclarationsProvider"
+                    dynamic="true"/>
+    <extensionPoint qualifiedName="com.perl5.settings.configurable.extension"
+                    interface="com.perl5.lang.perl.idea.configuration.settings.sdk.Perl5SettingsConfigurableExtension" dynamic="true"/>
+    <extensionPoint qualifiedName="com.perl5.fileTypeProvider" interface="com.perl5.lang.perl.fileTypes.PerlFileTypeProvider"
+                    dynamic="true"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.role.tiny.RoleTinyImplicitSubsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.scalar.util.ScalarUtilImplicitSubsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.cgi.PerlCgiDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.psi.references.PerlCoreDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.psi.references.PerlBuiltinDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.typesStandard.TypesStandardImplicitDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.readonly.ReadonlyImplicitDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.log4perl.Log4PerlImplicitDeclarationsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.moo.MooImplicitSubsProvider"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.futureAsyncAwait.FutureAsyncAwaitImplicitDeclarationsProvider"/>
+
+    <subCallHandler key="mk_accessors"
+                    implementationClass="com.perl5.lang.perl.parser.Class.Accessor.psi.impl.PerlClassAccessorHandler$PerlClassAccessorRWHandler"/>
+    <subCallHandler key="mk_ro_accessors"
+                    implementationClass="com.perl5.lang.perl.parser.Class.Accessor.psi.impl.PerlClassAccessorHandler$PerlClassAccessorRoHandler"/>
+    <subCallHandler key="mk_wo_accessors"
+                    implementationClass="com.perl5.lang.perl.parser.Class.Accessor.psi.impl.PerlClassAccessorHandler$PerlClassAccessorWoHandler"/>
+
+    <parserExtension implementation="com.perl5.lang.perl.parser.PerlSwitchParserExtensionImpl"/>
+    <parserExtension implementation="com.perl5.lang.perl.parser.MooseParserExtension"/>
+  </extensions>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <additionalTextAttributes scheme="Default" file="colorSchemes/npp_default.xml"/>
+    <additionalTextAttributes scheme="Darcula" file="colorSchemes/perl_darcula.xml"/>
+    <errorHandler implementation="com.perl5.errorHandler.YoutrackErrorHandler"/>
+
+    <!-- Perl  -->
+    <lang.ast.factory language="Perl5" implementationClass="com.perl5.lang.perl.parser.elementTypes.PerlAstFactory"/>
+    <lang.fileViewProviderFactory language="Perl5"
+                                  implementationClass="com.perl5.lang.perl.psi.PerlFileViewProviderFactory"/>
+    <lang.parserDefinition language="Perl5" implementationClass="com.perl5.lang.perl.PerlParserDefinition"/>
+    <fileType implementationClass="com.perl5.lang.perl.fileTypes.PerlFileTypeScript" fieldName="INSTANCE"
+              name="Perl5 Script" language="Perl5" extensions="pl;ph;al;cgi"/>
+    <fileType implementationClass="com.perl5.lang.perl.fileTypes.PerlFileTypePackage" fieldName="INSTANCE"
+              name="Perl5 Package" extensions="pm" language="Perl5"/>
+    <fileType implementationClass="com.perl5.lang.perl.fileTypes.PerlFileTypeTest" fieldName="INSTANCE"
+              name="Perl5 Test" language="Perl5" extensions="t"/>
+    <applicationService serviceImplementation="com.perl5.lang.perl.idea.codeInsight.Perl5CodeInsightSettings"/>
+    <applicationSettings service="com.perl5.lang.perl.idea.codeInsight.Perl5CodeInsightSettings"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.perl.idea.codeInsight.Perl5CodeInsightSettingsRemoteInfoProvider"/>
+    <typedHandler implementation="com.perl5.lang.perl.idea.editor.smartkeys.PerlTypedHandler"
+                  id="PerlTypedHandler" order="first"/>
+    <backspaceHandlerDelegate implementation="com.perl5.lang.perl.idea.editor.smartkeys.PerlBackspaceHandler" order="first"/>
+    <codeStyleSettingsProvider
+        implementation="com.perl5.lang.perl.idea.formatter.settings.PerlCodeStyleSettingsProvider"/>
+    <langCodeStyleSettingsProvider
+        implementation="com.perl5.lang.perl.idea.formatter.settings.PerlLanguageCodeStyleSettingsProvider"/>
+    <lang.whiteSpaceFormattingStrategy language="Perl5"
+                                       implementationClass="com.perl5.lang.perl.idea.formatter.PerlWhiteSpaceFormattingStrategy"/>
+    <lang.indentStrategy language="Perl5" implementationClass="com.perl5.lang.perl.idea.editor.PerlIndentStrategy"/>
+    <lang.syntaxHighlighterFactory language="Perl5"
+                                   implementationClass="com.perl5.lang.perl.idea.highlighter.PerlSyntaxHighlighterFactory"/>
+    <lang.formatter language="Perl5"
+                    implementationClass="com.perl5.lang.perl.idea.formatter.PerlFormattingModelBuilder"/>
+    <preFormatProcessor implementation="com.perl5.lang.perl.idea.formatter.PerlPreFormatProcessor"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PsiPerlLabelExpr"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlLeafOrLeafOwnerManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.impl.PerlHeredocElementImpl" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlHeredocElementManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.mixins.PerlStringMixin" order="first" id="QuotedString"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlStringManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.mixins.PerlStringBareMixin" order="after QuotedString"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlBareStringManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlAnnotationVariableElement"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlAnnotationVariableElementManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlStringContentElement" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlStringContentManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlNamespaceElement" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlNamespaceElementManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlVariableNameElement" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlVariableNameManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlSubNameElement" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlSubNameManipulator"/>
+    <lang.elementManipulator forClass="com.perl5.lang.perl.psi.PerlHeredocTerminatorElement" order="first"
+                             implementationClass="com.perl5.lang.perl.idea.manipulators.PerlHeredocTerminatorManipulator"/>
+    <lang.commenter language="Perl5" implementationClass="com.perl5.lang.perl.idea.editor.PerlCommenter"/>
+    <lang.braceMatcher language="Perl5" implementationClass="com.perl5.lang.perl.idea.editor.PerlBraceMatcher"/>
+    <extendWordSelectionHandler implementation="com.perl5.lang.perl.idea.editor.PerlVariableSelectionHandler"/>
+    <enterHandlerDelegate implementation="com.perl5.lang.perl.idea.editor.smartkeys.PerlEnterHeredocClosingHandler"
+                          id="PerlEnterHandler" order="first"/>
+    <enterHandlerDelegate implementation="com.perl5.lang.perl.idea.editor.smartkeys.PerlEnterInBracketsHandler"/>
+    <enterHandlerDelegate implementation="com.perl5.lang.perl.idea.editor.smartkeys.PerlEnterInCommentHandler"/>
+    <editorHighlighterProvider filetype="Perl5 Script"
+                               implementationClass="com.perl5.lang.perl.idea.highlighter.PerlEditorHighlighterProvider"/>
+    <editorHighlighterProvider filetype="Perl5 Package"
+                               implementationClass="com.perl5.lang.perl.idea.highlighter.PerlEditorHighlighterProvider"/>
+    <editorHighlighterProvider filetype="Perl5 Test"
+                               implementationClass="com.perl5.lang.perl.idea.highlighter.PerlEditorHighlighterProvider"/>
+    <colorSettingsPage implementation="com.perl5.lang.perl.idea.highlighter.PerlColorSettingsPage"/>
+    <basicWordSelectionFilter implementation="com.perl5.lang.perl.idea.editor.PerlVariableSelectionHandler$OuterElementsSuppressor"/>
+    <lang.namesValidator language="Perl5" implementationClass="com.perl5.lang.perl.idea.PerlNamesValidator"/>
+    <lang.foldingBuilder language="Perl5"
+                         implementationClass="com.perl5.lang.perl.idea.folding.PerlFoldingBuilder"/>
+    <highlightUsagesHandlerFactory order="before mainone"
+                                   implementation="com.perl5.lang.perl.idea.codeInsight.highlighting.PerlHighlightExitPointsHandlerFactory"/>
+    <usageTypeProvider implementation="com.perl5.lang.perl.idea.findusages.PerlUsageTypeProvider"/>
+    <readWriteAccessDetector implementation="com.perl5.lang.perl.idea.findusages.PerlReadWriteAccessDetector"/>
+
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.codeInsight.typeInference.value.PerlValuesCacheService"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.intellilang.PerlInjectionMarkersService"/>
+    <projectSettings service="com.perl5.lang.perl.idea.intellilang.PerlInjectionMarkersService"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.perl.idea.intellilang.PerlInjectionMarkersRemoteInfoProvider"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.psi.references.PerlBuiltInVariablesService"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.psi.references.PerlImplicitDeclarationsService"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.psi.references.PerlBuiltInNamespacesService"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.configuration.settings.PerlLocalSettings"/>
+    <projectSettings service="com.perl5.lang.perl.idea.configuration.settings.PerlLocalSettings"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.perl.idea.configuration.settings.PerlLocalSettingsRemoteInfoProvider"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettings"/>
+    <projectSettings service="com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettings"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.perl.idea.configuration.settings.PerlSharedSettingsRemoteInfoProvider"/>
+    <applicationService serviceImplementation="com.perl5.lang.perl.fileTypes.PerlFileTypeService"/>
+
+    <applicationService serviceImplementation="com.perl5.lang.perl.idea.folding.PerlFoldingSettingsImpl"/>
+    <applicationSettings service="com.perl5.lang.perl.idea.folding.PerlFoldingSettingsImpl"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.perl.idea.folding.PerlFoldingSettingsRemoteInfoProvider"/>
+
+    <projectStructure.sourceRootEditHandler
+        implementation="com.perl5.lang.perl.idea.configuration.settings.sdk.PerlLibrarySourceRootEditHandler"/>
+
+    <lang.smartEnterProcessor language="Perl5" implementationClass="com.perl5.lang.perl.idea.editor.smartkeys.PerlSmartEnterProcessor"/>
+    <declarationRangeHandler key="com.perl5.lang.perl.psi.PerlSubDefinitionElement"
+                             implementationClass="com.perl5.lang.perl.idea.codeInsight.PerlDeclarationRangeHandler"/>
+    <declarationRangeHandler key="com.perl5.lang.perl.psi.PerlNamespaceDefinitionWithIdentifier"
+                             implementationClass="com.perl5.lang.perl.idea.codeInsight.PerlDeclarationRangeHandler"/>
+    <elementDescriptionProvider implementation="com.perl5.lang.perl.idea.PerlElementDescriptionProvider" id="perl5"/>
+    <iconProvider implementation="com.perl5.lang.perl.idea.ui.PerlIconProvider"/>
+
+    <regExpLanguageHost forClass="com.perl5.lang.perl.psi.impl.PsiPerlPerlRegexImpl"
+                        implementationClass="com.perl5.lang.perl.idea.regexp.Perl5RegexpHost"/>
+    <multiHostInjector implementation="com.perl5.lang.perl.idea.regexp.Perl5RegexpInjector"/>
+    <!-- EOF Perl  -->
+
+    <!-- Perl XS  -->
+    <fileType implementationClass="com.perl5.lang.xs.filetypes.XSFileType" fieldName="INSTANCE"
+              name="Perl5 Extension" extensions="xs" language="Perl5 XS"/>
+    <!-- EOF Perl XS  -->
+
+    <!-- Regexp  -->
+    <lang.parserDefinition language="Perl5Regexp"
+                           implementationClass="com.perl5.lang.perl.idea.regexp.Perl5RegexpParserDefinition"/>
+    <!-- EOF Regexp  -->
+
+    <!--  POD -->
+    <lang.parserDefinition language="Perl5 POD" implementationClass="com.perl5.lang.pod.PodParserDefinition"/>
+    <fileType implementationClass="com.perl5.lang.pod.filetypes.PodFileType" fieldName="INSTANCE"
+              name="POD File" language="Perl5 POD" extensions="pod"/>
+    <typedHandler implementation="com.perl5.lang.pod.idea.editor.PodTypedHandler"/>
+    <backspaceHandlerDelegate implementation="com.perl5.lang.pod.idea.editor.PodBackspaceHandler"/>
+    <lang.syntaxHighlighterFactory language="Perl5 POD"
+                                   implementationClass="com.perl5.lang.pod.idea.highlighter.PodSyntaxHighlighterFactory"/>
+    <lang.elementManipulator forClass="com.perl5.lang.pod.parser.psi.PodCompositeElement" order="first"
+                             implementationClass="com.perl5.lang.pod.parser.psi.manipulators.PodElementManipulator"/>
+    <lang.braceMatcher language="Perl5 POD" implementationClass="com.perl5.lang.pod.idea.editor.PodBraceMathcer"/>
+    <colorSettingsPage implementation="com.perl5.lang.pod.idea.highlighter.PodColorSettingsPage"/>
+    <lang.foldingBuilder language="Perl5 POD" implementationClass="com.perl5.lang.pod.idea.editor.PodFoldingBuilder"/>
+    <iconProvider implementation="com.perl5.lang.pod.idea.ui.PodIconProvider"/>
+    <elementDescriptionProvider implementation="com.perl5.lang.pod.parser.psi.PodElementDescriptionProvider"/>
+    <lang.namesValidator language="Perl5 POD" implementationClass="com.perl5.lang.pod.idea.refactoring.PodNamesValidator"/>
+    <lang.ast.factory language="Perl5 POD" implementationClass="com.perl5.lang.pod.PodAstFactory"/>
+    <!--  END OF POD -->
+  </extensions>
+</idea-plugin>

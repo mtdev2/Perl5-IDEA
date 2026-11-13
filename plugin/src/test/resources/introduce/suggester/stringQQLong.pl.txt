@@ -1,0 +1,6 @@
+scalar
+value
+string
+> some_cumbersome_strinasdfg_asd
+path
+pathname

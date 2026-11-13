@@ -1,0 +1,9 @@
+scalar
+value
+string
+> foo_bar_baz
+package
+namespace
+module
+baz
+bar_baz

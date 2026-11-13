@@ -1,2 +1,0 @@
-Foo::Bar::->MULTICONST2(<caret>)
-No element

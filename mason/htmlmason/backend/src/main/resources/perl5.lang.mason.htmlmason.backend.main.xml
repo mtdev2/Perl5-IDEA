@@ -1,0 +1,68 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.plugin.backend.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.framework.backend.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.htmlmason.common.main"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+    <module name="perl5.lang.mason.framework.common.main" namespace="hurricup"/>
+  </dependencies>
+
+  <resource-bundle>messages.HtmlMasonBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <fileTypeProvider implementation="com.perl5.lang.htmlmason.filetypes.HTMLMasonFileTypeProvider"/>
+    <settings.configurable.extension implementation="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonSettingsConfigurableExtension"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <jps.plugin/>
+    <lang.findUsagesProvider language="HTML::Mason Templating Language"
+                             implementationClass="com.perl5.lang.perl.idea.findusages.PerlFindUsagesProvider"/>
+    <lang.refactoringSupport language="HTML::Mason Templating Language"
+                             implementationClass="com.perl5.lang.perl.idea.refactoring.PerlRefactoringSupportProvider"/>
+
+    <editorNotificationProvider
+        implementation="com.perl5.lang.htmlmason.idea.editor.notification.HTMLMasonPathsNotification"/>
+    <lang.findUsagesProvider language="HTML::Mason Templating Language"
+                             implementationClass="com.perl5.lang.htmlmason.idea.findusages.HTMLMasonFindUsagesProvider"/>
+
+    <liveTemplateContext contextId="PERL5_HTML_MASON"
+                         implementation="com.perl5.lang.htmlmason.idea.livetemplates.HTMLMasonTemplateContextType"/>
+    <liveTemplatePreprocessor
+        implementation="com.perl5.lang.htmlmason.idea.livetemplates.HTMLMasonTemplatePreprocessor"/>
+    <defaultLiveTemplates file="liveTemplates/Perl5HTMLMason.xml"/>
+
+    <!--suppress KotlinObjectExtensionRegistration -->
+    <stubElementTypeHolder class="com.perl5.lang.htmlmason.elementType.HTMLMasonElementTypes"/>
+    <stubIndex implementation="com.perl5.lang.htmlmason.parser.stubs.HTMLMasonFlagsStubIndex"/>
+    <stubElementRegistryExtension implementation="com.perl5.lang.htmlmason.parser.stubs.HTMLMasonStubRegistryExtension"/>
+    <languageStubDefinition language="HTML::Mason Templating Language"
+                            implementationClass="com.perl5.lang.perl.psi.stubs.PerlTemplatingStubDefinition"/>
+
+    <codeInsight.lineMarkerProvider language="HTML::Mason Templating Language"
+                                    implementationClass="com.perl5.lang.htmlmason.idea.navigation.HTMLMasonLineMarkerProvider"/>
+    <typeHierarchyProvider language="HTML::Mason Templating Language"
+                           implementationClass="com.perl5.lang.htmlmason.idea.hierarchy.HTMLMasonTypeHierarchyProvider"/>
+    <annotator language="HTML::Mason Templating Language"
+               implementationClass="com.perl5.lang.htmlmason.idea.annotator.HTMLMasonAnnotator"
+               order="after PERL_SUBS_ANNOTATOR"/>
+    <psi.referenceContributor language="Perl5"
+                              implementation="com.perl5.lang.htmlmason.parser.psi.references.HTMLMasonReferencesContributor"/>
+    <referencesSearch
+        implementation="com.perl5.lang.htmlmason.parser.psi.references.HTMLMasonReferencesSearcher"/>
+    <completion.contributor language="Perl5"
+                            implementationClass="com.perl5.lang.htmlmason.idea.completion.HTMLMasonCompletionContributor" order="first"/>
+    <elementDescriptionProvider
+        implementation="com.perl5.lang.htmlmason.parser.psi.HTMLMasonElementDescriptionProvider" order="first"/>
+    <documentationProvider implementation="com.perl5.lang.htmlmason.documentation.HTMLMasonDocumentationProvider"/>
+    <liveTemplateOptionalProcessor
+        implementation="com.perl5.lang.htmlmason.idea.livetemplates.HTMLMasonLiveTemplateProcessor"/>
+  </extensions>
+
+  <actions>
+    <action id="Perl.MarkHTMLMasonRoot" class="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonMarkSourceRootAction">
+      <add-to-group group-id="MarkRootGroup"/>
+    </action>
+  </actions>
+
+</idea-plugin>

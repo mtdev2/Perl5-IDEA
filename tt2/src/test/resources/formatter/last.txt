@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+
+[% LAST IF some.condition %]
+[% LAST
+        IF
+                some.condition %]
+[% BREAK
+        IF
+                some.condition %]
+
+<div>
+[% LAST IF some.condition %]
+[% LAST
+        IF
+                some.condition %]
+[% BREAK
+        IF
+                some.condition %]
+    <div>
+    [% LAST IF some.condition %]
+    [% LAST
+            IF
+                    some.condition %]
+    [% BREAK
+            IF
+                    some.condition %]
+    </div>
+</div>
+
+</body>
+</html>

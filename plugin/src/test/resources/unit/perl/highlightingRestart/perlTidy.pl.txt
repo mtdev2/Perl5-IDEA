@@ -1,0 +1,5216 @@
+File size: 1135136
+Re-highlighted ranges: 82124
+Avg range size: 13.822073936973357
+Min range size: 1
+Max range size: 9294
+10% of text has range <= 9
+20% of text has range <= 13
+30% of text has range <= 18
+40% of text has range <= 23
+50% of text has range <= 29
+60% of text has range <= 39
+70% of text has range <= 52
+80% of text has range <= 63
+90% of text has range <= 77
+----------
+Range: (1470,1548) (78)
+#␣␣␣␣␣␣␣␣create␣a␣Perl::Tidy␣module␣which␣can␣operate␣on␣strings,␣arrays,␣etc.
+----------
+Range: (1663,1742) (79)
+#␣␣␣␣␣␣Sebastien␣Aperghis-Tramoni␣supplied␣a␣patch␣for␣the␣defined␣or␣operator.
+----------
+Range: (3160,3265) (105)
+use␣vars␣qw{
+␣␣$VERSION
+␣␣@ISA
+␣␣@EXPORT
+␣␣$missing_file_spec
+␣␣$fh_stderr
+␣␣$rOpts_character_encoding
+};
+----------
+Range: (5401,5685) (284)
+confess␣<<EOM;
+------------------------------------------------------------------------
+No␣'getline'␣method␣is␣defined␣for␣object␣of␣class␣$ref
+Please␣check␣your␣call␣to␣Perl::Tidy::perltidy.␣␣Trace␣follows.
+------------------------------------------------------------------------
+EOM
+----------
+Range: (5702,5782) (80)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Accept␣an␣object␣with␣a␣print␣method␣for␣writing.
+----------
+Range: (6199,6480) (281)
+confess␣<<EOM;
+------------------------------------------------------------------------
+No␣'print'␣method␣is␣defined␣for␣object␣of␣class␣$ref
+Please␣check␣your␣call␣to␣Perl::Tidy::perltidy.␣Trace␣follows.
+------------------------------------------------------------------------
+EOM
+----------
+Range: (8979,9058) (79)
+#␣The␣names␣correspond␣to␣the␣package␣names␣responsible␣for␣the␣unit␣processes.
+----------
+Range: (11229,11476) (247)
+confess␣<<EOM;
+------------------------------------------------------------------------
+Unknown␣perltidy␣parameter␣:␣(@bad_keys)
+perltidy␣only␣understands␣:␣(@good_keys)
+------------------------------------------------------------------------
+
+EOM
+----------
+Range: (11829,12058) (229)
+croak␣<<EOM;
+------------------------------------------------------------------------
+error␣in␣call␣to␣perltidy:
+-$key␣must␣be␣reference␣to␣HASH␣$but_is
+------------------------------------------------------------------------
+EOM
+----------
+Range: (12873,13129) (256)
+croak␣<<EOM;
+------------------------------------------------------------------------
+Unable␣to␣redirect␣STDERR␣to␣$stderr_stream
+Please␣check␣value␣of␣-stderr␣in␣call␣to␣perltidy
+------------------------------------------------------------------------
+EOM
+----------
+Range: (14107,14391) (284)
+croak␣<<EOM;
+------------------------------------------------------------------------
+Please␣check␣value␣of␣-dump_options_type␣in␣call␣to␣perltidy;
+saw:␣'$dump_options_type'
+expecting:␣'perltidyrc'␣or␣'full'
+------------------------------------------------------------------------
+EOM
+----------
+Range: (15008,15270) (262)
+croak␣<<EOM;
+------------------------------------------------------------------------
+Please␣check␣value␣of␣-argv␣in␣call␣to␣perltidy;
+it␣must␣be␣a␣string␣or␣ref␣to␣ARRAY␣but␣is:␣$rargv
+------------------------------------------------------------------------
+EOM
+----------
+Range: (15421,15501) (80)
+Die␣<<EOM;
+Error␣parsing␣this␣string␣passed␣to␣to␣perltidy␣with␣'argv':
+$msg
+EOM
+----------
+Range: (16318,16441) (123)
+my␣(␣$rOpts,␣$config_file,␣$rraw_options,␣$roption_string,
+␣␣␣␣␣␣␣␣$rexpansion,␣$roption_category,␣$roption_range␣)
+␣␣␣␣␣␣=
+----------
+Range: (21611,21692) (81)
+##Warn␣"Ignoring␣-b;␣you␣may␣not␣specify␣a␣destination␣stream␣and␣-b␣together\n";
+----------
+Range: (25850,25964) (114)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣Warn␣"skipping␣file:␣'$input_file':␣no␣matches␣found\n";
+----------
+Range: (26642,26725) (83)
+Warn
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣"skipping␣file:␣$input_file:␣Non-text␣(override␣with␣-f)\n";
+----------
+Range: (27635,27866) (231)
+Die␣<<EOM;
+------------------------------------------------------------------------
+Problem␣combining␣$new_path␣and␣$base␣to␣make␣a␣filename;␣check␣-opath
+------------------------------------------------------------------------
+EOM
+----------
+Range: (27883,27978) (95)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Skip␣files␣with␣same␣extension␣as␣the␣output␣files␣because
+----------
+Range: (38943,39022) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (42233,42311) (78)
+<<EOM;
+Blinking.␣Output␣for␣iteration␣$iter␣same␣as␣for␣$saw_md5{$digest}.
+EOM
+----------
+Range: (45484,45570) (86)
+Die
+"unable␣to␣remove␣previous␣'$backup_name'␣for␣-b␣option;␣check␣permissions:␣$!\n";
+----------
+Range: (46592,46697) (105)
+Die
+"problem␣re-opening␣$input_file␣for␣write␣for␣-b␣option;␣check␣file␣and␣directory␣permissions:␣$!\n";
+----------
+Range: (47802,47881) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣else␣use␣default␣permissions␣for␣html␣and␣any␣other␣format
+----------
+Range: (47894,47979) (85)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (49458,49562) (104)
+"output␣file␣'$output_file'␣missing␣or␣zero␣length;␣original␣'$ifname'␣not␣deleted\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (49649,49730) (81)
+Die
+"unable␣to␣remove␣previous␣'$ifname'␣for␣-b␣option;␣check␣permissions:␣$!\n";
+----------
+Range: (52071,52193) (122)
+my␣(
+␣␣␣␣␣␣␣␣$rOpts,␣␣␣␣␣␣␣␣$logger_object,␣$config_file,
+␣␣␣␣␣␣␣␣$rraw_options,␣$Windows_type,␣␣$readable_options
+␣␣␣␣)␣=
+----------
+Range: (52239,52321) (82)
+"perltidy␣version␣$VERSION␣log␣file␣on␣a␣$^O␣system,␣OLD_PERL_VERSION=$]\n"
+␣␣␣␣);
+----------
+Range: (56533,56643) (110)
+qw(
+␣␣␣␣␣␣html!
+␣␣␣␣␣␣noprofile
+␣␣␣␣␣␣no-profile
+␣␣␣␣␣␣npro
+␣␣␣␣␣␣recombine!
+␣␣␣␣␣␣valign!
+␣␣␣␣␣␣notidy
+␣␣␣␣);
+----------
+Range: (57380,57472) (92)
+Die
+"redefining␣abbreviation␣$short_name␣for␣$long_name;␣already␣used␣for␣$existing_name\n";
+----------
+Range: (57818,57925) (107)
+Die
+"attempting␣to␣redefine␣abbreviation␣$nshort_name␣for␣$nolong_name;␣already␣used␣for␣$existing_name\n";
+----------
+Range: (72458,72535) (77)
+}
+␣␣␣␣}
+
+␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (74917,77105) (2188)
+qw(
+␣␣␣␣␣␣add-newlines
+␣␣␣␣␣␣add-semicolons
+␣␣␣␣␣␣add-whitespace
+␣␣␣␣␣␣blanks-before-blocks
+␣␣␣␣␣␣blanks-before-comments
+␣␣␣␣␣␣blank-lines-before-subs=1
+␣␣␣␣␣␣blank-lines-before-packages=1
+␣␣␣␣␣␣block-brace-tightness=0
+␣␣␣␣␣␣block-brace-vertical-tightness=0
+␣␣␣␣␣␣brace-tightness=1
+␣␣␣␣␣␣brace-vertical-tightness-closing=0
+␣␣␣␣␣␣brace-vertical-tightness=0
+␣␣␣␣␣␣break-at-old-logical-breakpoints
+␣␣␣␣␣␣break-at-old-ternary-breakpoints
+␣␣␣␣␣␣break-at-old-attribute-breakpoints
+␣␣␣␣␣␣break-at-old-keyword-breakpoints
+␣␣␣␣␣␣comma-arrow-breakpoints=5
+␣␣␣␣␣␣nocheck-syntax
+␣␣␣␣␣␣closing-side-comment-interval=6
+␣␣␣␣␣␣closing-side-comment-maximum-text=20
+␣␣␣␣␣␣closing-side-comment-else-flag=0
+␣␣␣␣␣␣closing-side-comments-balanced
+␣␣␣␣␣␣closing-paren-indentation=0
+␣␣␣␣␣␣closing-brace-indentation=0
+␣␣␣␣␣␣closing-square-bracket-indentation=0
+␣␣␣␣␣␣continuation-indentation=2
+␣␣␣␣␣␣delete-old-newlines
+␣␣␣␣␣␣delete-semicolons
+␣␣␣␣␣␣extended-syntax
+␣␣␣␣␣␣fuzzy-line-length
+␣␣␣␣␣␣hanging-side-comments
+␣␣␣␣␣␣indent-block-comments
+␣␣␣␣␣␣indent-columns=4
+␣␣␣␣␣␣iterations=1
+␣␣␣␣␣␣keep-old-blank-lines=1
+␣␣␣␣␣␣long-block-line-count=8
+␣␣␣␣␣␣look-for-autoloader
+␣␣␣␣␣␣look-for-selfloader
+␣␣␣␣␣␣maximum-consecutive-blank-lines=1
+␣␣␣␣␣␣maximum-fields-per-table=0
+␣␣␣␣␣␣maximum-line-length=80
+␣␣␣␣␣␣memoize
+␣␣␣␣␣␣minimum-space-to-comment=4
+␣␣␣␣␣␣nobrace-left-and-indent
+␣␣␣␣␣␣nocuddled-else
+␣␣␣␣␣␣nodelete-old-whitespace
+␣␣␣␣␣␣nohtml
+␣␣␣␣␣␣nologfile
+␣␣␣␣␣␣noquiet
+␣␣␣␣␣␣noshow-options
+␣␣␣␣␣␣nostatic-side-comments
+␣␣␣␣␣␣notabs
+␣␣␣␣␣␣nowarning-output
+␣␣␣␣␣␣character-encoding=none
+␣␣␣␣␣␣outdent-labels
+␣␣␣␣␣␣outdent-long-quotes
+␣␣␣␣␣␣outdent-long-comments
+␣␣␣␣␣␣paren-tightness=1
+␣␣␣␣␣␣paren-vertical-tightness-closing=0
+␣␣␣␣␣␣paren-vertical-tightness=0
+␣␣␣␣␣␣pass-version-line
+␣␣␣␣␣␣recombine
+␣␣␣␣␣␣valign
+␣␣␣␣␣␣short-concatenation-item-length=8
+␣␣␣␣␣␣space-for-semicolon
+␣␣␣␣␣␣square-bracket-tightness=1
+␣␣␣␣␣␣square-bracket-vertical-tightness-closing=0
+␣␣␣␣␣␣square-bracket-vertical-tightness=0
+␣␣␣␣␣␣static-block-comments
+␣␣␣␣␣␣trim-qw
+␣␣␣␣␣␣format=tidy
+␣␣␣␣␣␣backup-file-extension=bak
+␣␣␣␣␣␣format-skipping
+␣␣␣␣␣␣default-tabsize=8
+
+␣␣␣␣␣␣pod2html
+␣␣␣␣␣␣html-table-of-contents
+␣␣␣␣␣␣html-entities
+␣␣␣␣);
+----------
+Range: (83189,83738) (549)
+qw(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣check-syntax
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣keep-old-blank-lines=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-old-newlines
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-old-whitespace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-semicolons
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣indent-columns=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣maximum-consecutive-blank-lines=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣maximum-line-length=100000
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noadd-newlines
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noadd-semicolons
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noadd-whitespace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noblanks-before-blocks
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣blank-lines-before-subs=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣blank-lines-before-packages=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣notabs
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣],
+----------
+Range: (84165,84722) (557)
+qw(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣check-syntax
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣ci=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-old-newlines
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-old-whitespace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣delete-semicolons
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣indent-columns=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣maximum-consecutive-blank-lines=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣maximum-line-length=1
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noadd-semicolons
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noadd-whitespace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣noblanks-before-blocks
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣blank-lines-before-subs=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣blank-lines-before-packages=0
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣nofuzzy-line-length
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣notabs
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣norecombine
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣],
+----------
+Range: (84928,85018) (90)
+qw(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣lp␣bl␣noll␣pt=2␣bt=2␣sbt=2␣cpi=1␣csbi=1␣cbi=1
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣],
+----------
+Range: (85200,85311) (111)
+q(wbb=%␣+␣-␣*␣/␣x␣!=␣==␣>=␣<=␣=~␣!~␣<␣>␣|␣&␣=␣**=␣+=␣*=␣&=␣<<=␣&&=␣-=␣/=␣|=␣>>=␣||=␣//=␣.=␣%=␣^=␣x=)
+␣␣␣␣␣␣␣␣],
+----------
+Range: (85785,85863) (78)
+#␣This␣patch␣was␣supplied␣by␣Jonathan␣Swartz␣Nov␣2012␣and␣significantly␣speeds
+----------
+Range: (85985,86102) (117)
+my␣(
+␣␣␣␣␣␣␣␣$perltidyrc_stream,␣␣$is_Windows,␣$Windows_type,
+␣␣␣␣␣␣␣␣$rpending_complaint,␣$dump_options_type
+␣␣␣␣)␣=
+----------
+Range: (86790,86907) (117)
+my␣(
+␣␣␣␣␣␣␣␣$perltidyrc_stream,␣␣$is_Windows,␣$Windows_type,
+␣␣␣␣␣␣␣␣$rpending_complaint,␣$dump_options_type
+␣␣␣␣)␣=
+----------
+Range: (86940,87046) (106)
+my␣(
+␣␣␣␣␣␣␣␣$roption_string,␣␣␣$rdefaults,␣$rexpansion,
+␣␣␣␣␣␣␣␣$roption_category,␣$roption_range
+␣␣␣␣)␣=
+----------
+Range: (89052,89130) (78)
+Warn
+"Only␣one␣-pro=filename␣allowed,␣using␣'$2'␣instead␣of␣'$config_file'\n";
+----------
+Range: (91416,91614) (198)
+Warn␣<<EOM;
+␣Conflict:␣a␣perltidyrc␣configuration␣file␣was␣specified␣both␣as␣this
+␣perltidy␣call␣parameter:␣$perltidyrc_stream
+␣and␣with␣this␣-profile=$config_file.
+␣Using␣-profile=$config_file.
+EOM
+----------
+Range: (93099,93194) (95)
+Die
+"Error␣in␣this␣config␣file:␣$config_file␣␣\nUse␣-npro␣to␣ignore␣this␣file,␣-h␣for␣help'\n";
+----------
+Range: (93211,93289) (78)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Anything␣left␣in␣this␣local␣@ARGV␣is␣an␣error␣and␣must␣be
+----------
+Range: (94000,94209) (209)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣Die␣<<EOM;
+There␣are␣$count␣unrecognized␣values␣in␣the␣configuration␣file␣'$config_file':
+$str
+Use␣leading␣dashes␣for␣parameters.␣␣Use␣-npro␣to␣ignore␣this␣file.
+EOM
+----------
+Range: (94226,94305) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Undo␣any␣options␣which␣cause␣premature␣exit.␣␣They␣are␣not
+----------
+Range: (94485,94925) (440)
+qw{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-defaults
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-long-names
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-options
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-profile
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-short-names
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-token-types
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-want-left-space
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣dump-want-right-space
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣help
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣stylesheet
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣version
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (95116,95235) (119)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (97586,97666) (80)
+}
+
+␣␣␣␣#␣Never␣let␣Windows␣9x/Me␣systems␣run␣syntax␣check␣--␣this␣will␣prevent␣a
+----------
+Range: (98975,99052) (77)
+}
+
+␣␣␣␣#␣check␣for␣reasonable␣number␣of␣blank␣lines␣and␣fix␣to␣avoid␣problems
+----------
+Range: (100855,100995) (140)
+Warn␣<<EOM;
+␣Conflict:␣you␣specified␣both␣'opening-brace-always-on-right'␣(-bar)␣and
+␣␣'opening-brace-on-new-line'␣(-bl).␣␣Ignoring␣-bl.
+EOM
+----------
+Range: (101697,101776) (79)
+}
+
+␣␣␣␣␣␣␣␣#␣entab␣leading␣whitespace␣has␣priority␣over␣the␣older␣'tabs'␣option
+----------
+Range: (101833,101917) (84)
+}
+␣␣␣␣}
+
+␣␣␣␣#␣set␣a␣default␣tabsize␣to␣be␣used␣in␣guessing␣the␣starting␣indentation
+----------
+Range: (105304,105390) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣in␣expansion␣hash,␣must␣be␣actual␣long␣name
+----------
+Range: (105476,105557) (81)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣a␣dash␣item,␣so␣just␣save␣it␣for␣the␣next␣pass
+----------
+Range: (105926,106053) (127)
+Warn␣<<EOM;
+I'm␣tired.␣We␣seem␣to␣be␣in␣an␣infinite␣loop␣trying␣to␣expand␣aliases.
+Here␣are␣the␣raw␣options;
+(rraw_options)
+EOM
+----------
+Range: (106375,106495) (120)
+Die␣<<"DIE";
+Please␣check␣your␣configuration␣file␣$config_file␣for␣circular-references.
+To␣deactivate␣it,␣use␣-npro.
+DIE
+----------
+Range: (106545,106660) (115)
+Die␣<<'DIE';
+Program␣bug␣-␣circular-references␣in␣the␣%expansion␣hash,␣probably␣due␣to
+a␣recent␣program␣change.
+DIE
+----------
+Range: (106890,107234) (344)
+<<EOM;
+List␣of␣short␣names.␣␣This␣list␣shows␣how␣all␣abbreviations␣are
+translated␣into␣other␣abbreviations␣and,␣eventually,␣into␣long␣names.
+New␣abbreviations␣may␣be␣defined␣in␣a␣.perltidyrc␣file.
+For␣a␣list␣of␣all␣long␣names,␣use␣perltidy␣--dump-long-names␣(-dln).
+--------------------------------------------------------------------------
+EOM
+----------
+Range: (107691,107789) (98)
+s/;-?\d*$//
+
+␣␣␣␣␣␣#␣remove␣explicit␣.␣version␣ie␣two␣dots␣in␣filename␣NB␣^␣escapes␣a␣dot
+␣␣␣␣␣␣or
+----------
+Range: (107799,108197) (398)
+s/(␣␣␣␣␣␣␣␣␣␣#␣begin␣capture␣$1
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣(?:^|[^^])\.␣#␣match␣a␣dot␣not␣preceded␣by␣a␣caret
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣(?:␣␣␣␣␣␣␣␣␣␣#␣followed␣by␣nothing
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣|␣␣␣␣␣␣␣␣␣␣#␣or
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣.*[^^]␣␣␣␣␣#␣anything␣ending␣in␣a␣non␣caret
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣end␣capture␣$1
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣\.-?\d*$␣␣␣␣␣␣␣#␣match␣.␣version␣number
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣/$1/x;
+----------
+Range: (110359,110504) (145)
+<<EOS;
+Error␣trying␣to␣discover␣Win_OS_Type:␣$id:$major:$minor␣Has␣no␣name␣of␣record!
+We␣won't␣be␣able␣to␣look␣for␣a␣system-wide␣config␣file.
+EOS
+----------
+Range: (110509,110589) (80)
+}
+
+␣␣␣␣#␣Unfortunately␣the␣logic␣used␣for␣the␣various␣versions␣isn't␣so␣clever..
+----------
+Range: (111297,111384) (87)
+my␣(␣$is_Windows,␣$Windows_type,␣$rconfig_file_chatter,
+␣␣␣␣␣␣␣␣$rpending_complaint␣)␣=
+----------
+Range: (117981,118058) (77)
+"Attempting␣to␣redefine␣alias␣($name)␣in␣config␣file␣$config_file␣line␣$.\n";
+----------
+Range: (118968,119103) (135)
+<<EOM;
+Error␣reading␣file␣'$config_file'␣at␣line␣number␣$line_no.
+$msg
+Please␣fix␣this␣line␣or␣use␣-npro␣to␣avoid␣reading␣this␣file
+EOM
+----------
+Range: (119518,119614) (96)
+"Didn't␣see␣a␣'}'␣to␣match␣the␣'{'␣at␣line␣$opening_brace_line␣in␣config␣file␣'$config_file'\n";
+----------
+Range: (120753,120832) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣error..we␣reached␣the␣end␣without␣seeing␣the␣ending␣quote␣char
+----------
+Range: (120875,121073) (198)
+<<EOM;
+Error␣reading␣file␣$config_file␣at␣line␣number␣$line_no.
+Did␣not␣see␣ending␣quote␣character␣<$quote_char>␣in␣this␣text:
+$instr
+Please␣fix␣this␣line␣or␣use␣-npro␣to␣avoid␣reading␣this␣file
+EOM
+----------
+Range: (121108,121195) (87)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣accumulating␣characters␣and␣looking␣for␣start␣of␣a␣quoted␣string
+----------
+Range: (122495,122574) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣error..we␣reached␣the␣end␣without␣seeing␣the␣ending␣quote␣char
+----------
+Range: (122683,122762) (79)
+<<EOM;
+Did␣not␣see␣ending␣quote␣character␣<$quote_char>␣in␣this␣text:
+$body
+EOM
+----------
+Range: (122797,122884) (87)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣accumulating␣characters␣and␣looking␣for␣start␣of␣a␣quoted␣string
+----------
+Range: (123472,123999) (527)
+<<EOM;
+#␣Command␣line␣long␣names␣(passed␣to␣GetOptions)
+#---------------------------------------------------------------
+#␣here␣is␣a␣summary␣of␣the␣Getopt␣codes:
+#␣<none>␣does␣not␣take␣an␣argument
+#␣=s␣takes␣a␣mandatory␣string
+#␣:s␣takes␣an␣optional␣string
+#␣=i␣takes␣a␣mandatory␣integer
+#␣:i␣takes␣an␣optional␣integer
+#␣!␣does␣not␣take␣an␣argument␣and␣may␣be␣negated
+#␣␣i.e.,␣-foo␣and␣-nofoo␣are␣allowed
+#␣a␣double␣dash␣signals␣the␣end␣of␣the␣options␣list
+#
+#---------------------------------------------------------------
+EOM
+----------
+Range: (125643,125986) (343)
+<<"EOM";
+This␣is␣perltidy,␣v$VERSION
+
+Copyright␣2000-2016,␣Steve␣Hancock
+
+Perltidy␣is␣free␣software␣and␣may␣be␣copied␣under␣the␣terms␣of␣the␣GNU
+General␣Public␣License,␣which␣is␣included␣in␣the␣distribution␣files.
+
+Complete␣documentation␣for␣perltidy␣can␣be␣found␣using␣'man␣perltidy'
+or␣on␣the␣internet␣at␣http://perltidy.sourceforge.net.
+EOM
+----------
+Range: (126020,135314) (9294)
+<<EOF;
+This␣is␣perltidy␣version␣$VERSION,␣a␣perl␣script␣indenter.␣␣Usage:
+
+␣␣␣␣perltidy␣[␣options␣]␣file1␣file2␣file3␣...
+␣␣␣␣␣␣␣␣␣␣␣␣(output␣goes␣to␣file1.tdy,␣file2.tdy,␣file3.tdy,␣...)
+␣␣␣␣perltidy␣[␣options␣]␣file1␣-o␣outfile
+␣␣␣␣perltidy␣[␣options␣]␣file1␣-st␣>outfile
+␣␣␣␣perltidy␣[␣options␣]␣<infile␣>outfile
+
+Options␣have␣short␣and␣long␣forms.␣Short␣forms␣are␣shown;␣see
+man␣pages␣for␣long␣forms.␣␣Note:␣'=s'␣indicates␣a␣required␣string,
+and␣'=n'␣indicates␣a␣required␣integer.
+
+I/O␣control
+␣-h␣␣␣␣␣␣show␣this␣help
+␣-o=file␣name␣of␣the␣output␣file␣(only␣if␣single␣input␣file)
+␣-oext=s␣change␣output␣extension␣from␣'tdy'␣to␣s
+␣-opath=path␣␣change␣path␣to␣be␣'path'␣for␣output␣files
+␣-b␣␣␣␣␣␣backup␣original␣to␣.bak␣and␣modify␣file␣in-place
+␣-bext=s␣change␣default␣backup␣extension␣from␣'bak'␣to␣s
+␣-q␣␣␣␣␣␣deactivate␣error␣messages␣(for␣running␣under␣editor)
+␣-w␣␣␣␣␣␣include␣non-critical␣warning␣messages␣in␣the␣.ERR␣error␣output
+␣-syn␣␣␣␣run␣perl␣-c␣to␣check␣syntax␣(default␣under␣unix␣systems)
+␣-log␣␣␣␣save␣.LOG␣file,␣which␣has␣useful␣diagnostics
+␣-f␣␣␣␣␣␣force␣perltidy␣to␣read␣a␣binary␣file
+␣-g␣␣␣␣␣␣like␣-log␣but␣writes␣more␣detailed␣.LOG␣file,␣for␣debugging␣scripts
+␣-opt␣␣␣␣write␣the␣set␣of␣options␣actually␣used␣to␣a␣.LOG␣file
+␣-npro␣␣␣ignore␣.perltidyrc␣configuration␣command␣file
+␣-pro=file␣␣␣read␣configuration␣commands␣from␣file␣instead␣of␣.perltidyrc
+␣-st␣␣␣␣␣send␣output␣to␣standard␣output,␣STDOUT
+␣-se␣␣␣␣␣send␣all␣error␣output␣to␣standard␣error␣output,␣STDERR
+␣-v␣␣␣␣␣␣display␣version␣number␣to␣standard␣output␣and␣quit
+
+Basic␣Options:
+␣-i=n␣␣␣␣use␣n␣columns␣per␣indentation␣level␣(default␣n=4)
+␣-t␣␣␣␣␣␣tabs:␣use␣one␣tab␣character␣per␣indentation␣level,␣not␣recommeded
+␣-nt␣␣␣␣␣no␣tabs:␣use␣n␣spaces␣per␣indentation␣level␣(default)
+␣-et=n␣␣␣entab␣leading␣whitespace␣n␣spaces␣per␣tab;␣not␣recommended
+␣-io␣␣␣␣␣"indent␣only":␣just␣do␣indentation,␣no␣other␣formatting.
+␣-sil=n␣␣set␣starting␣indentation␣level␣to␣n;␣␣use␣if␣auto␣detection␣fails
+␣-ole=s␣␣specify␣output␣line␣ending␣(s=dos␣or␣win,␣mac,␣unix)
+␣-ple␣␣␣␣keep␣output␣line␣endings␣same␣as␣input␣(input␣must␣be␣filename)
+
+Whitespace␣Control
+␣-fws␣␣␣␣freeze␣whitespace;␣this␣disables␣all␣whitespace␣changes
+␣␣␣␣␣␣␣␣␣␣␣and␣disables␣the␣following␣switches:
+␣-bt=n␣␣␣sets␣brace␣tightness,␣␣n=␣(0␣=␣loose,␣1=default,␣2␣=␣tight)
+␣-bbt␣␣␣␣same␣as␣-bt␣but␣for␣code␣block␣braces;␣same␣as␣-bt␣if␣not␣given
+␣-bbvt␣␣␣block␣braces␣vertically␣tight;␣use␣with␣-bl␣or␣-bli
+␣-bbvtl=s␣␣make␣-bbvt␣to␣apply␣to␣selected␣list␣of␣block␣types
+␣-pt=n␣␣␣paren␣tightness␣(n=0,␣1␣or␣2)
+␣-sbt=n␣␣square␣bracket␣tightness␣(n=0,␣1,␣or␣2)
+␣-bvt=n␣␣brace␣vertical␣tightness,
+␣␣␣␣␣␣␣␣␣n=(0=open,␣1=close␣unless␣multiple␣steps␣on␣a␣line,␣2=always␣close)
+␣-pvt=n␣␣paren␣vertical␣tightness␣(see␣-bvt␣for␣n)
+␣-sbvt=n␣square␣bracket␣vertical␣tightness␣(see␣-bvt␣for␣n)
+␣-bvtc=n␣closing␣brace␣vertical␣tightness:
+␣␣␣␣␣␣␣␣␣n=(0=open,␣1=sometimes␣close,␣2=always␣close)
+␣-pvtc=n␣closing␣paren␣vertical␣tightness,␣see␣-bvtc␣for␣n.
+␣-sbvtc=n␣closing␣square␣bracket␣vertical␣tightness,␣see␣-bvtc␣for␣n.
+␣-ci=n␣␣␣sets␣continuation␣indentation=n,␣␣default␣is␣n=2␣spaces
+␣-lp␣␣␣␣␣line␣up␣parentheses,␣brackets,␣and␣non-BLOCK␣braces
+␣-sfs␣␣␣␣add␣space␣before␣semicolon␣in␣for(␣;␣;␣)
+␣-aws␣␣␣␣allow␣perltidy␣to␣add␣whitespace␣(default)
+␣-dws␣␣␣␣delete␣all␣old␣non-essential␣whitespace
+␣-icb␣␣␣␣indent␣closing␣brace␣of␣a␣code␣block
+␣-cti=n␣␣closing␣indentation␣of␣paren,␣square␣bracket,␣or␣non-block␣brace:
+␣␣␣␣␣␣␣␣␣n=0␣none,␣=1␣align␣with␣opening,␣=2␣one␣full␣indentation␣level
+␣-icp␣␣␣␣equivalent␣to␣-cti=2
+␣-wls=s␣␣want␣space␣left␣of␣tokens␣in␣string;␣i.e.␣-nwls='+␣-␣*␣/'
+␣-wrs=s␣␣want␣space␣right␣of␣tokens␣in␣string;
+␣-sts␣␣␣␣put␣space␣before␣terminal␣semicolon␣of␣a␣statement
+␣-sak=s␣␣put␣space␣between␣keywords␣given␣in␣s␣and␣'(';
+␣-nsak=s␣no␣space␣between␣keywords␣in␣s␣and␣'(';␣i.e.␣-nsak='my␣our␣local'
+
+Line␣Break␣Control
+␣-fnl␣␣␣␣freeze␣newlines;␣this␣disables␣all␣line␣break␣changes
+␣␣␣␣␣␣␣␣␣␣␣␣and␣disables␣the␣following␣switches:
+␣-anl␣␣␣␣add␣newlines;␣␣ok␣to␣introduce␣new␣line␣breaks
+␣-bbs␣␣␣␣add␣blank␣line␣before␣subs␣and␣packages
+␣-bbc␣␣␣␣add␣blank␣line␣before␣block␣comments
+␣-bbb␣␣␣␣add␣blank␣line␣between␣major␣blocks
+␣-kbl=n␣␣keep␣old␣blank␣lines?␣0=no,␣1=some,␣2=all
+␣-mbl=n␣␣maximum␣consecutive␣blank␣lines␣to␣output␣(default=1)
+␣-ce␣␣␣␣␣cuddled␣else;␣use␣this␣style:␣'}␣else␣{'
+␣-dnl␣␣␣␣delete␣old␣newlines␣(default)
+␣-l=n␣␣␣␣maximum␣line␣length;␣␣default␣n=80
+␣-bl␣␣␣␣␣opening␣brace␣on␣new␣line
+␣-sbl␣␣␣␣opening␣sub␣brace␣on␣new␣line.␣␣value␣of␣-bl␣is␣used␣if␣not␣given.
+␣-bli␣␣␣␣opening␣brace␣on␣new␣line␣and␣indented
+␣-bar␣␣␣␣opening␣brace␣always␣on␣right,␣even␣for␣long␣clauses
+␣-vt=n␣␣␣vertical␣tightness␣(requires␣-lp);␣n␣controls␣break␣after␣opening
+␣␣␣␣␣␣␣␣␣token:␣0=never␣␣1=no␣break␣if␣next␣line␣balanced␣␣␣2=no␣break
+␣-vtc=n␣␣vertical␣tightness␣of␣closing␣container;␣n␣controls␣if␣closing
+␣␣␣␣␣␣␣␣␣token␣starts␣new␣line:␣0=always␣␣1=not␣unless␣list␣␣1=never
+␣-wba=s␣␣want␣break␣after␣tokens␣in␣string;␣i.e.␣wba=':␣.'
+␣-wbb=s␣␣want␣break␣before␣tokens␣in␣string
+
+Following␣Old␣Breakpoints
+␣-kis␣␣␣␣keep␣interior␣semicolons.␣␣Allows␣multiple␣statements␣per␣line.
+␣-boc␣␣␣␣break␣at␣old␣comma␣breaks:␣turns␣off␣all␣automatic␣list␣formatting
+␣-bol␣␣␣␣break␣at␣old␣logical␣breakpoints:␣or,␣and,␣||,␣&&␣(default)
+␣-bok␣␣␣␣break␣at␣old␣list␣keyword␣breakpoints␣such␣as␣map,␣sort␣(default)
+␣-bot␣␣␣␣break␣at␣old␣conditional␣(ternary␣?:)␣operator␣breakpoints␣(default)
+␣-boa␣␣␣␣break␣at␣old␣attribute␣breakpoints
+␣-cab=n␣␣break␣at␣commas␣after␣a␣comma-arrow␣(=>):
+␣␣␣␣␣␣␣␣␣n=0␣break␣at␣all␣commas␣after␣=>
+␣␣␣␣␣␣␣␣␣n=1␣stable:␣break␣unless␣this␣breaks␣an␣existing␣one-line␣container
+␣␣␣␣␣␣␣␣␣n=2␣break␣only␣if␣a␣one-line␣container␣cannot␣be␣formed
+␣␣␣␣␣␣␣␣␣n=3␣do␣not␣treat␣commas␣after␣=>␣specially␣at␣all
+
+Comment␣controls
+␣-ibc␣␣␣␣indent␣block␣comments␣(default)
+␣-isbc␣␣␣indent␣spaced␣block␣comments;␣may␣indent␣unless␣no␣leading␣space
+␣-msc=n␣␣minimum␣desired␣spaces␣to␣side␣comment,␣default␣4
+␣-fpsc=n␣fix␣position␣for␣side␣comments;␣default␣0;
+␣-csc␣␣␣␣add␣or␣update␣closing␣side␣comments␣after␣closing␣BLOCK␣brace
+␣-dcsc␣␣␣delete␣closing␣side␣comments␣created␣by␣a␣-csc␣command
+␣-cscp=s␣change␣closing␣side␣comment␣prefix␣to␣be␣other␣than␣'##␣end'
+␣-cscl=s␣change␣closing␣side␣comment␣to␣apply␣to␣selected␣list␣of␣blocks
+␣-csci=n␣minimum␣number␣of␣lines␣needed␣to␣apply␣a␣-csc␣tag,␣default␣n=6
+␣-csct=n␣maximum␣number␣of␣columns␣of␣appended␣text,␣default␣n=20
+␣-cscw␣␣␣causes␣warning␣if␣old␣side␣comment␣is␣overwritten␣with␣-csc
+
+␣-sbc␣␣␣␣use␣'static␣block␣comments'␣identified␣by␣leading␣'##'␣(default)
+␣-sbcp=s␣change␣static␣block␣comment␣identifier␣to␣be␣other␣than␣'##'
+␣-osbc␣␣␣outdent␣static␣block␣comments
+
+␣-ssc␣␣␣␣use␣'static␣side␣comments'␣identified␣by␣leading␣'##'␣(default)
+␣-sscp=s␣change␣static␣side␣comment␣identifier␣to␣be␣other␣than␣'##'
+
+Delete␣selected␣text
+␣-dac␣␣␣␣delete␣all␣comments␣AND␣pod
+␣-dbc␣␣␣␣delete␣block␣comments
+␣-dsc␣␣␣␣delete␣side␣comments
+␣-dp␣␣␣␣␣delete␣pod
+
+Send␣selected␣text␣to␣a␣'.TEE'␣file
+␣-tac␣␣␣␣tee␣all␣comments␣AND␣pod
+␣-tbc␣␣␣␣tee␣block␣comments
+␣-tsc␣␣␣␣tee␣side␣comments
+␣-tp␣␣␣␣␣tee␣pod
+
+Outdenting
+␣-olq␣␣␣␣outdent␣long␣quoted␣strings␣(default)
+␣-olc␣␣␣␣outdent␣a␣long␣block␣comment␣line
+␣-ola␣␣␣␣outdent␣statement␣labels
+␣-okw␣␣␣␣outdent␣control␣keywords␣(redo,␣next,␣last,␣goto,␣return)
+␣-okwl=s␣specify␣alternative␣keywords␣for␣-okw␣command
+
+Other␣controls
+␣-mft=n␣␣maximum␣fields␣per␣table;␣default␣n=40
+␣-x␣␣␣␣␣␣do␣not␣format␣lines␣before␣hash-bang␣line␣(i.e.,␣for␣VMS)
+␣-asc␣␣␣␣allows␣perltidy␣to␣add␣a␣';'␣when␣missing␣(default)
+␣-dsm␣␣␣␣allows␣perltidy␣to␣delete␣an␣unnecessary␣';'␣␣(default)
+
+Combinations␣of␣other␣parameters
+␣-gnu␣␣␣␣␣attempt␣to␣follow␣GNU␣Coding␣Standards␣as␣applied␣to␣perl
+␣-mangle␣␣remove␣as␣many␣newlines␣as␣possible␣(but␣keep␣comments␣and␣pods)
+␣-extrude␣␣insert␣as␣many␣newlines␣as␣possible
+
+Dump␣and␣die,␣debugging
+␣-dop␣␣␣␣dump␣options␣used␣in␣this␣run␣to␣standard␣output␣and␣quit
+␣-ddf␣␣␣␣dump␣default␣options␣to␣standard␣output␣and␣quit
+␣-dsn␣␣␣␣dump␣all␣option␣short␣names␣to␣standard␣output␣and␣quit
+␣-dln␣␣␣␣dump␣option␣long␣names␣to␣standard␣output␣and␣quit
+␣-dpro␣␣␣dump␣whatever␣configuration␣file␣is␣in␣effect␣to␣standard␣output
+␣-dtt␣␣␣␣dump␣all␣token␣types␣to␣standard␣output␣and␣quit
+
+HTML
+␣-html␣write␣an␣html␣file␣(see␣'man␣perl2web'␣for␣many␣options)
+␣␣␣␣␣␣␣Note:␣when␣-html␣is␣used,␣no␣indentation␣or␣formatting␣are␣done.
+␣␣␣␣␣␣␣Hint:␣try␣perltidy␣-html␣-css=mystyle.css␣filename.pl
+␣␣␣␣␣␣␣and␣edit␣mystyle.css␣to␣change␣the␣appearance␣of␣filename.html.
+␣␣␣␣␣␣␣-nnn␣gives␣line␣numbers
+␣␣␣␣␣␣␣-pre␣only␣writes␣out␣<pre>..</pre>␣code␣section
+␣␣␣␣␣␣␣-toc␣places␣a␣table␣of␣contents␣to␣subs␣at␣the␣top␣(default)
+␣␣␣␣␣␣␣-pod␣passes␣pod␣text␣through␣pod2html␣(default)
+␣␣␣␣␣␣␣-frm␣write␣html␣as␣a␣frame␣(3␣files)
+␣␣␣␣␣␣␣-text=s␣extra␣extension␣for␣table␣of␣contents␣if␣-frm,␣default='toc'
+␣␣␣␣␣␣␣-sext=s␣extra␣extension␣for␣file␣content␣if␣-frm,␣default='src'
+
+A␣prefix␣of␣"n"␣negates␣short␣form␣toggle␣switches,␣and␣a␣prefix␣of␣"no"
+negates␣the␣long␣forms.␣␣For␣example,␣-nasc␣means␣don't␣add␣missing
+semicolons.
+
+If␣you␣are␣unable␣to␣see␣this␣entire␣text,␣try␣"perltidy␣-h␣|␣more"
+For␣more␣detailed␣information,␣and␣additional␣options,␣try␣"man␣perltidy",
+or␣go␣to␣the␣perltidy␣home␣page␣at␣http://perltidy.sourceforge.net
+EOF
+----------
+Range: (136909,136992) (83)
+"␣-x"␣}
+␣␣␣␣}
+
+␣␣␣␣#␣this␣shouldn't␣happen␣unless␣a␣temporary␣file␣couldn't␣be␣made
+----------
+Range: (138518,138611) (93)
+"The␣output␣file␣has␣a␣syntax␣error␣when␣tested␣with␣perl␣$flags␣$ostream␣!\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (138665,138743) (78)
+"This␣implies␣an␣error␣in␣perltidy;␣the␣file␣$ostream␣is␣bad\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (139646,139727) (81)
+"The␣output␣file␣will␣not␣be␣checked␣because␣of␣input␣file␣problems\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (141467,141693) (226)
+confess␣<<EOM;
+------------------------------------------------------------------------
+expecting␣ref␣to␣SCALAR␣but␣got␣ref␣to␣($ref);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (142467,142696) (229)
+confess␣<<EOM;
+------------------------------------------------------------------------
+expecting␣mode␣=␣'r'␣or␣'w'␣but␣got␣mode␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (142803,143035) (232)
+confess␣<<EOM;
+------------------------------------------------------------------------
+getline␣call␣requires␣mode␣=␣'r'␣but␣mode␣=␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (143195,143425) (230)
+confess␣<<EOM;
+------------------------------------------------------------------------
+print␣call␣requires␣mode␣=␣'w'␣but␣mode␣=␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (144136,144361) (225)
+confess␣<<EOM;
+------------------------------------------------------------------------
+expecting␣ref␣to␣ARRAY␣but␣got␣ref␣to␣($ref);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (144613,144842) (229)
+confess␣<<EOM;
+------------------------------------------------------------------------
+expecting␣mode␣=␣'r'␣or␣'w'␣but␣got␣mode␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (144949,145176) (227)
+confess␣<<EOM;
+------------------------------------------------------------------------
+getline␣requires␣mode␣=␣'r'␣but␣mode␣=␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (145336,145561) (225)
+confess␣<<EOM;
+------------------------------------------------------------------------
+print␣requires␣mode␣=␣'w'␣but␣mode␣=␣($mode);␣trace␣follows:
+------------------------------------------------------------------------
+EOM
+----------
+Range: (145697,145777) (80)
+#␣the␣Perl::Tidy::LineSource␣class␣supplies␣an␣object␣with␣a␣'get_line()'␣method
+----------
+Range: (146727,146805) (78)
+<<EOM;
+Note:␣--syntax␣check␣will␣be␣skipped␣because␣standard␣input␣is␣used
+EOM
+----------
+Range: (148379,148495) (116)
+my␣(␣$class,␣$output_file,␣$tee_file,␣$line_separator,␣$rOpts,
+␣␣␣␣␣␣␣␣$rpending_logfile_message,␣$binmode␣)
+␣␣␣␣␣␣=
+----------
+Range: (149177,149278) (101)
+binmode␣STDOUT␣}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣in␣order␣to␣check␣output␣syntax␣when␣standard␣output␣is␣used,
+----------
+Range: (149692,149771) (79)
+<<EOM;
+Note:␣--syntax␣check␣will␣be␣skipped␣because␣standard␣output␣is␣used
+EOM
+----------
+Range: (151729,151809) (80)
+}
+␣␣␣␣}
+}
+
+#####################################################################
+----------
+Range: (157651,158076) (425)
+<<EOM;
+The␣nesting␣depths␣in␣the␣table␣below␣are␣at␣the␣start␣of␣the␣lines.
+The␣indicated␣output␣line␣numbers␣are␣not␣always␣exact.
+ci␣=␣levels␣of␣continuation␣indentation;␣bk␣=␣1␣if␣in␣BLOCK,␣0␣if␣not.
+
+in:out␣indent␣c␣b␣␣nesting␣␣␣code␣+␣messages;␣(messages␣begin␣with␣>>>)
+lines␣␣levels␣i␣k␣␣␣␣␣␣␣␣␣␣␣␣(code␣begins␣with␣one␣'.'␣per␣indent␣level)
+------␣␣-----␣-␣-␣--------␣␣␣-------------------------------------------
+EOM
+----------
+Range: (160488,160630) (142)
+"L$input_line_number:$output_line_number$extra_space␣i$guessed_indentation_level:$structural_indentation_level␣$ci_level␣$bk␣$nesting_string";
+----------
+Range: (164485,164837) (352)
+<<EOM);
+
+You␣may␣have␣encountered␣a␣code␣bug␣in␣perltidy.␣␣If␣you␣think␣so,␣and
+the␣problem␣is␣not␣listed␣in␣the␣BUGS␣file␣at
+http://perltidy.sourceforge.net,␣please␣report␣it␣so␣that␣it␣can␣be
+corrected.␣␣Include␣the␣smallest␣possible␣script␣which␣has␣the␣problem,
+along␣with␣the␣.LOG␣file.␣See␣the␣manual␣pages␣for␣contact␣information.
+Thank␣you!
+EOM
+----------
+Range: (164946,165483) (537)
+<<EOM);
+
+You␣may␣have␣encountered␣a␣bug␣in␣perltidy.␣␣However,␣since␣you␣are␣using␣the
+-extrude␣option,␣the␣problem␣may␣be␣with␣perl␣or␣one␣of␣its␣modules,␣which␣have
+occasional␣problems␣with␣this␣type␣of␣file.␣␣If␣you␣believe␣that␣the
+problem␣is␣with␣perltidy,␣and␣the␣problem␣is␣not␣listed␣in␣the␣BUGS␣file␣at
+http://perltidy.sourceforge.net,␣please␣report␣it␣so␣that␣it␣can␣be␣corrected.
+Include␣the␣smallest␣possible␣script␣which␣has␣the␣problem,␣along␣with␣the␣.LOG
+file.␣See␣the␣manual␣pages␣for␣contact␣information.
+Thank␣you!
+EOM
+----------
+Range: (165536,165945) (409)
+<<EOM);
+
+Oops,␣you␣seem␣to␣have␣encountered␣a␣bug␣in␣perltidy.␣␣Please␣check␣the
+BUGS␣file␣at␣http://perltidy.sourceforge.net.␣␣If␣the␣problem␣is␣not
+listed␣there,␣please␣report␣it␣so␣that␣it␣can␣be␣corrected.␣␣Include␣the
+smallest␣possible␣script␣which␣produces␣this␣message,␣along␣with␣the
+.LOG␣file␣if␣appropriate.␣␣See␣the␣manual␣pages␣for␣contact␣information.
+Your␣efforts␣are␣appreciated.
+Thank␣you!
+EOM
+----------
+Range: (166202,166433) (231)
+<<EOM);
+
+The␣log␣file␣shows␣that␣perltidy␣added␣$added_semicolon_count␣semicolons.
+Please␣rerun␣with␣-nasc␣to␣see␣if␣that␣is␣the␣cause␣of␣the␣syntax␣error.␣␣Even
+if␣that␣is␣the␣problem,␣please␣report␣it␣so␣that␣it␣can␣be␣fixed.
+EOM
+----------
+Range: (167286,167373) (87)
+"To␣see␣$self->{_complaint_count}␣non-critical␣warnings␣rerun␣with␣-w\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (168044,168134) (90)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+}
+
+#####################################################################
+----------
+Range: (168673,168840) (167)
+use␣vars␣qw{
+␣␣%html_color
+␣␣%html_bold
+␣␣%html_italic
+␣␣%token_short_names
+␣␣%short_to_long_names
+␣␣$rOpts
+␣␣$css_filename
+␣␣$css_linkname
+␣␣$missing_html_entities
+};
+----------
+Range: (168842,168919) (77)
+#␣replace␣unsafe␣characters␣with␣HTML␣entity␣representation␣if␣HTML::Entities
+----------
+Range: (169011,169119) (108)
+my␣(␣$class,␣$input_file,␣$html_file,␣$extension,␣$html_toc_extension,
+␣␣␣␣␣␣␣␣$html_src_extension␣)
+␣␣␣␣␣␣=
+----------
+Range: (170403,170499) (96)
+Perl::Tidy::Warn
+"unable␣to␣find␣Pod::Html;␣cannot␣use␣pod2html\n-npod␣disables␣this␣message\n";
+----------
+Range: (170805,170896) (91)
+Perl::Tidy::Warn
+"cannot␣use␣frames␣without␣a␣specified␣output␣extension;␣ignoring␣-frm\n";
+----------
+Range: (174821,174898) (77)
+<<"TOC_END");
+<!--␣BEGIN␣CODE␣INDEX␣--><a␣name="code-index"></a>
+<ul>
+TOC_END
+----------
+Range: (175132,175218) (86)
+"package-$name"␣}
+
+␣␣␣␣#␣append␣'-1',␣'-2',␣etc␣if␣necessary␣to␣make␣unique;␣this␣will
+----------
+Range: (175722,175803) (81)
+'main'␣}
+
+␣␣␣␣␣␣␣␣#␣if␣we're␣already␣in␣a␣package/sub␣list,␣be␣sure␣its␣the␣right
+----------
+Range: (187867,188071) (204)
+<<"EOM");
+/*␣default␣style␣sheet␣generated␣by␣perltidy␣*/
+body␣{background:␣$bg_color;␣color:␣$text_color}
+pre␣{␣color:␣$text_color;
+␣␣␣␣␣␣background:␣$pre_bg_color;
+␣␣␣␣␣␣font-family:␣courier;
+␣␣␣␣}
+
+EOM
+----------
+Range: (190252,190343) (91)
+Perl::Tidy::Warn
+␣␣␣␣␣␣␣␣␣␣"unable␣to␣open␣temporary␣file␣$tmpfile;␣cannot␣use␣pod2html\n";
+----------
+Range: (191406,191498) (92)
+"--$kw=$rOpts->{$kw}"␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Toggle␣switches;␣these␣have␣extra␣leading␣'pod'
+----------
+Range: (192456,192547) (91)
+Perl::Tidy::Warn
+␣␣␣␣␣␣␣␣␣␣"unable␣to␣open␣temporary␣file␣$tmpfile;␣cannot␣use␣pod2html\n";
+----------
+Range: (197265,197348) (83)
+Perl::Tidy::Warn
+"Problem␣merging␣html␣stream␣with␣pod2html;␣order␣may␣be␣wrong\n";
+----------
+Range: (197417,197496) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣If␣didn't␣see␣multiple␣=cut␣lines,␣we'll␣put␣the␣pod␣out␣first
+----------
+Range: (197810,197887) (77)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Copy␣any␣remaining␣code␣section␣before␣the␣</body>␣tag
+----------
+Range: (201110,201248) (138)
+<<EOM);
+<html>
+<head>
+<title>$title</title>
+</head>
+<body>
+<h1><a␣href=\"$src_basename#-top-"␣target="$src_frame_name">$title</a></h1>
+EOM
+----------
+Range: (201513,201636) (123)
+my␣(
+␣␣␣␣␣␣␣␣$title,␣␣␣␣␣␣␣␣$frame_filename,␣$top_basename,
+␣␣␣␣␣␣␣␣$toc_basename,␣$src_basename,␣␣␣$src_frame_name
+␣␣␣␣)␣=
+----------
+Range: (201768,202023) (255)
+<<EOM);
+<!DOCTYPE␣html␣PUBLIC␣"-//W3C//DTD␣XHTML␣1.0␣Frameset//EN"
+␣␣␣␣"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<?xml␣version="1.0"␣encoding="iso-8859-1"␣?>
+<html␣xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>$title</title>
+</head>
+EOM
+----------
+Range: (202124,202263) (139)
+<<EOM);
+<frameset␣cols="20%,80%">
+<frameset␣rows="30%,70%">
+<frame␣src␣=␣"$top_basename"␣/>
+<frame␣src␣=␣"$toc_basename"␣/>
+</frameset>
+EOM
+----------
+Range: (202448,202804) (356)
+<<EOM);
+<frame␣src␣=␣"$src_basename"␣name␣=␣"$src_frame_name"␣/>
+<noframes>
+<body>
+<p>If␣you␣see␣this␣message,␣you␣are␣using␣a␣non-frame-capable␣web␣client.</p>
+<p>This␣document␣contains:</p>
+<ul>
+<li><a␣href="$toc_basename">A␣table␣of␣contents</a></li>
+<li><a␣href="$src_basename">The␣source␣code</a></li>
+</ul>
+</body>
+</noframes>
+</frameset>
+</html>
+EOM
+----------
+Range: (204865,204942) (77)
+qq(<link␣rel="stylesheet"␣href="$css_linkname"␣type="text/css"␣/>)
+␣␣␣␣␣␣␣␣);
+----------
+Range: (205980,206245) (265)
+<<"HTML_START");
+<!DOCTYPE␣html␣PUBLIC␣"-//W3C//DTD␣XHTML␣1.0␣Transitional//EN"
+␣␣␣"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--␣Generated␣by␣perltidy␣on␣$date␣-->
+<html␣xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>$title</title>
+HTML_START
+----------
+Range: (206441,206573) (132)
+<<"HTML_START");
+</head>
+<body␣bgcolor=\"$rOpts->{'html-color-background'}\"␣text=\"$rOpts->{'html-color-punctuation'}\">
+HTML_START
+----------
+Range: (207024,207104) (80)
+<<"END_PRE");
+<hr␣/>
+<!--␣contents␣of␣filename:␣$fname_comment␣-->
+<pre>
+END_PRE
+----------
+Range: (209867,209944) (77)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#-------------------------------------------------------
+----------
+Range: (218429,223595) (5166)
+use␣vars␣qw{
+
+␣␣@gnu_stack
+␣␣$max_gnu_stack_index
+␣␣$gnu_position_predictor
+␣␣$line_start_index_to_go
+␣␣$last_indentation_written
+␣␣$last_unadjusted_indentation
+␣␣$last_leading_token
+␣␣$last_output_short_opening_token
+
+␣␣$saw_VERSION_in_this_file
+␣␣$saw_END_or_DATA_
+
+␣␣@gnu_item_list
+␣␣$max_gnu_item_index
+␣␣$gnu_sequence_number
+␣␣$last_output_indentation
+␣␣%last_gnu_equals
+␣␣%gnu_comma_count
+␣␣%gnu_arrow_count
+
+␣␣@block_type_to_go
+␣␣@type_sequence_to_go
+␣␣@container_environment_to_go
+␣␣@bond_strength_to_go
+␣␣@forced_breakpoint_to_go
+␣␣@token_lengths_to_go
+␣␣@summed_lengths_to_go
+␣␣@levels_to_go
+␣␣@leading_spaces_to_go
+␣␣@reduced_spaces_to_go
+␣␣@matching_token_to_go
+␣␣@mate_index_to_go
+␣␣@nesting_blocks_to_go
+␣␣@ci_levels_to_go
+␣␣@nesting_depth_to_go
+␣␣@nobreak_to_go
+␣␣@old_breakpoint_to_go
+␣␣@tokens_to_go
+␣␣@types_to_go
+␣␣@inext_to_go
+␣␣@iprev_to_go
+
+␣␣%saved_opening_indentation
+
+␣␣$max_index_to_go
+␣␣$comma_count_in_batch
+␣␣$old_line_count_in_batch
+␣␣$last_nonblank_index_to_go
+␣␣$last_nonblank_type_to_go
+␣␣$last_nonblank_token_to_go
+␣␣$last_last_nonblank_index_to_go
+␣␣$last_last_nonblank_type_to_go
+␣␣$last_last_nonblank_token_to_go
+␣␣@nonblank_lines_at_depth
+␣␣$starting_in_quote
+␣␣$ending_in_quote
+␣␣@whitespace_level_stack
+␣␣$whitespace_last_level
+
+␣␣$in_format_skipping_section
+␣␣$format_skipping_pattern_begin
+␣␣$format_skipping_pattern_end
+
+␣␣$forced_breakpoint_count
+␣␣$forced_breakpoint_undo_count
+␣␣@forced_breakpoint_undo_stack
+␣␣%postponed_breakpoint
+
+␣␣$tabbing
+␣␣$embedded_tab_count
+␣␣$first_embedded_tab_at
+␣␣$last_embedded_tab_at
+␣␣$deleted_semicolon_count
+␣␣$first_deleted_semicolon_at
+␣␣$last_deleted_semicolon_at
+␣␣$added_semicolon_count
+␣␣$first_added_semicolon_at
+␣␣$last_added_semicolon_at
+␣␣$first_tabbing_disagreement
+␣␣$last_tabbing_disagreement
+␣␣$in_tabbing_disagreement
+␣␣$tabbing_disagreement_count
+␣␣$input_line_tabbing
+
+␣␣$last_line_type
+␣␣$last_line_leading_type
+␣␣$last_line_leading_level
+␣␣$last_last_line_leading_level
+
+␣␣%block_leading_text
+␣␣%block_opening_line_number
+␣␣$csc_new_statement_ok
+␣␣$csc_last_label
+␣␣%csc_block_label
+␣␣$accumulating_text_for_block
+␣␣$leading_block_text
+␣␣$rleading_block_if_elsif_text
+␣␣$leading_block_text_level
+␣␣$leading_block_text_length_exceeded
+␣␣$leading_block_text_line_length
+␣␣$leading_block_text_line_number
+␣␣$closing_side_comment_prefix_pattern
+␣␣$closing_side_comment_list_pattern
+
+␣␣$last_nonblank_token
+␣␣$last_nonblank_type
+␣␣$last_last_nonblank_token
+␣␣$last_last_nonblank_type
+␣␣$last_nonblank_block_type
+␣␣$last_output_level
+␣␣%is_do_follower
+␣␣%is_if_brace_follower
+␣␣%space_after_keyword
+␣␣$rbrace_follower
+␣␣$looking_for_else
+␣␣%is_last_next_redo_return
+␣␣%is_other_brace_follower
+␣␣%is_else_brace_follower
+␣␣%is_anon_sub_brace_follower
+␣␣%is_anon_sub_1_brace_follower
+␣␣%is_sort_map_grep
+␣␣%is_sort_map_grep_eval
+␣␣%is_sort_map_grep_eval_do
+␣␣%is_block_without_semicolon
+␣␣%is_if_unless
+␣␣%is_and_or
+␣␣%is_assignment
+␣␣%is_chain_operator
+␣␣%is_if_unless_and_or_last_next_redo_return
+␣␣%ok_to_add_semicolon_for_block_type
+
+␣␣@has_broken_sublist
+␣␣@dont_align
+␣␣@want_comma_break
+
+␣␣$is_static_block_comment
+␣␣$index_start_one_line_block
+␣␣$semicolons_before_block_self_destruct
+␣␣$index_max_forced_break
+␣␣$input_line_number
+␣␣$diagnostics_object
+␣␣$vertical_aligner_object
+␣␣$logger_object
+␣␣$file_writer_object
+␣␣$formatter_self
+␣␣@ci_stack
+␣␣$last_line_had_side_comment
+␣␣%want_break_before
+␣␣%outdent_keyword
+␣␣$static_block_comment_pattern
+␣␣$static_side_comment_pattern
+␣␣%opening_vertical_tightness
+␣␣%closing_vertical_tightness
+␣␣%closing_token_indentation
+␣␣$some_closing_token_indentation
+
+␣␣%opening_token_right
+␣␣%stack_opening_token
+␣␣%stack_closing_token
+
+␣␣$block_brace_vertical_tightness_pattern
+
+␣␣$rOpts_add_newlines
+␣␣$rOpts_add_whitespace
+␣␣$rOpts_block_brace_tightness
+␣␣$rOpts_block_brace_vertical_tightness
+␣␣$rOpts_brace_left_and_indent
+␣␣$rOpts_comma_arrow_breakpoints
+␣␣$rOpts_break_at_old_keyword_breakpoints
+␣␣$rOpts_break_at_old_comma_breakpoints
+␣␣$rOpts_break_at_old_logical_breakpoints
+␣␣$rOpts_break_at_old_ternary_breakpoints
+␣␣$rOpts_break_at_old_attribute_breakpoints
+␣␣$rOpts_closing_side_comment_else_flag
+␣␣$rOpts_closing_side_comment_maximum_text
+␣␣$rOpts_continuation_indentation
+␣␣$rOpts_cuddled_else
+␣␣$rOpts_delete_old_whitespace
+␣␣$rOpts_fuzzy_line_length
+␣␣$rOpts_indent_columns
+␣␣$rOpts_line_up_parentheses
+␣␣$rOpts_maximum_fields_per_table
+␣␣$rOpts_maximum_line_length
+␣␣$rOpts_variable_maximum_line_length
+␣␣$rOpts_short_concatenation_item_length
+␣␣$rOpts_keep_old_blank_lines
+␣␣$rOpts_ignore_old_breakpoints
+␣␣$rOpts_format_skipping
+␣␣$rOpts_space_function_paren
+␣␣$rOpts_space_keyword_paren
+␣␣$rOpts_keep_interior_semicolons
+␣␣$rOpts_ignore_side_comment_lengths
+␣␣$rOpts_stack_closing_block_brace
+␣␣$rOpts_whitespace_cycle
+␣␣$rOpts_tight_secret_operators
+
+␣␣%is_opening_type
+␣␣%is_closing_type
+␣␣%is_keyword_returning_list
+␣␣%tightness
+␣␣%matching_token
+␣␣$rOpts
+␣␣%right_bond_strength
+␣␣%left_bond_strength
+␣␣%binary_ws_rules
+␣␣%want_left_space
+␣␣%want_right_space
+␣␣%is_digraph
+␣␣%is_trigraph
+␣␣$bli_pattern
+␣␣$bli_list_string
+␣␣%is_closing_type
+␣␣%is_opening_type
+␣␣%is_closing_token
+␣␣%is_opening_token
+};
+----------
+Range: (223751,223863) (112)
+qw(
+␣␣␣␣␣␣..␣::␣<<␣>>␣**␣&&␣..␣||␣//␣->␣=>␣+=␣-=␣.=␣%=␣&=␣|=␣^=␣*=␣<>
+␣␣␣␣␣␣<=␣>=␣==␣=~␣!~␣!=␣++␣--␣/=␣x=
+␣␣␣␣);
+----------
+Range: (224004,224094) (90)
+qw(
+␣␣␣␣␣␣=␣**=␣+=␣*=␣&=␣<<=␣&&=
+␣␣␣␣␣␣-=␣/=␣|=␣>>=␣||=␣//=
+␣␣␣␣␣␣.=␣%=␣^=
+␣␣␣␣␣␣x=
+␣␣␣␣);
+----------
+Range: (224148,224227) (79)
+qw(
+␣␣␣␣␣␣grep
+␣␣␣␣␣␣keys
+␣␣␣␣␣␣map
+␣␣␣␣␣␣reverse
+␣␣␣␣␣␣sort
+␣␣␣␣␣␣split
+␣␣␣␣);
+----------
+Range: (225397,225528) (131)
+qw(BEGIN␣END␣CHECK␣INIT␣AUTOLOAD␣DESTROY␣UNITCHECK␣continue␣if␣elsif␣else
+␣␣␣␣␣␣unless␣while␣until␣for␣foreach␣given␣when␣default);
+----------
+Range: (226036,226158) (122)
+qw(␣BEGIN␣END␣CHECK␣INIT␣AUTOLOAD␣DESTROY␣UNITCHECK␣continue␣if␣elsif␣else
+␣␣␣␣␣␣unless␣do␣while␣until␣eval␣for␣foreach␣);
+----------
+Range: (233089,233196) (107)
+"Leading␣whitespace␣will␣be␣entabbed␣with␣$rOpts->{'entab-leading-whitespace'}␣spaces␣per␣tab\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (233711,233801) (90)
+confess
+"Attempt␣to␣create␣more␣than␣1␣object␣in␣$class,␣which␣is␣not␣a␣true␣class␣yet\n";
+----------
+Range: (241398,241490) (92)
+'{'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣2␣Then␣either␣a␣brace␣or␣bracket
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (245374,245503) (129)
+2
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣we␣are␣beyond␣the␣1/4␣point␣and␣there␣was␣an␣old
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣break␣at␣the␣equals
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (245972,246085) (113)
+$old_breakpoint_to_go[␣$last_equals␣-␣2␣]␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (248177,248258) (81)
+$gnu_stack[$max_gnu_stack_index]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣->get_SEQUENCE_NUMBER(
+----------
+Range: (248669,248823) (154)
+"Program␣bug␣with␣-lp.␣␣seqno=$seqno␣should␣be␣$gnu_sequence_number␣and␣i=$i␣should␣be␣less␣than␣max=$max_gnu_item_index\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (249020,249113) (93)
+$gnu_item_list[$i]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣->permanently_decrease_AVAILABLE_SPACES(
+----------
+Range: (249267,249360) (93)
+$gnu_item_list[$i]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣->tentatively_decrease_AVAILABLE_SPACES(
+----------
+Range: (249873,249977) (104)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣go␣down␣one␣level
+----------
+Range: (250549,250634) (85)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣reached␣bottom␣of␣stack␣..␣should␣never␣happen␣because
+----------
+Range: (250786,250919) (133)
+"program␣bug␣with␣-lp:␣stack_error.␣level=$level;␣lev=$lev;␣ci_level=$ci_level;␣ci_lev=$ci_lev;␣rerun␣with␣-nlp\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (252418,252496) (78)
+}
+
+␣␣␣␣␣␣␣␣#␣otherwise␣use␣the␣space␣to␣the␣first␣non-blank␣level␣change␣token
+----------
+Range: (254723,254814) (91)
+$gnu_stack[$max_gnu_stack_index]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣->tentatively_decrease_AVAILABLE_SPACES(
+----------
+Range: (254845,254931) (86)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣Count␣commas␣and␣look␣for␣non-list␣characters.␣␣Once␣we␣see␣a
+----------
+Range: (255792,255898) (106)
+/^([\:\?\,f])$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣previous␣character␣was␣opening␣and␣this␣does␣not␣close␣it
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (256091,256172) (81)
+/^([\.]|\|\||\&\&)$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣this␣is␣a␣closing␣structure
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (256259,256355) (96)
+$last_nonblank_type_to_go␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣previous␣token␣was␣keyword␣'return'
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (256463,256551) (88)
+'{'␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣starting␣a␣new␣line␣at␣certain␣keywords␣is␣fine
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (256588,256727) (139)
+$is_if_unless_and_or_last_next_redo_return{$token}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣this␣is␣after␣an␣assignment␣after␣a␣closing␣structure
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (256863,256958) (95)
+/^[\}\)\]]$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣it␣is␣significantly␣to␣the␣right
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (257702,257805) (103)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣remember␣the␣predicted␣position␣of␣this␣token␣on␣the␣output␣line
+----------
+Range: (261465,261647) (182)
+"program␣bug␣with␣-lp:␣want␣to␣delete␣$deleted_spaces␣from␣item␣$i,␣but␣old=$old_spaces␣deleted:␣lev=$level␣ci=$ci_level␣␣deleted:␣level=$old_level␣ci=$ci_level\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (267753,267840) (87)
+"This␣means␣the␣display␣of␣this␣script␣could␣vary␣with␣device␣or␣software\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (268182,268274) (92)
+"First␣indentation␣disagreement␣seen␣at␣input␣line␣$first_tabbing_disagreement\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (268347,268451) (104)
+"Ending␣with␣indentation␣disagreement␣which␣started␣at␣input␣line␣$in_tabbing_disagreement\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (268546,268640) (94)
+"Last␣indentation␣disagreement␣seen␣at␣input␣line␣$last_tabbing_disagreement\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (268821,268916) (95)
+"Note:␣Indentation␣disagreement␣detection␣is␣not␣accurate␣for␣outdenting␣and␣-lp.\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (271063,271516) (453)
+Perl::Tidy::Warn␣<<EOM;
+-----------------------------------------------------------------------
+Conflict:␣-lp␣␣conflicts␣with␣-io,␣-fnl,␣-nanl,␣or␣-ndnl;␣ignoring␣-lp
+
+The␣-lp␣indentation␣logic␣requires␣that␣perltidy␣be␣able␣to␣coordinate
+arbitrarily␣large␣numbers␣of␣line␣breakpoints.␣␣This␣isn't␣possible
+with␣these␣flags.␣Sometimes␣an␣acceptable␣workaround␣is␣to␣use␣-wocb=3
+-----------------------------------------------------------------------
+EOM
+----------
+Range: (271574,271659) (85)
+}
+␣␣␣␣}
+
+␣␣␣␣#␣At␣present,␣tabs␣are␣not␣compatible␣with␣the␣line-up-parentheses␣style
+----------
+Range: (271850,271956) (106)
+Perl::Tidy::Warn␣<<EOM;
+Conflict:␣-t␣(tabs)␣cannot␣be␣used␣with␣the␣-lp␣␣option;␣ignoring␣-t;␣see␣-et.
+EOM
+----------
+Range: (272122,272229) (107)
+Perl::Tidy::Warn␣<<EOM;
+Conflict:␣-t␣(tabs)␣cannot␣be␣used␣with␣the␣-okw␣options;␣ignoring␣-t;␣see␣-et.
+EOM
+----------
+Range: (272335,272442) (107)
+Perl::Tidy::Warn␣<<EOM;
+Conflict:␣-t␣(tabs)␣cannot␣be␣used␣with␣the␣-ola␣␣option;␣ignoring␣-t;␣see␣-et.
+EOM
+----------
+Range: (273934,274013) (79)
+}
+
+␣␣␣␣#␣default␣keywords␣for␣which␣space␣is␣introduced␣before␣an␣opening␣paren
+----------
+Range: (274087,274202) (115)
+qw(my␣local␣our␣and␣or␣err␣eq␣ne␣if␣else␣elsif␣until
+␣␣␣␣␣␣unless␣while␣for␣foreach␣return␣switch␣case␣given␣when);
+----------
+Range: (274792,274934) (142)
+qw(%␣+␣-␣*␣/␣x␣!=␣==␣>=␣<=␣=~␣!~␣<␣>␣|␣&
+␣␣␣␣␣␣=␣**=␣+=␣*=␣&=␣<<=␣&&=␣-=␣/=␣|=␣>>=␣||=␣//=␣.=␣%=␣^=␣x=
+␣␣␣␣␣␣.␣:␣?␣&&␣||␣and␣or␣err␣xor
+␣␣␣␣);
+----------
+Range: (276562,276642) (80)
+}
+
+␣␣␣␣#␣Define␣here␣tokens␣which␣may␣follow␣the␣closing␣brace␣of␣a␣do␣statement
+----------
+Range: (278626,278723) (97)
+Perl::Tidy::Die␣<<EOM;
+Unrecognized␣character-encoding␣'$enc';␣expecting␣one␣of:␣(none,␣utf8)
+EOM
+----------
+Range: (279987,280069) (82)
+Perl::Tidy::Die␣<<EOM;
+Unrecognized␣line␣ending␣'$ole';␣expecting␣one␣of:␣$str
+EOM
+----------
+Range: (286074,286163) (89)
+Perl::Tidy::Die
+"ERROR:␣the␣-sbcp␣prefix␣is␣'$prefix'␣but␣must␣begin␣with␣'#'␣or␣'^#'\n";
+----------
+Range: (286292,286381) (89)
+Perl::Tidy::Die
+"ERROR:␣the␣-sbc␣prefix␣'$prefix'␣causes␣the␣invalid␣regex␣'$pattern'\n";
+----------
+Range: (286662,286752) (90)
+Perl::Tidy::Die
+␣␣␣␣␣␣␣␣␣␣"ERROR:␣the␣$opt_name␣parameter␣'$param'␣must␣begin␣with␣'#'\n";
+----------
+Range: (286848,286944) (96)
+Perl::Tidy::Die
+"ERROR:␣the␣$opt_name␣parameter␣'$param'␣causes␣the␣invalid␣regex␣'$pattern'\n";
+----------
+Range: (289258,289344) (86)
+Perl::Tidy::Warn
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣"unrecognized␣block␣type␣$i␣after␣$abbrev,␣ignoring\n";
+----------
+Range: (289967,290057) (90)
+Perl::Tidy::Die
+"ERROR:␣the␣-sscp␣prefix␣'$prefix'␣causes␣the␣invalid␣regex␣'$pattern'\n";
+----------
+Range: (291295,291409) (114)
+Perl::Tidy::Warn
+"Program␣Error:␣the␣-cscp␣prefix␣'$csc_prefix'␣caused␣the␣invalid␣regex␣'$csc_prefix_pattern'\n";
+----------
+Range: (291555,291639) (84)
+Perl::Tidy::Warn
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣"Using␣default␣-cscp␣instead;␣please␣check␣output\n";
+----------
+Range: (291991,292370) (379)
+print␣$fh␣<<EOM;
+These␣values␣are␣the␣main␣control␣of␣whitespace␣to␣the␣left␣of␣a␣token␣type;
+They␣may␣be␣altered␣with␣the␣-wls␣parameter.
+For␣a␣list␣of␣token␣types,␣use␣perltidy␣--dump-token-types␣(-dtt)
+␣1␣means␣the␣token␣wants␣a␣space␣to␣its␣left
+-1␣means␣the␣token␣does␣not␣want␣a␣space␣to␣its␣left
+------------------------------------------------------------------------
+EOM
+----------
+Range: (292546,292928) (382)
+print␣$fh␣<<EOM;
+These␣values␣are␣the␣main␣control␣of␣whitespace␣to␣the␣right␣of␣a␣token␣type;
+They␣may␣be␣altered␣with␣the␣-wrs␣parameter.
+For␣a␣list␣of␣token␣types,␣use␣perltidy␣--dump-token-types␣(-dtt)
+␣1␣means␣the␣token␣wants␣a␣space␣to␣its␣right
+-1␣means␣the␣token␣does␣not␣want␣a␣space␣to␣its␣right
+------------------------------------------------------------------------
+EOM
+----------
+Range: (294753,294944) (191)
+/^([\'\w]|\:\:)/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣do␣not␣combine␣a␣number␣with␣a␣concatenation␣dot
+␣␣␣␣␣␣␣␣␣␣#␣example:␣pom.caputo:
+␣␣␣␣␣␣␣␣␣␣#␣$vt100_compatible␣?␣"\e[0;0H"␣:␣('-'␣x␣78␣.␣"\n");
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (295038,295272) (234)
+'.'␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣do␣not␣join␣a␣minus␣with␣a␣bare␣word,␣because␣you␣might␣form
+␣␣␣␣␣␣␣␣␣␣#␣a␣file␣test␣operator.␣␣Example␣from␣Complex.pm:
+␣␣␣␣␣␣␣␣␣␣#␣if␣(CORE::abs($z␣-␣i)␣<␣$eps);␣"z-i"␣would␣be␣taken␣as␣a␣file␣test.
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (295310,295558) (248)
+/^[_A-Za-z]$/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣and␣something␣like␣this␣could␣become␣ambiguous␣without␣space
+␣␣␣␣␣␣␣␣␣␣#␣after␣the␣'-':
+␣␣␣␣␣␣␣␣␣␣#␣␣␣use␣constant␣III=>1;
+␣␣␣␣␣␣␣␣␣␣#␣␣␣$a␣=␣$b␣-␣III;
+␣␣␣␣␣␣␣␣␣␣#␣and␣even␣this:
+␣␣␣␣␣␣␣␣␣␣#␣␣␣$a␣=␣-␣III;
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (295630,295912) (282)
+/^[_A-Za-z]/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣'=␣-'␣should␣not␣become␣=-␣or␣you␣will␣get␣a␣warning
+␣␣␣␣␣␣␣␣␣␣#␣about␣reversed␣-=
+␣␣␣␣␣␣␣␣␣␣#␣||␣($tokenr␣eq␣'-')
+
+␣␣␣␣␣␣␣␣␣␣#␣keep␣a␣space␣between␣a␣quote␣and␣a␣bareword␣to␣prevent␣the
+␣␣␣␣␣␣␣␣␣␣#␣bareword␣from␣becoming␣a␣quote␣modifier.
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (295949,296097) (148)
+/^[a-zA-Z_]/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣keep␣a␣space␣between␣a␣token␣ending␣in␣'$'␣and␣any␣word;
+␣␣␣␣␣␣␣␣␣␣#␣this␣caused␣trouble:␣␣"die␣@$␣if␣$@"
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296166,296250) (84)
+/^[a-zA-Z_]/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣perl␣is␣very␣fussy␣about␣spaces␣before␣<<
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296264,296402) (138)
+/^\<\</␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣avoid␣combining␣tokens␣to␣create␣new␣meanings.␣Example:
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣$a+␣+$b␣must␣not␣become␣$a++$b
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296455,296608) (153)
+$is_trigraph{␣$tokenl␣.␣$tokenr␣}␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣another␣example:␣do␣not␣combine␣these␣two␣&'s:
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣allow_options␣&␣&OPT_EXECCGI
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296611,296778) (167)
+$is_digraph{␣$tokenl␣.␣substr(␣$tokenr,␣0,␣1␣)␣}␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣don't␣combine␣$$␣or␣$#␣with␣any␣alphanumeric
+␣␣␣␣␣␣␣␣␣␣#␣(testfile␣mangle.t␣with␣--mangle)
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296825,296980) (155)
+/^\w/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣retain␣any␣space␣after␣possible␣filehandle
+␣␣␣␣␣␣␣␣␣␣#␣(testfiles␣prnterr1.t␣with␣--extrude␣and␣mangle.t␣with␣--mangle)
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (296993,297119) (126)
+'Z'␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣Perl␣is␣sensitive␣to␣whitespace␣after␣the␣+␣here:
+␣␣␣␣␣␣␣␣␣␣#␣␣$b␣=␣xvals␣$a␣+␣0.1␣*␣yvals␣$a;
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (297150,297235) (85)
+/^[\/\?\+\-\*]$/␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣keep␣paren␣separate␣in␣'use␣Foo::Bar␣()'
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (297339,297458) (119)
+'use'␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣keep␣any␣space␣between␣filehandle␣and␣paren:
+␣␣␣␣␣␣␣␣␣␣#␣file␣mangle.t␣with␣--mangle:
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (297489,297574) (85)
+'('␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣retain␣any␣space␣after␣here␣doc␣operator␣(␣hereerr.t)
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (297587,297720) (133)
+'h'␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣be␣careful␣with␣a␣space␣around␣++␣and␣--,␣to␣avoid␣ambiguity␣as␣to
+␣␣␣␣␣␣␣␣␣␣#␣which␣token␣it␣applies
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (297848,298028) (180)
+/^[\;\}\)\]]/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣need␣space␣after␣foreach␣my;␣for␣example,␣this␣will␣fail␣in
+␣␣␣␣␣␣␣␣␣␣#␣older␣versions␣of␣Perl:
+␣␣␣␣␣␣␣␣␣␣#␣foreach␣my$ft(@filetypes)...
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (298160,298266) (106)
+/^\$/
+␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣must␣have␣space␣between␣grep␣and␣left␣paren;␣"grep("␣will␣fail
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (298287,298462) (175)
+$is_sort_grep_map{$tokenl}␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣don't␣stick␣numbers␣next␣to␣left␣parens,␣as␣in:
+␣␣␣␣␣␣␣␣␣␣#use␣Mail::Internet␣1.28␣();␣(see␣Entity.pm,␣Head.pm,␣Test.pm)
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (298499,299223) (724)
+'('␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣We␣must␣be␣sure␣that␣a␣space␣between␣a␣?␣and␣a␣quoted␣string
+␣␣␣␣␣␣␣␣␣␣#␣remains␣if␣the␣space␣before␣the␣?␣remains.␣␣[Loca.pm,␣lockarea]
+␣␣␣␣␣␣␣␣␣␣#␣ie,
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣$b=join␣$comma␣?␣','␣:␣':',␣@_;␣␣#␣ok
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣$b=join␣$comma?','␣:␣':',␣@_;␣␣␣␣#␣ok!
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣$b=join␣$comma␣?','␣:␣':',␣@_;␣␣␣#␣error!
+␣␣␣␣␣␣␣␣␣␣#␣Not␣really␣required:
+␣␣␣␣␣␣␣␣␣␣##␣||␣(␣(␣$typel␣eq␣'?'␣)␣&&␣(␣$typer␣eq␣'Q'␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣do␣not␣remove␣space␣between␣an␣'&'␣and␣a␣bare␣word␣because
+␣␣␣␣␣␣␣␣␣␣#␣it␣may␣turn␣into␣a␣function␣evaluation,␣like␣here
+␣␣␣␣␣␣␣␣␣␣#␣between␣'&'␣and␣'O_ACCMODE',␣producing␣a␣syntax␣error␣[File.pm]
+␣␣␣␣␣␣␣␣␣␣#␣␣␣␣$opts{rdonly}␣=␣(($opts{mode}␣&␣O_ACCMODE)␣==␣O_RDONLY);
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (299260,299358) (98)
+/^[a-zA-Z_]/␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣space␣stacked␣labels␣␣(TODO:␣check␣if␣really␣necessary)
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (304063,304274) (211)
+qw"
+␣␣␣␣␣␣␣␣␣␣+␣-␣*␣/␣%␣?␣=␣.␣:␣x␣<␣>␣|␣&␣^␣..␣<<␣>>␣**␣&&␣..␣||␣//␣=>␣+=␣-=
+␣␣␣␣␣␣␣␣␣␣.=␣%=␣x=␣&=␣|=␣^=␣*=␣<>␣<=␣>=␣==␣=~␣!~␣/=␣!=␣...␣<<=␣>>=␣~~␣!~~
+␣␣␣␣␣␣␣␣␣␣&&=␣||=␣//=␣<=>␣A␣k␣f␣w␣F␣n␣C␣Y␣U␣G␣v
+␣␣␣␣␣␣␣␣␣␣";
+----------
+Range: (307948,308033) (85)
+my␣(␣$last_token,␣$last_type,␣$last_block_type,␣$token,␣$type,
+␣␣␣␣␣␣␣␣$block_type␣);
+----------
+Range: (309516,309608) (92)
+$token␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (311691,311795) (104)
+$tightness{$last_token}␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#=============================================================
+----------
+Range: (312567,312650) (83)
+1␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#=============================================================
+----------
+Range: (313886,314010) (124)
+$matching_token{$last_token}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣watch␣out␣for␣this:␣[␣[␣]␣␣␣␣(misc.t)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (314381,314474) (93)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}␣␣␣␣#␣end␣setting␣space␣flag␣inside␣opening␣tokens
+----------
+Range: (316643,316727) (84)
+WS_YES␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣NOTE:␣some␣older␣versions␣of␣Perl␣had␣occasional␣problems␣if
+----------
+Range: (318770,318855) (85)
+WS_YES␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣avoid␣any␣space␣before␣the␣brace␣or␣bracket␣in␣something␣like
+----------
+Range: (329612,329711) (99)
+"STORE:␣from␣$a␣$c:␣storing␣token␣$token␣type␣$type␣lev=$level␣slev=$slevel␣at␣$max_index_to_go\n";
+----------
+Range: (333992,334073) (81)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Write␣line␣verbatim␣if␣we␣are␣in␣a␣formatting␣skip␣section
+----------
+Range: (335861,335939) (78)
+}
+
+␣␣␣␣␣␣␣␣#␣see␣if␣this␣is␣a␣static␣block␣comment␣(starts␣with␣##␣by␣default)
+----------
+Range: (336714,336889) (175)
+/^\#␣␣␣\s*
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣line␣\s+␣(\d+)␣␣␣\s*
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣(?:\s("?)([^"]+)\2)?␣\s*
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$/x
+␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣{
+----------
+Range: (337393,337472) (79)
+$is_static_block_comment␣␣␣␣#␣do␣not␣make␣static␣comment␣hanging
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (337473,337690) (217)
+$rOpts->{'hanging-side-comments'}␣␣␣␣#␣user␣is␣allowing
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣hanging␣side␣comments
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣like␣this
+␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣{
+----------
+Range: (339362,339471) (109)
+$rOpts->{'blanks-before-comments'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣if␣this␣is␣an␣empty␣comment␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (339488,339790) (302)
+'#'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣after␣a␣short␣line␣ending␣in␣an␣opening␣token
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣because␣we␣already␣have␣space␣above␣this␣comment.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Note␣that␣the␣first␣comment␣in␣this␣if␣block,␣after
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣'if␣(',␣does␣not␣get␣a␣blank␣line␣because␣of␣this.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (339792,339897) (105)
+$last_output_short_opening_token
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣never␣before␣static␣block␣comments
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (345557,345639) (82)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣If␣we␣just␣saw␣the␣end␣of␣an␣elsif␣block,␣write␣nag␣message
+----------
+Range: (346207,346315) (108)
+'}'␣)
+␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Patch␣for␣RT␣#98902.␣Honor␣request␣to␣break␣at␣old␣commas.
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (347117,347237) (120)
+$rOpts->{'delete-side-comments'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣delete␣closing␣side␣comments␣if␣necessary
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (347440,347517) (77)
+/$closing_side_comment_list_pattern/o␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (347696,347787) (91)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣If␣we␣are␣continuing␣after␣seeing␣a␣right␣curly␣brace,␣flush
+----------
+Range: (348924,349003) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Split␣identifiers␣with␣leading␣arrows,␣inserting␣blanks␣if
+----------
+Range: (350413,350495) (82)
+s/\s+/␣/g␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣trim␣identifiers␣of␣trailing␣blanks␣which␣can␣occur
+----------
+Range: (351556,351641) (85)
+/^(=|==|!=)$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣preceded␣by␣simple␣scalar
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (351726,351890) (164)
+/^\$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣followed␣by␣some␣kind␣of␣termination
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣(but␣give␣complaint␣if␣we␣can's␣see␣far␣enough␣ahead)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (351915,351996) (81)
+/^[;␣\)\}]$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣scalar␣is␣not␣declared
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (352097,352175) (78)
+/^(my|our|local)$/
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (352282,352379) (97)
+"Note:␣be␣sure␣you␣want␣'$last_nonblank_token'␣instead␣of␣'$guess'␣here\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (353335,353425) (90)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Do␣not␣allow␣breaks␣which␣would␣promote␣a␣side␣comment␣to␣a
+----------
+Range: (355836,355916) (80)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣decide␣if␣user␣requested␣break␣before␣'{'
+----------
+Range: (356075,356189) (114)
+$rOpts->{'opening-brace-on-new-line'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣use␣-sbl␣flag␣for␣a␣named␣sub␣block
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣:
+----------
+Range: (356236,356360) (124)
+$rOpts->{'opening-sub-brace-on-new-line'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣use␣-asbl␣flag␣for␣an␣anonymous␣sub␣block
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣:
+----------
+Range: (356542,356648) (106)
+$want_break
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣were␣unable␣to␣start␣looking␣for␣a␣block,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (356680,356943) (263)
+UNDEFINED_INDEX
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣if␣it␣will␣not␣be␣on␣same␣line␣as␣its␣keyword,␣so␣that
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣it␣will␣be␣outdented␣(eval.t,␣overload.t),␣and␣the␣user
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣has␣not␣insisted␣on␣keeping␣it␣on␣the␣right
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (356999,357081) (82)
+$rOpts->{'opening-brace-always-on-right'}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (358394,358482) (88)
+0
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣if␣it␣has␣too␣many␣semicolons
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (358707,358804) (97)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣put␣a␣break␣before␣this␣closing␣curly␣brace␣if␣appropriate
+----------
+Range: (359108,359187) (79)
+0␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣don't␣have␣one
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (359213,359301) (88)
+';'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣are␣allowed␣to␣do␣so.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (359302,359424) (122)
+$rOpts->{'add-semicolons'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣are␣allowed␣to␣for␣this␣block␣type
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (359429,359508) (79)
+$ok_to_add_semicolon_for_block_type{$block_type}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (360746,360828) (82)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣then␣write␣out␣everything␣before␣this␣closing␣curly␣brace
+----------
+Range: (362667,362878) (211)
+$is_block_without_semicolon{$block_type}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Follow␣users␣break␣point␣for
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣one␣line␣block␣types␣U␣&␣G,␣such␣as␣a␣'try'␣block
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (362919,363053) (134)
+$jmax
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣needless␣semicolon␣follows␣we␣handle␣it␣later
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (363224,363324) (100)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣set␣string␣indicating␣what␣we␣need␣to␣look␣for␣brace␣follower
+----------
+Range: (364377,364468) (91)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣None␣of␣the␣above:␣specify␣what␣can␣follow␣a␣closing
+----------
+Range: (364786,364866) (80)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣See␣if␣an␣elsif␣block␣is␣followed␣by␣another␣elsif␣or␣else;
+----------
+Range: (365329,365447) (118)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣keep␣going␣after␣certain␣block␣types␣(map,sort,grep,eval)
+----------
+Range: (367231,367349) (118)
+$is_block_without_semicolon{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$last_nonblank_block_type}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (367622,367804) (182)
+$rOpts->{'delete-semicolons'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣don't␣delete␣;␣before␣a␣#␣because␣it␣would␣promote␣it
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣to␣a␣block␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (370855,371092) (237)
+$rOpts->{'delete-side-comments'}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣this␣line␣ends␣in␣a␣quote
+␣␣␣␣␣␣␣␣␣␣␣␣#␣NOTE:␣This␣is␣critically␣important␣for␣insuring␣that␣quoted␣lines
+␣␣␣␣␣␣␣␣␣␣␣␣#␣do␣not␣get␣processed␣by␣things␣like␣-sot␣and␣-sct
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (371164,371252) (88)
+$is_VERSION_statement
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣to␣keep␣a␣label␣at␣the␣end␣of␣a␣line
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (371262,371344) (82)
+'J'
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣we␣are␣instructed␣to␣keep␣all␣old␣line␣breaks
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (371827,371905) (78)
+#␣pipeline␣to␣the␣VerticalAligner␣package,␣breaking␣the␣line␣into␣continuation
+----------
+Range: (372179,372346) (167)
+"OUTPUT:␣output_line_to_go␣called:␣$a␣$c␣$last_nonblank_type␣$last_nonblank_token,␣one_line=$index_start_one_line_block,␣tokens␣to␣write=$max_index_to_go\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (373524,373680) (156)
+$block_type_to_go[$max_index_to_go]
+
+␣␣␣␣␣␣␣␣#␣but␣not␣one␣of␣these␣which␣are␣never␣duplicated␣on␣a␣line:
+␣␣␣␣␣␣␣␣#␣until|while|for|if|elsif|else
+␣␣␣␣␣␣␣␣&&
+----------
+Range: (373682,373762) (80)
+$is_block_without_semicolon{␣$block_type_to_go[$max_index_to_go]␣}
+␣␣␣␣␣␣)
+␣␣␣␣{
+----------
+Range: (374403,374489) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣quit␣if␣we␣see␣anything␣besides␣words,␣function,␣blanks
+----------
+Range: (377485,377567) (82)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣update␣blank␣line␣variables␣and␣count␣number␣of␣consecutive
+----------
+Range: (378425,378522) (97)
+"FLUSH:␣flushing␣from␣$package␣$file␣$line,␣types=␣$types_to_go[$imin]␣to␣$types_to_go[$imax]\n";
+----------
+Range: (378842,378978) (136)
+1
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣must␣always␣call␣scan_list()␣with␣unbalanced␣batches␣because␣it
+␣␣␣␣␣␣␣␣␣␣␣␣#␣is␣maintaining␣some␣stacks
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (378999,379081) (82)
+)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣call␣scan_list␣if␣we␣might␣want␣to␣break␣at␣commas
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (379238,379375) (137)
+0␣)
+␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣call␣scan_list␣if␣user␣may␣want␣to␣break␣open␣some␣one-line
+␣␣␣␣␣␣␣␣␣␣␣␣#␣hash␣references
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (379976,380124) (148)
+$rOpts_add_newlines
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or,␣we␣don't␣already␣have␣an␣interior␣breakpoint
+␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣didn't␣see␣a␣good␣breakpoint
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (380192,380270) (78)
+$saw_good_break
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣this␣line␣is␣'short'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (382971,383069) (98)
+my␣(␣$j,␣$jmax,␣$level,␣$slevel,␣$ci_level,␣$rtokens,␣$rtoken_type,
+␣␣␣␣␣␣␣␣$rblock_type␣)
+␣␣␣␣␣␣=
+----------
+Range: (385932,386011) (79)
+}
+
+␣␣␣␣␣␣␣␣#␣Patch␣to␣avoid␣breaking␣short␣blocks␣defined␣with␣extended_syntax:
+----------
+Range: (387541,387622) (81)
+}
+
+␣␣␣␣␣␣␣␣#␣or␣encounter␣another␣opening␣brace␣before␣finding␣the␣closing␣brace.
+----------
+Range: (388493,388579) (86)
+##␣grep␣{␣$_->foo␣ne␣'bar'␣}␣#␣asdfa␣asdf␣asdf␣asdf␣asdf␣asdf␣asdf␣asdf␣asdf␣asdf␣asdf
+----------
+Range: (392841,392937) (96)
+';'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣with␣possible␣side␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (397764,397925) (161)
+my␣(␣$ibeg,␣$ibeg_next,␣$ibegm,␣$iend,␣$iendm,␣$ipad,␣$line,
+␣␣␣␣␣␣␣␣␣␣␣␣$pad_spaces,
+␣␣␣␣␣␣␣␣␣␣␣␣$tok_next,␣$type_next,␣$has_leading_op_next,␣$has_leading_op␣);
+----------
+Range: (405247,405357) (110)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣find␣interior␣token␣to␣pad␣if␣necessary
+----------
+Range: (407007,407085) (78)
+##␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$font->{'loca'}->{'glyphs'}[$x]->read->{'xMin'}␣*␣1000
+----------
+Range: (409419,409512) (93)
+$types_match
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣keywords␣must␣match␣if␣keyword
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (409607,409703) (96)
+$tokens_to_go[$inext_next]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (414552,414629) (77)
+$pad_spaces--␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣make␣sure␣this␣won't␣change␣if␣-lp␣is␣used
+----------
+Range: (415071,415190) (119)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣we␣might␣be␣able␣to␣handle␣a␣pad␣of␣-1␣by␣removing␣a␣blank
+----------
+Range: (424409,424560) (151)
+0
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣we␣should␣only␣move␣right␣if␣we␣are␣sure␣it␣will
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣spoil␣vertical␣alignment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (424934,425021) (87)
+$saw_indentation{$_}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣->permanently_decrease_AVAILABLE_SPACES(
+----------
+Range: (425052,425146) (94)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Otherwise,␣record␣what␣we␣want␣and␣the␣vertical␣aligner
+----------
+Range: (427561,427862) (301)
+$rOpts_closing_side_comment_maximum_text
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣either:
+␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣new␣total␣line␣length␣must␣be␣below␣the␣line␣length␣limit
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣new␣length␣must␣be␣below␣the␣text␣length␣limit
+␣␣␣␣␣␣␣␣␣␣␣␣#␣(ie,␣we␣may␣allow␣one␣token␣to␣exceed␣the␣text␣length␣limit)
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (428055,428527) (472)
+$rOpts_closing_side_comment_maximum_text
+␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣UNLESS:␣we␣are␣adding␣a␣closing␣paren␣before␣the␣brace␣we␣seek.
+␣␣␣␣␣␣␣␣␣␣␣␣#␣This␣is␣an␣attempt␣to␣avoid␣situations␣where␣the␣...␣to␣be
+␣␣␣␣␣␣␣␣␣␣␣␣#␣added␣are␣longer␣than␣the␣omitted␣right␣paren,␣as␣in:
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣foreach␣my␣$item␣(@a_rather_long_variable_name_here)␣{
+␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣&whatever;
+␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣}␣##␣end␣foreach␣my␣$item␣(@a_rather_long_variable_name_here...
+
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (428937,429021) (84)
+$accumulating_text_for_block␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣{
+----------
+Range: (432383,432466) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣we␣run␣into␣a␣'}'␣then␣we␣probably␣started␣accumulating
+----------
+Range: (436334,436431) (97)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Treat␣an␣'else'␣block␣specially␣by␣adding␣preceding␣'if'␣and
+----------
+Range: (441525,441652) (127)
+my␣(␣$terminal_type,␣$i_terminal,␣$i_block_leading_text,
+␣␣␣␣␣␣␣␣$block_leading_text,␣$block_line_count,␣$block_label␣)
+␣␣␣␣␣␣=
+----------
+Range: (442143,442257) (114)
+$rOpts->{'closing-side-comment-interval'}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣there␣is␣an␣existing␣comment␣to␣check
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (442300,442422) (122)
+$rOpts->{'closing-side-comment-warnings'}␣)
+␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣#␣..␣and␣if␣this␣is␣one␣of␣the␣types␣of␣interest
+␣␣␣␣␣␣␣␣&&
+----------
+Range: (442465,442842) (377)
+/$closing_side_comment_list_pattern/o
+
+␣␣␣␣␣␣␣␣#␣..␣but␣not␣an␣anonymous␣sub
+␣␣␣␣␣␣␣␣#␣These␣are␣not␣normally␣of␣interest,␣and␣their␣closing␣braces␣are
+␣␣␣␣␣␣␣␣#␣often␣followed␣by␣commas␣or␣semicolons␣anyway.␣␣This␣also␣avoids
+␣␣␣␣␣␣␣␣#␣possible␣erratic␣output␣due␣to␣line␣numbering␣inconsistencies
+␣␣␣␣␣␣␣␣#␣in␣the␣cases␣where␣their␣closing␣braces␣terminate␣a␣line.
+␣␣␣␣␣␣␣␣&&
+----------
+Range: (442877,443101) (224)
+'sub'
+
+␣␣␣␣␣␣␣␣#␣..and␣the␣corresponding␣opening␣brace␣must␣is␣not␣in␣this␣batch
+␣␣␣␣␣␣␣␣#␣(because␣we␣do␣not␣need␣to␣tag␣one-line␣blocks,␣although␣this
+␣␣␣␣␣␣␣␣#␣should␣also␣be␣caught␣with␣a␣positive␣-csci␣value)
+␣␣␣␣␣␣␣␣&&
+----------
+Range: (443260,443358) (98)
+$have_side_comment
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣old␣side␣comment␣is␣a␣closing␣side␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (443591,443676) (85)
+"$rOpts->{'closing-side-comment-prefix'}␣$block_label$block_type_to_go[$i_terminal]";
+----------
+Range: (445396,445487) (91)
+$new_csc␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣old␣comment␣is␣contained␣in␣new␣comment,
+----------
+Range: (446550,446637) (87)
+"perltidy␣-cscw␣replaced:␣$tokens_to_go[$max_index_to_go]\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (447611,447705) (94)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣switch␣to␣the␣new␣csc␣(unless␣we␣deleted␣it!)
+----------
+Range: (450789,450923) (134)
+}
+
+␣␣␣␣␣␣␣␣my␣(␣$indentation,␣$lev,␣$level_end,␣$terminal_type,
+␣␣␣␣␣␣␣␣␣␣␣␣$is_semicolon_terminated,␣$is_outdented_line␣)
+␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (451229,451336) (107)
+$rOpts->{'outdent-long-quotes'}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣which␣are␣long␣block␣comments,␣if␣allowed
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (451404,451517) (113)
+$rOpts->{'outdent-long-comments'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣not␣if␣this␣is␣a␣static␣block␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (453346,453652) (306)
+$lev␣)␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣terminal␣term␣must␣not␣contain␣any␣ternary␣terms,␣as␣in
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣my␣$ECHO␣=␣(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣$Is_MSWin32␣?␣".\\echo$$"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣:␣$Is_MacOS␣␣␣?␣":echo$$"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣:␣(␣$Is_NetWare␣?␣"echo$$"␣:␣"./echo$$"␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣);
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (454879,454963) (84)
+$last_output_short_opening_token
+
+␣␣␣␣␣␣␣␣␣␣#␣line␣ends␣in␣opening␣token
+␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (455112,455263) (151)
+$ibeg
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣is␣a␣single␣token␣followed␣by␣opening␣token.
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Note␣that␣sub␣identifiers␣have␣blanks␣like␣'sub␣doit'
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (455312,455396) (84)
+/\s+/␣)
+␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣#␣and␣limit␣total␣to␣10␣character␣widths
+␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (462315,462410) (95)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Patch␣to␣avoid␣aligning␣leading␣and␣trailing␣if,␣unless.
+----------
+Range: (463256,463342) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Decorate␣block␣braces␣with␣block␣types␣to␣avoid
+----------
+Range: (465796,465898) (102)
+""␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣to␣make␣numbers␣and␣quotes␣align
+----------
+Range: (466484,466572) (88)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣done␣with␣this␣line␣..␣join␣text␣of␣tokens␣to␣make␣the␣last␣field
+----------
+Range: (472719,472798) (79)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣if␣no␣sequence␣number␣it␣must␣be␣an␣unbalanced␣container
+----------
+Range: (474428,474515) (87)
+"non-fatal␣program␣bug␣in␣lookup_opening_indentation␣-␣index␣out␣of␣range\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (475766,475885) (119)
+my␣(␣$ibeg,␣$iend,␣$rfields,␣$rpatterns,␣$ri_first,␣$ri_last,
+␣␣␣␣␣␣␣␣␣␣␣␣$rindentation_list,␣$level_jump␣)
+␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (476910,477026) (116)
+my␣(
+␣␣␣␣␣␣␣␣␣␣␣␣$opening_indentation,␣$opening_offset,
+␣␣␣␣␣␣␣␣␣␣␣␣$is_leading,␣␣␣␣␣␣␣␣␣␣$opening_exists
+␣␣␣␣␣␣␣␣);
+----------
+Range: (477685,477794) (109)
+$is_semicolon_terminated
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣'cuddled␣parens'␣of␣the␣form:␣␣␣")->pack("
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (477976,478407) (431)
+$nesting_depth_to_go[$ibeg]␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣when␣the␣next␣line␣is␣at␣a␣lower␣indentation␣level
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣PATCH:␣and␣only␣if␣the␣style␣allows␣undoing␣continuation
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣for␣all␣closing␣token␣types.␣We␣should␣really␣wait␣until
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣indentation␣of␣the␣next␣line␣is␣known␣and␣then␣make
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣a␣decision,␣but␣that␣would␣require␣another␣pass.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (478643,478726) (83)
+','
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣allow␣just␣one␣character␣before␣the␣comma
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (478750,478929) (179)
+1
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣require␣LIST␣environment;␣otherwise,␣we␣may␣outdent␣too␣much␣-
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣this␣can␣happen␣in␣calls␣without␣parentheses␣(overload.t);
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (479065,479142) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣undo␣continuation␣indentation␣of␣a␣terminal␣closing␣token␣if
+----------
+Range: (479954,480036) (82)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Patch␣for␣RT␣#96101,␣in␣which␣closing␣brace␣of␣anonymous␣subs
+----------
+Range: (483632,483756) (124)
+$is_semicolon_terminated
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣}␣xxxx␣;
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (483818,483910) (92)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣if␣at␣');',␣'};',␣'>;',␣and␣'];'␣of␣a␣terminal␣qw␣quote
+----------
+Range: (484668,484747) (79)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣##########################################################
+----------
+Range: (488080,488176) (96)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Full␣indentaion␣of␣closing␣tokens␣(-icb␣and␣-icp␣or␣-cti=2)
+----------
+Range: (489754,489833) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣handle␣-icp␣and␣any␣-icb␣block␣braces␣which␣fall␣through␣above
+----------
+Range: (491171,491248) (77)
+}
+
+␣␣␣␣␣␣␣␣#␣be␣sure␣lines␣with␣leading␣closing␣tokens␣are␣not␣outdented␣more
+----------
+Range: (491877,491984) (107)
+$is_if_elsif_else_unless_while_until_for_foreach{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$block_type_to_go[$ibeg]
+␣␣␣␣␣␣␣␣␣␣␣␣}␣);
+----------
+Range: (492919,493038) (119)
+$outdent_keyword{␣$tokens_to_go[$ibeg]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣labels␣if␣requested
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (493094,493175) (81)
+'J'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣static␣block␣comments␣if␣requested
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (493618,493700) (82)
+0␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣do␣not␣promote␣a␣spaced␣static␣block␣comment␣to␣non-spaced;
+----------
+Range: (496435,496515) (80)
+0
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣allow␣2-line␣method␣call␣to␣be␣closed␣up
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (497475,497559) (84)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#--------------------------------------------------------------
+----------
+Range: (498745,498845) (100)
+1
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣allow␣closing␣up␣2-line␣method␣calls
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (498927,499028) (101)
+')'␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (499810,499908) (98)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#--------------------------------------------------------------
+----------
+Range: (500645,500797) (152)
+$opening_token_right{␣$tokens_to_go[$ibeg_next]␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣previous␣line␣is␣not␣opening
+␣␣␣␣␣␣␣␣␣␣␣␣#␣(use␣-sot␣to␣combine␣with␣it)
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (500799,500970) (171)
+$is_opening_token{$token_end}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣previous␣line␣ended␣in␣one␣of␣these
+␣␣␣␣␣␣␣␣␣␣␣␣#␣(add␣other␣cases␣if␣necessary;␣'=>'␣and␣'.'␣are␣not␣necessary
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (500972,501073) (101)
+$block_type_to_go[$ibeg_next]
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣this␣is␣a␣line␣with␣just␣an␣opening␣token
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (501198,501291) (93)
+'#'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣looks␣bad␣if␣we␣align␣vertically␣with␣the␣wrong␣container
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (503882,503968) (86)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#--------------------------------------------------------------
+----------
+Range: (506283,506400) (117)
+qw#
+␣␣␣␣␣␣␣␣␣␣=␣**=␣+=␣*=␣&=␣<<=␣&&=␣-=␣/=␣|=␣>>=␣||=␣//=␣.=␣%=␣^=␣x=
+␣␣␣␣␣␣␣␣␣␣{␣?␣:␣=>␣&&␣||␣//␣~~␣!~~
+␣␣␣␣␣␣␣␣␣␣#;
+----------
+Range: (507828,507910) (82)
+$i_terminal␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣look␣at␣each␣line␣of␣this␣batch..
+----------
+Range: (510138,510275) (137)
+/$static_side_comment_pattern/o
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣a␣closing␣side␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (510380,510467) (87)
+/$closing_side_comment_prefix_pattern/o␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (512109,512190) (81)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Do␣not␣align␣leading␣':␣('␣or␣'.␣('.␣␣This␣would␣prevent
+----------
+Range: (512939,513022) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣For␣a␣paren␣after␣keyword,␣only␣align␣something␣like␣this:
+----------
+Range: (513585,513662) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣NOTE:␣This␣is␣deactivated␣because␣it␣causes␣the␣previous
+----------
+Range: (514488,514589) (101)
+$alignment_type
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣its␣not␣the␣first␣token␣of␣the␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (514700,514785) (85)
+'b'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣previous␣token␣IS␣one␣of␣these:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (514816,514900) (84)
+/^[\,\;]$/␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣it's␣NOT␣one␣of␣these
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (514912,515015) (103)
+/^[b\#\)\]\}]$/␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣then␣go␣ahead␣and␣align
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (516662,516742) (80)
+$is_sort_map_grep_eval_do{␣$$rblock_type[$i]␣}␣)␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (525410,525540) (130)
+qw(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣=␣**=␣+=␣*=␣&=␣<<=␣&&=
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣-=␣/=␣|=␣>>=␣||=␣//=
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣.=␣%=␣^=
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣x=
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (537107,537264) (157)
+my␣(␣$block_type,␣$i_next,␣$i_next_nonblank,␣$next_nonblank_token,
+␣␣␣␣␣␣␣␣␣␣␣␣$next_nonblank_type,␣$next_token,␣$next_type,␣$total_nesting_depth,
+␣␣␣␣␣␣␣␣);
+----------
+Range: (540051,540132) (81)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Use␣the␣minimum␣of␣the␣left␣and␣right␣strengths.␣␣Note:␣it␣might
+----------
+Range: (542165,542252) (87)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣good␣to␣break␣after␣end␣of␣code␣blocks
+----------
+Range: (542766,542843) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Don't␣break␣after␣keyword␣my.␣␣This␣is␣a␣quick␣fix␣for␣a
+----------
+Range: (544065,544165) (100)
+STRONG␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (544489,544587) (98)
+$is_sort_map_grep{$last_nonblank_token}␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣/^(sort|map|grep)$/␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (544859,544936) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣in␣older␣version␣of␣perl,␣use␣strict␣can␣cause␣problems␣with
+----------
+Range: (545875,545952) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣We'll␣check␣for␣an␣old␣breakpoint␣and␣keep␣a␣leading
+----------
+Range: (546789,546900) (111)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Do␣not␣break␣between␣a␣possible␣filehandle␣and␣a␣?␣or␣/␣and␣do
+----------
+Range: (547485,547606) (121)
+WS_NO
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣we␣might␣be␣followed␣by␣the␣start␣of␣a␣quote
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (547737,547823) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Breaking␣before␣a␣?␣before␣a␣quote␣can␣cause␣trouble␣if
+----------
+Range: (550800,550881) (81)
+"BOND_TABLES:␣ltype=$ltype␣rtype=$rtype␣$bond_str_1->$bond_str_2->$bond_str_3\n";
+----------
+Range: (554302,554466) (164)
+"BOND:␣␣i=$i␣$str␣$type␣$next_nonblank_type␣depth=$total_nesting_depth␣strength=$bond_str_1␣->␣$bond_str_2␣->␣$bond_str_3␣->␣$bond_str_4␣$bond_str␣->␣$strength␣\n";
+----------
+Range: (555252,555348) (96)
+"Program␣bug␣in␣scan_list:␣hit␣nesting␣error␣which␣should␣have␣been␣caught\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (555696,556255) (559)
+my␣(
+␣␣␣␣␣␣␣␣$block_type,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$current_depth,
+␣␣␣␣␣␣␣␣$depth,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$i,
+␣␣␣␣␣␣␣␣$i_last_nonblank_token,␣␣␣␣$last_colon_sequence_number,
+␣␣␣␣␣␣␣␣$last_nonblank_token,␣␣␣␣␣␣$last_nonblank_type,
+␣␣␣␣␣␣␣␣$last_nonblank_block_type,␣$last_old_breakpoint_count,
+␣␣␣␣␣␣␣␣$minimum_depth,␣␣␣␣␣␣␣␣␣␣␣␣$next_nonblank_block_type,
+␣␣␣␣␣␣␣␣$next_nonblank_token,␣␣␣␣␣␣$next_nonblank_type,
+␣␣␣␣␣␣␣␣$old_breakpoint_count,␣␣␣␣␣$starting_breakpoint_count,
+␣␣␣␣␣␣␣␣$starting_depth,␣␣␣␣␣␣␣␣␣␣␣$token,
+␣␣␣␣␣␣␣␣$type,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$type_sequence,
+␣␣␣␣);
+----------
+Range: (556261,556775) (514)
+my␣(
+␣␣␣␣␣␣␣␣@breakpoint_stack,␣␣␣␣␣␣␣␣␣␣␣␣␣␣@breakpoint_undo_stack,
+␣␣␣␣␣␣␣␣@comma_index,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣@container_type,
+␣␣␣␣␣␣␣␣@identifier_count_stack,␣␣␣␣␣␣␣␣@index_before_arrow,
+␣␣␣␣␣␣␣␣@interrupted_list,␣␣␣␣␣␣␣␣␣␣␣␣␣␣@item_count_stack,
+␣␣␣␣␣␣␣␣@last_comma_index,␣␣␣␣␣␣␣␣␣␣␣␣␣␣@last_dot_index,
+␣␣␣␣␣␣␣␣@last_nonblank_type,␣␣␣␣␣␣␣␣␣␣␣␣@old_breakpoint_count_stack,
+␣␣␣␣␣␣␣␣@opening_structure_index_stack,␣@rfor_semicolon_list,
+␣␣␣␣␣␣␣␣@has_old_logical_breakpoints,␣␣␣@rand_or_list,
+␣␣␣␣␣␣␣␣@i_equals,
+␣␣␣␣);
+----------
+Range: (558335,558422) (87)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣routine␣to␣decide␣which␣commas␣to␣break␣at␣within␣a␣container;
+----------
+Range: (562968,563054) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Changed␣rule␣from␣multiple␣old␣commas␣to␣just␣one␣here:
+----------
+Range: (568543,568625) (82)
+$is_keyword_returning_list{$token}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (569347,569434) (87)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣remember␣an␣=␣break␣as␣possible␣good␣break␣point
+----------
+Range: (570287,570381) (94)
+"Non-fatal␣program␣bug:␣backup␣logic␣needed␣to␣break␣after␣a␣comment\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (571016,571130) (114)
+/^(if|unless|while|until|for)$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣do␣not␣break␣at␣something␣like␣'1␣while'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (571168,571254) (86)
+2␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣let␣keywords␣follow␣a␣closing␣'do'␣brace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (571331,571436) (105)
+$is_long_line
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣container␣is␣broken␣(by␣side-comment,␣etc)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (576411,576508) (97)
+$max_index_to_go␣␣␣␣#␣or␣this␣'?'␣is␣the␣last␣token
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (577072,577156) (84)
+TYPE_SEQUENCE_INCREMENT
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (577424,577507) (83)
+#print␣"LISTX␣sees:␣i=$i␣type=$type␣␣tok=$token␣␣block=$block_type␣depth=$depth\n";
+----------
+Range: (579975,580070) (95)
+'k'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣a␣trailing␣'('␣usually␣indicates␣a␣non-list
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (580494,580602) (108)
+$block_type
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣we␣have␣the␣')'␣but␣not␣its␣'('␣in␣this␣batch..
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (582344,582529) (185)
+#print␣"LISTY␣sees:␣i=$i␣type=$type␣␣tok=$token␣␣block=$block_type␣depth=$depth␣next=$next_nonblank_type␣next_block=$next_nonblank_block_type␣inter=$interrupted_list[$current_depth]\n";
+----------
+Range: (583692,583786) (94)
+$opening_vertical_tightness{␣$tokens_to_go[$i_opening]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (585231,585326) (95)
+4␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣if␣the␣opening␣structure␣is␣in␣this␣batch
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (585327,585427) (100)
+$saw_opening_structure
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣either␣on␣the␣same␣old␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (585525,585651) (126)
+$last_old_breakpoint_count
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣user␣wants␣to␣form␣long␣blocks␣with␣arrows
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (585686,585814) (128)
+2
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣made␣some␣breakpoints␣between␣the␣opening␣and␣closing
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (585882,586088) (206)
+$forced_breakpoint_undo_count␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣this␣block␣is␣short␣enough␣to␣fit␣on␣one␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Note:␣use␣<␣because␣need␣1␣more␣space␣for␣possible␣comma
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (587655,587733) (78)
+#␣We␣will␣not␣break␣open␣the␣parens␣of␣a␣long␣but␣'simple'␣logical␣expression.
+----------
+Range: (588358,588435) (77)
+#␣This␣is␣on␣the␣verge␣of␣being␣difficult␣to␣read.␣␣The␣current␣default␣is␣to
+----------
+Range: (589018,589097) (79)
+#␣Some␣people␣might␣prefer␣the␣spacey␣version␣--␣an␣option␣could␣be␣added.␣␣The
+----------
+Range: (589320,589401) (81)
+#␣closing␣containers␣because␣(1)␣it␣contains␣no␣multi-line␣sub-containers␣itself,
+----------
+Range: (589618,589699) (81)
+#␣(although␣this␣looks␣perfectly␣ok␣and␣might␣be␣good␣for␣long␣expressions).␣␣The
+----------
+Range: (589700,589778) (78)
+#␣outer␣'if'␣container,␣though,␣contains␣a␣broken␣sub-container,␣so␣it␣will␣be
+----------
+Range: (589779,589860) (81)
+#␣broken␣open␣to␣avoid␣too␣much␣density.␣␣Also,␣since␣it␣contains␣no␣'or's,␣there
+----------
+Range: (590216,590310) (94)
+$is_logical_container{␣$container_type[$current_depth]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (591587,591734) (147)
+$block_type
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣we␣do␣not␣need␣to␣break␣at␣the␣top␣level␣of␣an␣'if'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣type␣expression
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (591736,592149) (413)
+$is_simple_logical_expression
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣##␣modification␣to␣keep␣':␣('␣containers␣vertically␣tight;
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣##␣but␣probably␣better␣to␣let␣user␣set␣-vt=1␣to␣avoid
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣##␣inconsistency␣with␣other␣paren␣types
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣##␣&&␣($container_type[$current_depth]␣ne␣':')
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣otherwise,␣we␣require␣one␣of␣these␣reasons␣for␣breaking:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (592238,592524) (286)
+$has_comma_breakpoints
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣-␣the␣opening␣container␣is␣separated␣from␣this␣batch
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣for␣some␣reason␣(comment,␣blank␣line,␣code␣block)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣-␣this␣is␣a␣non-paren␣container␣spanning␣multiple␣lines
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (592526,592694) (168)
+$saw_opening_structure
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣-␣this␣is␣a␣long␣block␣contained␣in␣another␣breakable
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣container
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (593773,593964) (191)
+$i_start_2)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣we␣are␣breaking␣after␣an␣opening␣brace,␣paren,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣so␣don't␣break␣before␣it␣too
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (595337,595420) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣break␣at␣'.'␣of␣lower␣depth␣level␣before␣opening␣token
+----------
+Range: (595580,595662) (82)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣break␣before␣opening␣structure␣if␣preceded␣by␣another
+----------
+Range: (596384,596463) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣also␣break␣before␣something␣like␣':('␣␣or␣'?('
+----------
+Range: (598387,598466) (79)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}␣␣␣␣#␣end␣logic␣to␣open␣up␣a␣container
+----------
+Range: (605576,605697) (121)
+$dd)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Avoid␣a␣break␣which␣would␣place␣an␣isolated␣'␣or␣"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣on␣a␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (608853,609127) (274)
+my␣(
+␣␣␣␣␣␣␣␣␣␣␣␣$depth,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$i_opening_paren,␣␣$i_closing_paren,
+␣␣␣␣␣␣␣␣␣␣␣␣$item_count,␣␣␣␣␣␣␣␣␣␣$identifier_count,␣$rcomma_index,
+␣␣␣␣␣␣␣␣␣␣␣␣$next_nonblank_type,␣␣$list_type,␣␣␣␣␣␣␣␣$interrupted,
+␣␣␣␣␣␣␣␣␣␣␣␣$rdo_not_break_apart,␣$must_break_open,
+␣␣␣␣␣␣␣␣)␣=
+----------
+Range: (611065,611168) (103)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣now␣we␣have␣to␣make␣a␣distinction␣between␣the␣comma␣count␣and␣item
+----------
+Range: (612394,612479) (85)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#---------------------------------------------------------------
+----------
+Range: (614712,614789) (77)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣always␣break␣at␣the␣last␣comma␣if␣this␣list␣is
+----------
+Range: (615171,615291) (120)
+#print␣"depth=$depth␣has_broken=$has_broken_sublist[$depth]␣is_multi=$is_multiline␣opening_paren=($i_opening_paren)␣\n";
+----------
+Range: (621324,621423) (99)
+my␣(␣$number_of_fields_best,␣$ri_ragged_break_list,
+␣␣␣␣␣␣␣␣␣␣␣␣$new_identifier_count␣)
+␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (621701,621784) (83)
+}
+
+␣␣␣␣␣␣␣␣#␣----------------------------------------------------------------------
+----------
+Range: (623758,623871) (113)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣try␣for␣one␣column␣if␣two␣won't␣work
+----------
+Range: (624315,624393) (78)
+}
+
+␣␣␣␣␣␣␣␣#␣How␣many␣columns␣(characters)␣and␣lines␣would␣this␣container␣take
+----------
+Range: (624940,625017) (77)
+#␣␣␣␣␣␣␣␣␣#␣We're␣in␣trouble.␣␣We␣can't␣find␣a␣single␣field␣width␣that␣works.
+----------
+Range: (625197,625278) (81)
+#␣␣␣␣␣␣␣␣␣In␣many␣cases,␣it␣may␣be␣best␣to␣not␣force␣a␣break␣if␣there␣is␣just␣one
+----------
+Range: (625279,625358) (79)
+#␣␣␣␣␣␣␣␣␣comma,␣because␣the␣standard␣continuation␣break␣logic␣will␣do␣a␣better
+----------
+Range: (625852,625934) (82)
+#␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣sort␣{␣$color_value{$::a}␣<=>␣$color_value{$::b};␣}␣keys␣%colors
+----------
+Range: (626060,626142) (82)
+#␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣"Number␣of␣routes␣in␣adj-RIB-in␣to␣be␣considered:␣$peercount"␣);
+----------
+Range: (626805,626885) (80)
+1
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣if␣this␣is␣a␣sublist␣of␣a␣larger␣list
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (626886,627029) (143)
+$in_hierarchical_list
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣if␣multiple␣commas␣and␣we␣don't␣have␣a␣long␣first␣or␣last
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣term
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (631038,631134) (96)
+0.15
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)␣␣␣␣#␣would␣be␣fairly␣spaced␣gaps␣if␣aligned
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (632129,632463) (334)
+"SPARSE:cols=$columns␣commas=$comma_count␣items:$item_count␣ids=$identifier_count␣pairwidth=$pair_width␣fields=$number_of_fields␣lines␣packed:␣$packed_lines␣packed_cols=$packed_columns␣fmtd:$formatted_lines␣cols␣/line:$columns_per_line␣␣unused:$unused_columns␣fmtd:$formatted_columns␣sparsity=$sparsity␣allow=$max_allowed_sparsity\n";
+----------
+Range: (633709,633787) (78)
+}
+
+␣␣␣␣␣␣␣␣#␣FIXME:␣For␣an␣item␣after␣a␣'=>',␣try␣to␣include␣the␣length␣of␣the
+----------
+Range: (634216,634306) (90)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Always␣break␣lists␣contained␣in␣'['␣and␣'{'␣if␣too␣long␣for␣1␣line,
+----------
+Range: (634559,634862) (303)
+#print␣"LISTX:␣next=$next_nonblank_type␣␣avail␣cols=$columns␣packed=$packed_columns␣must␣format␣=␣$must_break_open_container␣too-long=$too_long␣␣opening=$opening_token␣list_type=$list_type␣formatted_lines=$formatted_lines␣␣packed=$packed_lines␣max_sparsity=␣$max_allowed_sparsity␣sparsity=$sparsity␣\n";
+----------
+Range: (645810,645930) (120)
+"NOBREAK:␣forced_breakpoint␣$forced_breakpoint_count␣from␣$a␣$c␣with␣i=$i␣max=$max_index_to_go␣type=$types_to_go[$i]\n";
+----------
+Range: (647195,647376) (181)
+"FORCE␣$forced_breakpoint_count␣from␣$a␣$c␣with␣i=$i_nonblank␣max=$max_index_to_go␣tok=$tokens_to_go[$i_nonblank]␣type=$types_to_go[$i_nonblank]␣nobr=$nobreak_to_go[$i_nonblank]\n";
+----------
+Range: (648254,648335) (81)
+"Program␣Bug:␣undo_forced_breakpoint_stack␣from␣$a␣$c␣has␣i=$i_start␣"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (648753,648855) (102)
+"UNDOBP:␣undo␣forced_breakpoint␣i=$i␣$forced_breakpoint_undo_count␣from␣$a␣$c␣max=$max_index_to_go\n";
+----------
+Range: (649073,649156) (83)
+"Program␣Bug:␣undo_forced_breakpoint␣from␣$a␣$c␣has␣i=$i␣but␣max=$max_index_to_go";
+----------
+Range: (652374,652463) (89)
+Perl::Tidy::Die
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣"Program␣bug-infinite␣loop␣in␣recombine␣breakpoints\n";
+----------
+Range: (654994,655135) (141)
+"RECOMBINE:␣n=$n␣imid=$iend_1␣if=$ibeg_1␣type=$type_ibeg_1␣=$tokens_to_go[$ibeg_1]␣next_type=$type_ibeg_2␣next_tok=$tokens_to_go[$ibeg_2]\n";
+----------
+Range: (655553,655633) (80)
+';'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣with␣possible␣side␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (655849,655927) (78)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#----------------------------------------------------------
+----------
+Range: (659254,659339) (85)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣check␣for␣a␣number␣on␣the␣left
+----------
+Range: (660155,660258) (103)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣look␣for␣a␣single␣short␣token␣either␣side␣of␣the
+----------
+Range: (660922,661032) (110)
+/^[in]$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣one␣of␣the␣two␣lines␣must␣be␣short:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (661238,661329) (91)
+$iend_2
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣short
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (661452,661559) (107)
+$rOpts_short_concatenation_item_length
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (661730,661821) (91)
+$ibeg_1
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣short
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (661948,662157) (209)
+$rOpts_short_concatenation_item_length
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣keep␣pure␣terms;␣don't␣mix␣+-␣with␣*/
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (662331,662435) (104)
+$is_mult_div{␣$types_to_go[$itokpp]␣}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (662530,662608) (78)
+$is_plus_minus{␣$types_to_go[$itokmm]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (662609,662715) (106)
+$is_plus_minus{␣$types_to_go[$itokpp]␣}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣;
+----------
+Range: (662740,662823) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣it␣is␣also␣good␣to␣combine␣if␣we␣can␣reduce␣to␣2␣lines
+----------
+Range: (663673,663751) (78)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#----------------------------------------------------------
+----------
+Range: (665924,666036) (112)
+$this_line_is_semicolon_terminated
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣only␣one␣token␣on␣last␣line
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (666048,666130) (82)
+$iend_1
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣must␣be␣structural␣paren
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (666157,666239) (82)
+')'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣style␣must␣allow␣outdenting,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (666241,666497) (256)
+$closing_token_indentation{')'}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣only␣leading␣'&&',␣'||',␣and␣':'␣if␣no␣others␣seen
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣(but␣note:␣our␣count␣made␣below␣could␣be␣wrong
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣due␣to␣intervening␣comments)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (666567,666754) (187)
+/^(:|\&\&|\|\|)$/␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣leading␣colons␣probably␣line␣up␣with␣a
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣previous␣colon␣or␣question␣(count␣could␣be␣wrong).
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (666771,666925) (154)
+':'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣only␣one␣step␣in␣depth␣allowed.␣␣this␣line␣must␣not
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣begin␣with␣a␣')'␣itself.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (668802,668913) (111)
+$is_if_unless{␣$tokens_to_go[$ibeg_2]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (669084,669208) (124)
+$previous_outdentable_closing_paren
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣handle␣'.'␣and␣'?'␣specially␣below
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (672811,672920) (109)
+$old_breakpoint_to_go[$iend_1]
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣don't␣strand␣an␣isolated␣'='
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (673890,674008) (118)
+2
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣three␣lines,␣the␣last␣with␣a␣leading␣semicolon
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (674096,674209) (113)
+';'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣next␣line␣ends␣with␣a␣here␣doc
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (674226,674421) (195)
+'h'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣next␣line␣ends␣in␣an␣open␣paren␣or␣brace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣the␣break␣hasn't␣been␣forced␣[dima.t]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (674515,674734) (219)
+'{'␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣do␣not␣recombine␣if␣the␣two␣lines␣might␣align␣well
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣this␣is␣a␣very␣approximate␣test␣for␣this
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (674994,675356) (362)
+2
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣-lp␣users␣often␣prefer␣this:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣my␣$title␣=␣function($env,␣$env,␣$sysarea,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣"bubba␣Borrower␣Entry");
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣so␣we␣will␣recombine␣if␣-lp␣is␣used␣we␣have
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣ending␣comma
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (676226,676309) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣ok␣to␣recombine␣if␣no␣level␣changes␣before␣last␣token
+----------
+Range: (677220,677303) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣do␣not␣recombine␣if␣total␣is␣more␣than␣2␣level␣changes
+----------
+Range: (677385,677462) (77)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣unless
+----------
+Range: (677920,678064) (144)
+$is_last_next_redo_return{␣$tokens_to_go[$iend_1]␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣only␣if␣followed␣by␣multiple␣lines
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (678296,678392) (96)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#----------------------------------------------------------
+----------
+Range: (679329,680613) (1284)
+'('␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣is␣followed␣by␣a␣?␣or␣:␣at␣same␣depth
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣We␣are␣looking␣for␣something␣like␣this.␣We␣can
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣recombine␣the␣&&␣line␣with␣the␣line␣above␣to␣make␣the
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣structure␣more␣clear:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣return
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣exists␣$G->{Attr}->{V}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣&&␣exists␣$G->{Attr}->{V}->{$u}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣?␣%{␣$G->{Attr}->{V}->{$u}␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣:␣();
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣We␣should␣probably␣leave␣something␣like␣this␣alone:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣return
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣exists␣$G->{Attr}->{E}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣&&␣exists␣$G->{Attr}->{E}->{$u}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣&&␣exists␣$G->{Attr}->{E}->{$u}->{$v}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣?␣%{␣$G->{Attr}->{E}->{$u}->{$v}␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣:␣();
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣so␣that␣we␣either␣have␣all␣of␣the␣&&'s␣(or␣||'s)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣on␣one␣line,␣as␣in␣the␣first␣example,␣or␣break␣at
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣each␣one␣as␣in␣the␣second␣example.␣␣However,␣it
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣sometimes␣makes␣things␣worse␣to␣check␣for␣this␣because
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣it␣prevents␣multiple␣recombinations.␣␣So␣this␣is␣not␣done.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (683724,683979) (255)
+$type_ibeg_2
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣...␣or␣this␣would␣strand␣a␣short␣quote␣,␣like␣this
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣.␣"some␣long␣quote"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣.␣"\n";
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (684781,685204) (423)
+$is_if_unless{␣$tokens_to_go[$ibeg_1]␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣important:␣only␣combine␣a␣very␣simple␣or
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣statement␣because␣the␣step␣below␣may␣have
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣combined␣a␣trailing␣'and'␣with␣this␣or,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣we␣do␣not␣want␣to␣then␣combine
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣everything␣together
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (686573,686651) (78)
+$is_if_unless{␣$tokens_to_go[$ibeg_1]␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (687068,687205) (137)
+$this_line_is_semicolon_terminated
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣previous␣line␣begins␣with␣'and'␣or␣'or'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (687813,687933) (120)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣similar␣treatment␣of␣&&␣and␣||␣as␣above␣for␣'and'␣and␣'or':
+----------
+Range: (688351,688493) (142)
+$this_line_is_semicolon_terminated
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣previous␣line␣begins␣with␣an␣'if'␣or␣'unless'␣keyword
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (689014,689119) (105)
+2
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣three␣lines,␣the␣last␣with␣a␣leading␣semicolon
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (689164,689261) (97)
+';'␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣next␣line␣ends␣with␣a␣here␣doc
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (689278,689371) (93)
+'h'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣this␣is␣a␣short␣line␣ending␣in␣;
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (689526,689604) (78)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#----------------------------------------------------------
+----------
+Range: (691199,691314) (115)
+$levels_to_go[$if_next]
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣but␣an␣isolated␣'if␣('␣is␣undesirable
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (692098,692197) (99)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣recombine␣the␣pair␣with␣the␣greatest␣bond␣strength
+----------
+Range: (699285,699365) (80)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣Break␣after␣a␣'return'␣followed␣by␣a␣chain␣of␣operators
+----------
+Range: (708260,708350) (90)
+##␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣factorial(␣$a␣+␣$b␣-␣1␣)␣/␣factorial(␣$a␣-␣1␣)␣/␣factorial(␣$b␣-␣1␣)
+----------
+Range: (708551,708712) (161)
+$old_breakpoint_to_go[$i_test]
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣which␣is␣a␣'good'␣breakpoint,␣meaning␣...
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣we␣don't␣want␣to␣break␣before␣it
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (708714,708903) (189)
+$want_break_before{$type}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣either␣we␣want␣to␣break␣before␣the␣next␣token
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣the␣next␣token␣is␣not␣short␣(i.e.␣not␣a␣'*',␣'/'␣etc.)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (709206,709286) (80)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣otherwise␣increase␣strength␣a␣bit␣if␣this␣token␣would␣be␣at␣the
+----------
+Range: (711443,712102) (659)
+$forced_breakpoint_to_go[$i_test]
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣break␣between␣)␣{␣in␣a␣continued␣line␣so␣that␣the␣'{'␣can
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣be␣outdented
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣See␣similar␣logic␣in␣scan_list␣which␣catches␣instances
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣where␣a␣line␣is␣just␣something␣like␣')␣{'.␣␣We␣have␣to
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣be␣careful␣because␣the␣corresponding␣block␣keyword␣might
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣not␣be␣on␣the␣first␣line,␣such␣as␣'for'␣here:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣eval␣{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣for␣("a")␣{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣␣␣␣␣for␣$x␣(␣1,␣2␣)␣{␣local␣$_␣=␣"b";␣s/(.*)/+$1/␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣};
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (712340,712613) (273)
+$tokens_to_go[$i_begin]␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣RT␣#104427:␣Dont␣break␣before␣opening␣sub␣brace␣because
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣sub␣block␣breaks␣handled␣at␣higher␣level,␣unless
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣it␣looks␣like␣the␣preceeding␣list␣is␣long␣and␣broken
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (712768,712854) (86)
+$nesting_depth_to_go[$i_next_nonblank]␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (712856,713014) (158)
+$rOpts->{'opening-brace-always-on-right'}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣There␣is␣an␣implied␣forced␣break␣at␣a␣terminal␣opening␣brace
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (713477,713563) (86)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣quit␣if␣a␣break␣here␣would␣put␣a␣good␣terminal␣token␣on
+----------
+Range: (716031,716167) (136)
+/^[#;\{]$/␣␣␣␣␣␣␣␣#␣and␣this␣line␣ends␣in
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣';'␣or␣side␣comment
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (719150,719242) (92)
+$nesting_depth_to_go[$i_next_nonblank]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (719505,719582) (77)
+$nesting_depth_to_go[$i_test]␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (721780,721960) (180)
+"BREAK:␣i=$i_test␣imax=$imax␣$types_to_go[$i_test]␣$next_nonblank_type␣sp=($leading_spaces)␣lnext=␣$summed_lengths_to_go[$i_testp2]␣2long=$too_long␣str=$strength␣␣␣␣$ltok␣$rtok\n";
+----------
+Range: (729500,729581) (81)
+"Non-fatal␣program␣bug:␣couldn't␣set␣break␣at␣$i_break_left\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (732022,732147) (125)
+"Start␣indentation␣disagreement:␣input=$guessed_indentation_level;␣output=$structural_indentation_level\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (732518,732610) (92)
+"End␣indentation␣disagreement␣from␣input␣line␣$in_tabbing_disagreement\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (732885,732965) (80)
+}
+␣␣␣␣}
+}
+
+#####################################################################
+----------
+Range: (734829,735043) (214)
+my␣(
+␣␣␣␣␣␣␣␣$class,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$spaces,␣␣␣␣␣␣␣␣␣␣␣$level,
+␣␣␣␣␣␣␣␣$ci_level,␣␣␣␣␣␣␣␣␣␣␣␣$available_spaces,␣$index,
+␣␣␣␣␣␣␣␣$gnu_sequence_number,␣$align_paren,␣␣␣␣␣␣$stack_depth,
+␣␣␣␣␣␣␣␣$starting_index,
+␣␣␣␣)␣=
+----------
+Range: (746272,746353) (81)
+$_[2]␣}
+
+}
+
+#####################################################################
+----------
+Range: (750974,752251) (1277)
+}
+
+use␣vars␣qw(
+␣␣$vertical_aligner_self
+␣␣$current_line
+␣␣$maximum_alignment_index
+␣␣$ralignment_list
+␣␣$maximum_jmax_seen
+␣␣$minimum_jmax_seen
+␣␣$previous_minimum_jmax_seen
+␣␣$previous_maximum_jmax_seen
+␣␣$maximum_line_index
+␣␣$group_level
+␣␣$group_type
+␣␣$group_maximum_gap
+␣␣$marginal_match
+␣␣$last_level_written
+␣␣$last_leading_space_count
+␣␣$extra_indent_ok
+␣␣$zero_count
+␣␣@group_lines
+␣␣$last_comment_column
+␣␣$last_side_comment_line_number
+␣␣$last_side_comment_length
+␣␣$last_side_comment_level
+␣␣$outdented_line_count
+␣␣$first_outdented_line_at
+␣␣$last_outdented_line_at
+␣␣$diagnostics_object
+␣␣$logger_object
+␣␣$file_writer_object
+␣␣@side_comment_history
+␣␣$comment_leading_space_count
+␣␣$is_matching_terminal_line
+␣␣$consecutive_block_comments
+
+␣␣$cached_line_text
+␣␣$cached_line_type
+␣␣$cached_line_flag
+␣␣$cached_seqno
+␣␣$cached_line_valid
+␣␣$cached_line_leading_space_count
+␣␣$cached_seqno_string
+
+␣␣$valign_buffer_filling
+␣␣@valign_buffer
+
+␣␣$seqno_string
+␣␣$last_nonblank_seqno_string
+
+␣␣$rOpts
+
+␣␣$rOpts_maximum_line_length
+␣␣$rOpts_variable_maximum_line_length
+␣␣$rOpts_continuation_indentation
+␣␣$rOpts_indent_columns
+␣␣$rOpts_tabs
+␣␣$rOpts_entab_leading_whitespace
+␣␣$rOpts_valign
+
+␣␣$rOpts_fixed_position_side_comment
+␣␣$rOpts_minimum_space_to_comment
+
+);
+----------
+Range: (757057,757144) (87)
+"Current␣Alignments:\ni\ttoken\tstarting_column\tcolumn\tstarting_line\tending_line\n";
+----------
+Range: (757585,757666) (81)
+"$i\t$matching_token\t$starting_column\t$column\t$starting_line\t$ending_line\n";
+----------
+Range: (760875,761195) (320)
+my␣(
+␣␣␣␣␣␣␣␣$level,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$level_end,
+␣␣␣␣␣␣␣␣$indentation,␣␣␣␣␣␣␣␣␣$rfields,
+␣␣␣␣␣␣␣␣$rtokens,␣␣␣␣␣␣␣␣␣␣␣␣␣$rpatterns,
+␣␣␣␣␣␣␣␣$is_forced_break,␣␣␣␣␣$outdent_long_lines,
+␣␣␣␣␣␣␣␣$is_terminal_ternary,␣$is_terminal_statement,
+␣␣␣␣␣␣␣␣$do_not_pad,␣␣␣␣␣␣␣␣␣␣$rvertical_tightness_flags,
+␣␣␣␣␣␣␣␣$level_jump,
+␣␣␣␣)␣=
+----------
+Range: (762229,762385) (156)
+"APPEND0:␣entering␣lines=$maximum_line_index␣new␣#fields=␣$jmax,␣leading_count=$leading_space_count␣last_cmt=$last_comment_column␣force=$is_forced_break\n";
+----------
+Range: (764477,764554) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (765131,765214) (83)
+}
+␣␣␣␣}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (765542,765619) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (765956,766033) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (766484,766564) (80)
+)␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣flush␣current␣group␣if␣we␣are␣just␣collecting␣side␣comments..
+----------
+Range: (766676,766779) (103)
+3␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣..or␣if␣this␣new␣line␣doesn't␣fit␣to␣the␣left␣of␣the␣comments
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (766957,767045) (88)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣patch␣to␣start␣new␣COMMENT␣group␣if␣this␣comment␣may␣be␣outdented
+----------
+Range: (767397,767477) (80)
+}
+
+␣␣␣␣␣␣␣␣#␣just␣write␣this␣line␣directly␣if␣no␣current␣group,␣no␣side␣comment,
+----------
+Range: (768014,768161) (147)
+"Program␣bug␣in␣Perl::Tidy::VerticalAligner␣-␣number␣of␣tokens␣=␣$#{$rtokens}␣should␣be␣one␣less␣than␣number␣of␣fields:␣$#{$rfields})\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (768197,768274) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (769642,769719) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (772828,772911) (83)
+}
+␣␣␣␣}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (774049,774126) (77)
+}
+
+␣␣␣␣#␣--------------------------------------------------------------------
+----------
+Range: (780418,780513) (95)
+12
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣don't␣remember␣comment␣location␣across␣block␣level␣changes
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (792085,792162) (77)
+}
+
+␣␣␣␣␣␣␣␣#␣flush␣if␣adding␣this␣line␣would␣make␣a␣non-monotonic␣field␣count
+----------
+Range: (794004,794093) (89)
+}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣do␣detailed␣check␣for␣everything␣else␣except␣hanging␣side␣comments
+----------
+Range: (796245,796420) (175)
+$old_tok
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Exception␣for␣matching␣terminal␣:␣of␣ternary␣statement..
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣consider␣containers␣prefixed␣by␣?␣and␣:␣a␣match
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (796690,797406) (716)
+$jlimit
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣and␣there␣is␣either␣at␣least␣one␣alignment␣token
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣this␣is␣a␣single␣item␣following␣a␣list.␣␣This
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣latter␣rule␣is␣required␣for␣'December'␣to␣join
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣following␣list:
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣my␣(@months)␣=␣(
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣'',␣␣␣␣␣␣␣'January',␣␣␣'February',␣'March',
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣'April',␣␣'May',␣␣␣␣␣␣␣'June',␣␣␣␣␣'July',
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣'August',␣'September',␣'October',␣␣'November',
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣␣␣␣␣'December'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣);
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣If␣it␣doesn't␣then␣the␣-lp␣formatting␣will␣fail.
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (800021,800118) (97)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Handle␣an␣'='␣alignment␣with␣different␣patterns␣to
+----------
+Range: (801086,801168) (82)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣If␣we␣pass␣that␣test,␣we'll␣call␣it␣a␣marginal␣match.
+----------
+Range: (801869,801985) (116)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Don't␣let␣line␣with␣fewer␣fields␣increase␣column␣widths
+----------
+Range: (803318,803461) (143)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣##print␣"marginal=$marginal_match␣saw=$saw_good_alignment␣jmax=$jmax␣max=$maximum_field_index␣maxpad=$max_pad␣minpad=$min_pad\n";
+----------
+Range: (804155,804286) (131)
+##print␣"BUBBA:␣no␣match␣jmax=$jmax␣␣max=$maximum_field_index␣$group_list_type␣lines=$maximum_line_index␣token=$$old_rtokens[0]\n";
+----------
+Range: (805350,805427) (77)
+}
+
+␣␣␣␣␣␣␣␣#␣remember␣largest␣gap␣of␣the␣group,␣excluding␣gap␣to␣side␣comment
+----------
+Range: (806141,806335) (194)
+$padding_available␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣previously,␣there␣were␣upper␣bounds␣placed␣on␣padding␣here
+␣␣␣␣␣␣␣␣␣␣␣␣#␣(maximum_whitespace_columns),␣but␣they␣were␣not␣really␣helpful
+
+␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣{
+----------
+Range: (811098,811184) (86)
+"APPEND0:␣Flush␣called␣from␣$a␣$b␣$c␣for␣COMMENT␣group:␣lines=$maximum_line_index␣\n";
+----------
+Range: (812793,812932) (139)
+"APPEND0:␣Flush␣called␣from␣$a␣$b␣$c␣fields=$maximum_field_index␣list=$group_list_type␣lines=$maximum_line_index␣extra=$extra_indent_ok\n";
+----------
+Range: (814287,814367) (80)
+$marginal_match
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣don't␣align␣two␣lines␣with␣big␣gap
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (814389,814569) (180)
+12
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣lines␣with␣differing␣number␣of␣alignment␣tokens
+␣␣␣␣␣␣␣␣␣␣␣␣#␣TODO:␣this␣could␣be␣improved.␣␣It␣occasionally␣rejects
+␣␣␣␣␣␣␣␣␣␣␣␣#␣good␣matches.
+␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (821026,821127) (101)
+my␣(␣$line,␣$min_ci_gap,␣$do_not_align,␣$group_leader_length,
+␣␣␣␣␣␣␣␣$extra_leading_spaces␣)
+␣␣␣␣␣␣=
+----------
+Range: (827528,827656) (128)
+my␣(␣$leading_space_count,␣$str,␣$side_comment_length,␣$outdent_long_lines,
+␣␣␣␣␣␣␣␣$rvertical_tightness_flags,␣$level␣)
+␣␣␣␣␣␣=
+----------
+Range: (828988,829075) (87)
+my␣(␣$open_or_close,␣$tightness_flag,␣$seqno,␣$valid,␣$seqno_beg,
+␣␣␣␣␣␣␣␣$seqno_end␣);
+----------
+Range: (830886,830975) (89)
+$seqno_beg
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣The␣container␣combination␣must␣be␣okay..
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (831068,831177) (109)
+$cached_line_type␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣closing␣block␣brace␣may␣append␣to␣non-block
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (831336,831423) (87)
+2␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣The␣combined␣line␣must␣fit
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (835922,836003) (81)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$str␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (841114,841215) (101)
+"Error␣entabbing␣in␣valign_output_step_D:␣expected␣count=$leading_space_count\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (841698,841817) (119)
+"Error␣entabbing␣in␣valign_output_step_D:␣for␣level=$group_level␣count=$leading_space_count\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (842376,842477) (101)
+"Error␣entabbing␣in␣valign_output_step_D:␣expected␣count=$leading_space_count\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (844251,844359) (108)
+"Error␣in␣get_leading_string:␣for␣level=$group_level␣count=$leading_whitespace_count\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (845208,845286) (78)
+"␣␣use␣-noll␣to␣prevent␣outdenting,␣-l=n␣to␣increase␣line␣length\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (851045,851151) (106)
+"␣␣Maximum␣output␣line␣length␣was␣$max_output_line_length␣at␣line␣$max_output_line_length_at\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (851271,851380) (109)
+"$line_length_error_count␣output␣line$word␣exceeded␣$rOpts->{'maximum-line-length'}␣characters:\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (851638,851734) (96)
+"␣$word␣at␣line␣$first_line_length_error_at␣by␣$first_line_length_error␣characters\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (852138,852236) (98)
+"␣Maximum␣at␣line␣$max_line_length_error_at␣by␣$max_line_length_error␣characters\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (852277,852374) (97)
+"␣Last␣at␣line␣$last_line_length_error_at␣by␣$last_line_length_error␣characters\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (852383,852463) (80)
+}
+␣␣␣␣}
+}
+
+#####################################################################
+----------
+Range: (853126,853209) (83)
+print␣$fh
+␣␣␣␣␣␣"Use␣-dump-token-types␣(-dtt)␣to␣get␣a␣list␣of␣token␣type␣codes\n";
+----------
+Range: (859106,859867) (761)
+use␣vars␣qw{
+␣␣$tokenizer_self
+
+␣␣$last_nonblank_token
+␣␣$last_nonblank_type
+␣␣$last_nonblank_block_type
+␣␣$statement_type
+␣␣$in_attribute_list
+␣␣$current_package
+␣␣$context
+
+␣␣%is_constant
+␣␣%is_user_function
+␣␣%user_function_prototype
+␣␣%is_block_function
+␣␣%is_block_list_function
+␣␣%saw_function_definition
+
+␣␣$brace_depth
+␣␣$paren_depth
+␣␣$square_bracket_depth
+
+␣␣@current_depth
+␣␣@total_depth
+␣␣$total_depth
+␣␣@nesting_sequence_number
+␣␣@current_sequence_number
+␣␣@paren_type
+␣␣@paren_semicolon_count
+␣␣@paren_structural_type
+␣␣@brace_type
+␣␣@brace_structural_type
+␣␣@brace_context
+␣␣@brace_package
+␣␣@square_bracket_type
+␣␣@square_bracket_structural_type
+␣␣@depth_array
+␣␣@nested_ternary_flag
+␣␣@nested_statement_type
+␣␣@starting_line_of_current_depth
+};
+----------
+Range: (859917,860320) (403)
+use␣vars␣qw{
+␣␣%is_indirect_object_taker
+␣␣%is_block_operator
+␣␣%expecting_operator_token
+␣␣%expecting_operator_types
+␣␣%expecting_term_types
+␣␣%expecting_term_token
+␣␣%is_digraph
+␣␣%is_file_test_operator
+␣␣%is_trigraph
+␣␣%is_valid_token_type
+␣␣%is_keyword
+␣␣%is_code_block_token
+␣␣%really_want_term
+␣␣@opening_brace_names
+␣␣@closing_brace_names
+␣␣%is_keyword_taking_list
+␣␣%is_q_qq_qw_qx_qr_s_y_tr_m
+};
+----------
+Range: (866101,866191) (90)
+confess
+"Attempt␣to␣create␣more␣than␣1␣object␣in␣$class,␣which␣is␣not␣a␣true␣class␣yet\n";
+----------
+Range: (868827,868945) (118)
+"hit␣eof␣while␣in␣pod␣documentation␣(no␣=cut␣seen)\n\tthis␣can␣cause␣trouble␣with␣some␣pod␣utilities\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (868994,869112) (118)
+"hit␣eof␣while␣in␣pod␣documentation␣(no␣=cut␣seen)\n\tthis␣can␣cause␣trouble␣with␣some␣pod␣utilities\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (869411,869537) (126)
+"hit␣EOF␣in␣here␣document␣starting␣at␣line␣$started_looking_for_here_target_at␣with␣target:␣$here_doc_target\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (869584,869705) (121)
+"hit␣EOF␣in␣here␣document␣starting␣at␣line␣$started_looking_for_here_target_at␣with␣empty␣target␣string\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (869888,869994) (106)
+"NOTE:␣almost␣matched␣at␣input␣line␣$nearly_matched_here_target_at␣except␣for␣whitespace\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (870334,870436) (102)
+"hit␣EOF␣seeking␣end␣of␣$what␣starting␣at␣line␣$line_start_quote␣ending␣in␣$quote_target\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (871753,871870) (117)
+"Found␣v-string␣'$tok'␣but␣v-strings␣are␣not␣implemented␣in␣your␣version␣of␣perl;␣see␣Camel␣3␣book␣ch␣2\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (878321,878399) (78)
+"Hash-bang␣in␣pod␣can␣cause␣older␣versions␣of␣perl␣to␣fail!␣\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (881041,881140) (99)
+"There␣seems␣to␣be␣a␣hash-bang␣after␣line␣1;␣do␣you␣need␣to␣run␣with␣-x␣?\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (881524,881615) (91)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣wait␣for␣a␣hash-bang␣before␣parsing␣if␣the␣user␣invoked␣us␣with␣-x
+----------
+Range: (883735,883815) (80)
+"=cut␣starts␣a␣pod␣section␣..␣this␣can␣fool␣pod␣utilities.\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (886650,886727) (77)
+}
+
+␣␣␣␣#␣Note:␣if␣keyword␣'format'␣occurs␣in␣this␣line␣code,␣it␣is␣still␣CODE
+----------
+Range: (894584,895022) (438)
+my␣(
+␣␣␣␣␣␣␣␣$block_type,␣␣␣␣␣␣␣␣$container_type,␣␣␣␣$expecting,
+␣␣␣␣␣␣␣␣$i,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$i_tok,␣␣␣␣␣␣␣␣␣␣␣␣␣$input_line,
+␣␣␣␣␣␣␣␣$input_line_number,␣$last_nonblank_i,␣␣␣$max_token_index,
+␣␣␣␣␣␣␣␣$next_tok,␣␣␣␣␣␣␣␣␣␣$next_type,␣␣␣␣␣␣␣␣␣$peeked_ahead,
+␣␣␣␣␣␣␣␣$prototype,␣␣␣␣␣␣␣␣␣$rhere_target_list,␣$rtoken_map,
+␣␣␣␣␣␣␣␣$rtoken_type,␣␣␣␣␣␣␣$rtokens,␣␣␣␣␣␣␣␣␣␣␣$tok,
+␣␣␣␣␣␣␣␣$type,␣␣␣␣␣␣␣␣␣␣␣␣␣␣$type_sequence,␣␣␣␣␣$indent_flag,
+␣␣␣␣);
+----------
+Range: (895629,895774) (145)
+my␣(␣$in_quote,␣$quote_type,␣$quote_character,␣$quote_pos,␣$quote_depth,
+␣␣␣␣␣␣␣␣$quoted_string_1,␣$quoted_string_2,␣$allowed_quote_modifiers,␣);
+----------
+Range: (896149,896511) (362)
+my␣(
+␣␣␣␣␣␣␣␣$nesting_token_string,␣␣␣␣␣␣$nesting_type_string,
+␣␣␣␣␣␣␣␣$nesting_block_string,␣␣␣␣␣␣$nesting_block_flag,
+␣␣␣␣␣␣␣␣$nesting_list_string,␣␣␣␣␣␣␣$nesting_list_flag,
+␣␣␣␣␣␣␣␣$ci_string_in_tokenizer,␣␣␣␣$continuation_string_in_tokenizer,
+␣␣␣␣␣␣␣␣$in_statement_continuation,␣$level_in_tokenizer,
+␣␣␣␣␣␣␣␣$slevel_in_tokenizer,␣␣␣␣␣␣␣$rslevel_stack,
+␣␣␣␣);
+----------
+Range: (896654,896955) (301)
+my␣(
+␣␣␣␣␣␣␣␣$last_nonblank_container_type,␣␣␣␣␣$last_nonblank_type_sequence,
+␣␣␣␣␣␣␣␣$last_last_nonblank_token,␣␣␣␣␣␣␣␣␣$last_last_nonblank_type,
+␣␣␣␣␣␣␣␣$last_last_nonblank_block_type,␣␣␣␣$last_last_nonblank_container_type,
+␣␣␣␣␣␣␣␣$last_last_nonblank_type_sequence,␣$last_nonblank_prototype,
+␣␣␣␣);
+----------
+Range: (908008,908085) (77)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣a␣sub␣to␣warn␣if␣token␣found␣where␣operator␣expected
+----------
+Range: (911958,912346) (388)
+OPERATOR
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣be␣sure␣this␣is␣not␣a␣method␣call␣of␣the␣form
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣&method(...),␣$method->(..),␣&{method}(...),
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣$ref[2](list)␣is␣ok␣&␣short␣for␣$ref[2]->(list)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣NOTE:␣at␣present,␣braces␣in␣something␣like␣&{␣xxx␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣are␣not␣marked␣as␣a␣block,␣we␣might␣have␣a␣method␣call
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (912569,912654) (85)
+"do␣SUBROUTINE␣is␣deprecated;␣consider␣&␣or␣->␣notation\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (915947,916026) (79)
+"Syntax␣error?␣found␣token␣'$last_nonblank_type'␣then␣'('\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (916941,917021) (80)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣operator_expected:␣note␣if␣we␣are␣in␣the␣list␣(use.t)
+----------
+Range: (917086,917174) (88)
+'_use'␣}
+##␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣FIXME:␣need␣to␣move␣this␣elsewhere,␣perhaps␣check␣after␣a␣'('
+----------
+Range: (917231,917312) (81)
+##␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣warning("Leading␣','s␣illegal␣in␣some␣versions␣of␣perl\n");
+----------
+Range: (920957,921036) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣SWITCH/CASE:␣hide␣these␣keywords␣from␣an␣immediately
+----------
+Range: (922432,922559) (127)
+"syntax␣error␣at␣')␣{',␣didn't␣see␣one␣of:␣<<$list>>;␣If␣this␣code␣is␣okay␣try␣using␣the␣-xs␣flag\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (922580,922677) (97)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣paren-less␣for/foreach␣glitch,␣part␣2.
+----------
+Range: (922977,923066) (89)
+"syntax␣error␣at␣'$want_paren␣..␣{'␣--␣missing␣\$␣loop␣variable\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (923998,924085) (87)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣code␣and␣anonymous␣hash␣have␣the␣same␣type,␣'{',␣but␣are
+----------
+Range: (924718,924818) (100)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣SWITCH/CASE:␣if␣we␣find␣a␣stray␣opening␣block␣brace
+----------
+Range: (925155,925240) (85)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣$brace_type[␣++$brace_depth␣]␣␣␣␣␣␣␣␣=
+----------
+Range: (926153,926233) (80)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣propagate␣type␣information␣for␣'do'␣and␣'eval'␣blocks,␣and␣also
+----------
+Range: (932804,932881) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣propagate␣type␣information␣for␣smartmatch␣operator.␣␣This␣is
+----------
+Range: (935701,935795) (94)
+my␣(␣$found_target,␣$here_doc_target,␣$here_quote_character,
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$saw_error␣);
+----------
+Range: (936603,936680) (77)
+"Unconventional␣here-target:␣'$here_doc_target'\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (937840,937920) (80)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣operator_expected:␣note␣if␣we␣are␣in␣the␣list␣(use.t)
+----------
+Range: (939261,939403) (142)
+qw(␣}␣{␣BEGIN␣END␣CHECK␣INIT␣AUTOLOAD␣DESTROY␣UNITCHECK␣continue␣;
+␣␣␣␣␣␣if␣elsif␣else␣unless␣while␣until␣for␣foreach␣switch␣case␣given␣when);
+----------
+Range: (942706,942784) (78)
+#␣comparison␣of␣the␣input␣string␣and␣its␣tokenization␣for␣each␣line␣of␣a␣file.
+----------
+Range: (943202,943279) (77)
+#␣with␣changes␣in␣perl␣and␣to␣help␣adapt␣the␣tokenizer␣to␣other␣applications.
+----------
+Range: (949300,949398) (98)
+1␣␣␣␣#␣no␣use␣tokenizing␣a␣comment
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣start␣by␣breaking␣the␣line␣into␣pre-tokens
+----------
+Range: (952533,952616) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣For␣an␣'e'␣quote␣modifier␣we␣must␣scan␣the␣replacement
+----------
+Range: (953456,953541) (85)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣if
+----------
+Range: (954469,954620) (151)
+<<EOM);
+
+Partial␣match␣to␣quote␣modifier␣$allowed_quote_modifiers␣at␣word:␣'$str'
+Please␣put␣a␣space␣between␣quote␣modifiers␣and␣trailing␣keywords.
+EOM
+----------
+Range: (955390,955473) (83)
+"Note:␣found␣word␣$str␣at␣quote␣modifier␣location\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (962181,962261) (80)
+0␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣###############################################################
+----------
+Range: (964369,964457) (88)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣#␣quote␣a␣bare␣word␣within␣braces..like␣xxx->{s};␣note␣that␣we
+----------
+Range: (965095,965172) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣a␣bare␣word␣immediately␣followed␣by␣::␣is␣not␣a␣keyword;
+----------
+Range: (965926,966031) (105)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣FIXME:␣Patch:␣mark␣something␣like␣x4␣as␣an␣integer␣for␣now
+----------
+Range: (967212,967357) (145)
+'use'
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣these␣regexes␣are␣from␣AutoSplit.pm,␣which␣we␣want
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣to␣mimic
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (967450,967537) (87)
+/\bISA\s*=.*\bAutoLoader\b/
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (969456,969571) (115)
+"Attempting␣to␣define␣constant␣'$next_nonblank_token'␣which␣is␣a␣perl␣keyword\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (969600,969706) (106)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣FIXME:␣could␣check␣for␣error␣in␣which␣next␣token␣is
+----------
+Range: (969829,969913) (84)
+$is_constant{$current_package}{$next_nonblank_token}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣=
+----------
+Range: (969941,970025) (84)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣various␣quote␣operators
+----------
+Range: (971275,971359) (84)
+$is_for_foreach{$want_paren}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (974056,974148) (92)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣recognize␣'use'␣statements,␣which␣are␣special
+----------
+Range: (974382,974459) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣remember␣my␣and␣our␣to␣check␣for␣trailing␣":␣shared"
+----------
+Range: (974577,974660) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣Check␣for␣misplaced␣'elsif'␣and␣'else',␣but␣allow␣isolated
+----------
+Range: (975075,975161) (86)
+"expecting␣'$tok'␣to␣follow␣one␣of␣'if|elsif|unless'\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (975484,975765) (281)
+/^(if|elsif|unless|case|when)$/
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣to␣avoid␣an␣unwanted␣error␣message␣for
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣the␣case␣of␣a␣parenless␣'case'␣(RT␣105484):
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣switch␣(␣1␣)␣{␣case␣x␣{␣2␣}␣else␣{␣}␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (975813,975898) (85)
+/^(if|elsif|unless|case|when)$/
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (975936,976032) (96)
+"expecting␣'$tok'␣to␣follow␣one␣of␣'if|elsif|unless|case|when'\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (977018,977110) (92)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣SWITCH/CASE␣if␣'case'␣and␣'when␣are
+----------
+Range: (979248,979375) (127)
+<<EOM);
+Expecting␣operator␣after␣'$last_nonblank_token'␣but␣found␣bare␣word␣'$tok'
+␣␣␣␣␣␣␣Maybe␣indirectet␣object␣notation?
+EOM
+----------
+Range: (979576,979681) (105)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣mark␣bare␣words␣immediately␣followed␣by␣a␣paren␣as
+----------
+Range: (979890,979969) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣underscore␣after␣file␣test␣operator␣is␣file␣handle
+----------
+Range: (980799,980882) (83)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣patch␣for␣SWITCH/CASE␣if␣switch␣and␣given␣not␣keywords
+----------
+Range: (981447,981579) (132)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣###############################################################
+----------
+Range: (982220,982312) (92)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣###############################################################
+----------
+Range: (987164,987245) (81)
+#␣␣␣␣␣The␣total␣indentation␣will␣be␣$level␣*␣(4␣spaces)␣+␣$ci_level␣*␣(2␣spaces),
+----------
+Range: (988740,988818) (78)
+#␣␣␣␣␣␣␣the␣nesting␣depth␣that␣would␣occur␣if␣every␣nesting␣token␣--␣'{',␣'[',
+----------
+Range: (989049,989202) (153)
+my␣(␣$ci_string_i,␣$level_i,␣$nesting_block_string_i,
+␣␣␣␣␣␣␣␣␣␣␣␣$nesting_list_string_i,␣$nesting_token_string_i,
+␣␣␣␣␣␣␣␣␣␣␣␣$nesting_type_string_i,␣);
+----------
+Range: (991826,991936) (110)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣we␣are␣already␣in␣an␣indented␣if,␣see␣if␣we␣should␣outdent
+----------
+Range: (993193,993272) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣my␣$tok␣=
+----------
+Range: (993844,993925) (81)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣----------------------------------------------------------------
+----------
+Range: (994300,994386) (86)
+'k'␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣-----------------------------------------------------------------
+----------
+Range: (998317,998396) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣do␣not␣change␣container␣environment␣here␣if␣we␣are␣not
+----------
+Range: (998653,998732) (79)
+##␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣File::Spec->catdir(␣$_,␣"auto",␣$root,␣"$sub$lib_ext"␣)
+----------
+Range: (999191,999284) (93)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣we␣will␣use␣continuation␣indentation␣within␣containers
+----------
+Range: (999911,999992) (81)
+$is_logical_container{␣$routput_container_type->[$i]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣};
+----------
+Range: (1000744,1000821) (77)
+#␣␣For␣other␣types,␣we␣will␣give␣them␣continuation␣indentation.␣␣For␣example,
+----------
+Range: (1003358,1003441) (83)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+#␣...and␣include␣all␣block␣types␣except␣user␣subs␣with
+----------
+Range: (1003496,1003613) (117)
+#␣/^(\}|\{|BEGIN|END|CHECK|INIT|AUTOLOAD|DESTROY|UNITCHECK|continue|;|if|elsif|else|unless|while|until|for|foreach)$/
+----------
+Range: (1003674,1003823) (149)
+$is_zero_continuation_block_type{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$routput_block_type->[$i]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (1004093,1004246) (153)
+$is_not_zero_continuation_block_type{
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$routput_block_type->[$i]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (1006703,1006795) (92)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣be␣sure␣binary␣operators␣get␣continuation␣indentation
+----------
+Range: (1007086,1007167) (81)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣continuation␣indentation␣is␣sum␣of␣any␣open␣ci␣from␣previous
+----------
+Range: (1007767,1007846) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣otherwise,␣we␣are␣continuing␣the␣current␣statement
+----------
+Range: (1008347,1008426) (79)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣otherwise,␣the␣token␣after␣a␣','␣starts␣a␣new␣term
+----------
+Range: (1009542,1009638) (96)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣set␣secondary␣nesting␣levels␣based␣on␣all␣containment␣token␣types
+----------
+Range: (1015102,1015183) (81)
+##print␣"tok=$tok␣last␣type=$last_nonblank_type␣last␣tok=$last_nonblank_token\n";
+----------
+Range: (1015464,1015577) (113)
+#␣␣␣␣␣print␣"previous␣token=$last_nonblank_token␣␣type=$last_nonblank_type␣prototype=$last_nonblank_prototype\n";
+----------
+Range: (1015802,1015881) (79)
+}
+
+␣␣␣␣␣␣␣␣#␣For␣possible␣file␣handle␣like␣"$a",␣Perl␣uses␣weird␣parsing␣rules.
+----------
+Range: (1016581,1016677) (96)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣Check␣for␣smartmatch␣operator␣before␣preceding␣brace␣or␣square␣bracket.
+----------
+Range: (1021291,1021376) (85)
+"OP:␣unknown␣after␣type=$last_nonblank_type␣␣token=$last_nonblank_token\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (1021445,1021539) (94)
+"EXPECT:␣returns␣$op_expected␣for␣last␣type␣$last_nonblank_type␣token␣$last_nonblank_token\n";
+----------
+Range: (1022339,1022419) (80)
+}
+
+␣␣␣␣#␣otherwise,␣it␣is␣a␣label␣if␣and␣only␣if␣it␣follows␣a␣';'␣(real␣or␣fake)
+----------
+Range: (1023186,1023270) (84)
+#␣print␣"BLOCK_TYPE␣EXAMINING:␣type=$last_nonblank_type␣tok=$last_nonblank_token\n";
+----------
+Range: (1024634,1024711) (77)
+}
+␣␣␣␣}
+
+␣␣␣␣################################################################
+----------
+Range: (1025244,1025375) (131)
+#␣/^(BEGIN|END|CHECK|INIT|AUTOLOAD|DESTROY|UNITCHECK|continue|if|elsif|else|unless|do|while|until|eval|for|foreach|map|grep|sort)$/
+----------
+Range: (1031332,1031421) (89)
+/^(s|m|y|tr|qr|q|qq|qx)$/
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣a␣=>
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (1031732,1031845) (113)
+my␣(␣$found,␣$expecting,␣$i_tok,␣$last_nonblank_i,␣$rpretoken_map,
+␣␣␣␣␣␣␣␣$rpretoken_type,␣$input_line␣)
+␣␣␣␣␣␣=
+----------
+Range: (1034236,1034495) (259)
+/^([\$\@\*\&\%\)]|->|::)/
+
+␣␣␣␣␣␣␣␣␣␣#␣or␣if␣we␣follow␣a␣hash␣or␣array␣closing␣curly␣brace␣or␣bracket
+␣␣␣␣␣␣␣␣␣␣#␣For␣example,␣the␣second␣'{'␣in␣this␣is␣non-structural:␣$a{'x'}{'y'}
+␣␣␣␣␣␣␣␣␣␣#␣because␣the␣first␣'}'␣would␣have␣been␣given␣type␣'R'
+␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (1037984,1038072) (88)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+␣␣␣␣$nested_statement_type[$aa][␣$current_depth[$aa]␣]␣=
+----------
+Range: (1039543,1039706) (163)
+MAX_NAG_MESSAGES
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣if␣too␣many␣closing␣types␣have␣occurred,␣we␣probably
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣already␣caught␣this␣error
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (1039885,1039968) (83)
+$starting_line_of_current_depth[$aa]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣[␣$current_depth[$aa]␣];
+----------
+Range: (1040612,1040741) (129)
+<<"EOM";
+Found␣$diff␣extra␣$bname$ess␣between␣$opening_brace_names[$aa]␣on␣line␣$sl␣and␣$closing_brace_names[$aa]␣on␣line␣$el
+EOM
+----------
+Range: (1040842,1040929) (87)
+$starting_line_of_current_depth[$bb]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣[␣$current_depth[$bb]␣];
+----------
+Range: (1041547,1041670) (123)
+<<"EOM";
+There␣is␣no␣previous␣$opening_brace_names[$aa]␣to␣match␣a␣$closing_brace_names[$aa]␣on␣line␣$input_line_number
+EOM
+----------
+Range: (1042196,1042349) (153)
+<<"EOM";
+Final␣nesting␣depth␣of␣$opening_brace_names[$aa]s␣is␣$current_depth[$aa]
+The␣most␣recent␣un-matched␣$opening_brace_names[$aa]␣is␣on␣line␣$sl
+EOM
+----------
+Range: (1042443,1042525) (82)
+}
+␣␣␣␣}
+}
+
+#########i#############################################################
+----------
+Range: (1051599,1051693) (94)
+my␣(␣$input_line,␣$i,␣$tok,␣$type,␣$prototype,␣$rtoken_map,
+␣␣␣␣␣␣␣␣$max_token_index␣)
+␣␣␣␣␣␣=
+----------
+Range: (1053954,1054032) (78)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣bareword␣after␣sort␣has␣implied␣empty␣prototype;␣for␣example:
+----------
+Range: (1054320,1054397) (77)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣#␣Note:␣strangely,␣perl␣does␣not␣seem␣to␣really␣let␣you␣create
+----------
+Range: (1055857,1056002) (145)
+$is_indirect_object_taker{$last_nonblank_token}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣or␣preceded␣by␣something␣like␣'print('␣or␣'printf('
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣||
+----------
+Range: (1056088,1056237) (149)
+$is_indirect_object_taker{␣$paren_type[$paren_depth]
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣␣␣␣␣{
+----------
+Range: (1057283,1057370) (87)
+"Caution:␣unknown␣word␣'$tok'␣in␣indirect␣object␣slot\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (1057395,1057513) (118)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣bareword␣not␣followed␣by␣a␣space␣--␣may␣not␣be␣filehandle
+----------
+Range: (1057656,1057741) (85)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣#␣Now␣we␣must␣convert␣back␣from␣character␣position
+----------
+Range: (1059094,1059178) (84)
+#␣USES␣GLOBAL␣VARIABLES:␣$current_package,␣$last_nonblank_token,␣$in_attribute_list,
+----------
+Range: (1059219,1059320) (101)
+my␣(␣$input_line,␣$i,␣$tok,␣$rtokens,␣$rtoken_map,␣$id_scan_state,
+␣␣␣␣␣␣␣␣$max_token_index␣)
+␣␣␣␣␣␣=
+----------
+Range: (1060603,1060682) (79)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣handle␣non-blank␣line;␣identifier,␣if␣any,␣must␣follow
+----------
+Range: (1061494,1061577) (83)
+"Program␣bug␣in␣scan_id:␣undefined␣type␣but␣scan_state=$id_scan_state\n"
+␣␣␣␣␣␣␣␣);
+----------
+Range: (1063807,1063907) (100)
+my␣(␣$input_line,␣$i,␣$i_beg,␣$tok,␣$type,␣$rtokens,␣$rtoken_map,
+␣␣␣␣␣␣␣␣$max_token_index␣)
+␣␣␣␣␣␣=
+----------
+Range: (1065826,1065904) (78)
+"Unexpected␣'$next_nonblank_token'␣after␣package␣name␣'$tok'\n"
+␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (1066486,1066597) (111)
+my␣(␣$i,␣$id_scan_state,␣$identifier,␣$rtokens,␣$max_token_index,
+␣␣␣␣␣␣␣␣$expecting,␣$container_type␣)
+␣␣␣␣␣␣=
+----------
+Range: (1074671,1074753) (82)
+}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣POSTDEFREF:␣Postfix␣reference␣->$*␣->%*␣␣->@*␣->**␣->&*␣->$#*
+----------
+Range: (1083264,1083467) (203)
+1␣)
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣In␣something␣like␣'@$='␣we␣have␣an␣identifier␣'@$'
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣In␣something␣like␣'$${'␣we␣have␣type␣'$$'␣(and␣only
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣part␣of␣an␣identifier)
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (1084249,1084376) (127)
+"SCANID:␣called␣from␣$a␣$b␣$c␣with␣tok,␣i,␣state,␣identifier␣=$tok_begin,␣$i_begin,␣$id_scan_state_begin,␣$identifier_begin\n";
+----------
+Range: (1084398,1084489) (91)
+"SCANID:␣returned␣with␣tok,␣i,␣state,␣identifier␣=$tok,␣$i,␣$id_scan_state,␣$identifier\n";
+----------
+Range: (1085258,1085432) (174)
+my␣(
+␣␣␣␣␣␣␣␣␣␣␣␣$input_line,␣$i,␣␣␣␣␣␣␣␣␣␣␣␣␣$i_beg,
+␣␣␣␣␣␣␣␣␣␣␣␣$tok,␣␣␣␣␣␣␣␣$type,␣␣␣␣␣␣␣␣␣␣$rtokens,
+␣␣␣␣␣␣␣␣␣␣␣␣$rtoken_map,␣$id_scan_state,␣$max_token_index
+␣␣␣␣␣␣␣␣)␣=
+----------
+Range: (1085800,1085962) (162)
+m/\G\s*
+␣␣␣␣␣␣␣␣((?:\w*(?:'|::))*)␣␣#␣package␣-␣something␣that␣ends␣in␣::␣or␣'
+␣␣␣␣␣␣␣␣(\w+)␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣NAME␣␣␣␣-␣required
+␣␣␣␣␣␣␣␣/gcx
+␣␣␣␣␣␣␣␣␣␣)
+␣␣␣␣␣␣␣␣{
+----------
+Range: (1087121,1087259) (138)
+m/\G(\s*\([^\)\(\}\{\,]*\))?␣␣#␣PROTO
+␣␣␣␣␣␣␣␣␣␣␣␣(\s*:)?␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣ATTRS␣leading␣':'
+␣␣␣␣␣␣␣␣␣␣␣␣/gcx
+␣␣␣␣␣␣␣␣␣␣␣␣&&
+----------
+Range: (1088884,1088970) (86)
+"Possibly␣invalid␣sub\n")␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣#␣check␣for␣multiple␣definitions␣of␣a␣sub
+----------
+Range: (1090246,1090352) (106)
+"already␣saw␣definition␣of␣'sub␣$subname'␣in␣package␣'$package'␣at␣line␣$lno\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (1091837,1091968) (131)
+"expecting␣':'␣or␣';'␣or␣'{'␣after␣definition␣or␣declaration␣of␣sub␣'$subname'␣but␣saw␣'$next_nonblank_token'\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (1092172,1092250) (78)
+}
+}
+
+#########i###############################################################
+----------
+Range: (1095687,1095776) (89)
+'[\>\;\=\#\|\<]'␣}
+
+␣␣␣␣#␣shouldn't␣happen␣-␣we␣shouldn't␣be␣here␣if␣operator␣is␣expected
+----------
+Range: (1095796,1095914) (118)
+"Program␣Bug␣in␣find_angle_operator_termination\n")␣}
+
+␣␣␣␣#␣To␣illustrate␣what␣we␣might␣be␣looking␣at,␣in␣case␣we␣are
+----------
+Range: (1097518,1097595) (77)
+}
+␣␣␣␣␣␣␣␣␣␣␣␣}
+
+␣␣␣␣␣␣␣␣␣␣␣␣######################################debug#####
+----------
+Range: (1105981,1106087) (106)
+"Did␣not␣find␣here-doc␣string␣terminator␣($here_quote_character)␣before␣end␣of␣line␣\n"
+␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣);
+----------
+Range: (1108270,1108476) (206)
+my␣(
+␣␣␣␣␣␣␣␣$i,␣␣␣␣␣␣␣␣␣␣␣␣␣␣␣$in_quote,␣␣␣␣$quote_character,
+␣␣␣␣␣␣␣␣$quote_pos,␣␣␣␣␣␣␣$quote_depth,␣$quoted_string_1,
+␣␣␣␣␣␣␣␣$quoted_string_2,␣$rtokens,␣␣␣␣␣$rtoken_map,
+␣␣␣␣␣␣␣␣$max_token_index
+␣␣␣␣)␣=
+----------
+Range: (1110648,1110758) (110)
+my␣(␣$i_beg,␣$in_quote,␣$rtokens,␣$beginning_tok,␣$quote_pos,␣$quote_depth,
+␣␣␣␣␣␣␣␣$max_token_index␣)
+␣␣␣␣␣␣=
+----------
+Range: (1110915,1110997) (82)
+"QUOTE␣entering␣with␣quote_pos␣=␣$quote_pos␣i=$i␣beginning_tok␣=$beginning_tok\n";
+----------
+Range: (1112172,1112260) (88)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣#␣There␣are␣two␣different␣loops␣which␣search␣for␣the␣ending␣quote
+----------
+Range: (1114291,1114386) (95)
+}
+␣␣␣␣␣␣␣␣}
+␣␣␣␣}
+
+␣␣␣␣########################################################################
+----------
+Range: (1121680,1124559) (2879)
+print␣$fh␣<<'END_OF_LIST';
+
+Here␣is␣a␣list␣of␣the␣token␣types␣currently␣used␣for␣lines␣of␣type␣'CODE'.
+For␣the␣following␣tokens,␣the␣"type"␣of␣a␣token␣is␣just␣the␣token␣itself.
+
+..␣::␣<<␣>>␣**␣&&␣..␣||␣//␣->␣=>␣+=␣-=␣.=␣%=␣&=␣|=␣^=␣*=␣<>
+(␣)␣<=␣>=␣==␣=~␣!~␣!=␣++␣--␣/=␣x=
+...␣**=␣<<=␣>>=␣&&=␣||=␣//=␣<=>
+,␣+␣-␣/␣*␣|␣%␣!␣x␣~␣=␣\␣?␣:␣.␣<␣>␣^␣&
+
+The␣following␣additional␣token␣types␣are␣defined:
+
+␣type␣␣␣␣meaning
+␣␣␣␣b␣␣␣␣blank␣(white␣space)
+␣␣␣␣{␣␣␣␣indent:␣opening␣structural␣curly␣brace␣or␣square␣bracket␣or␣paren
+␣␣␣␣␣␣␣␣␣(code␣block,␣anonymous␣hash␣reference,␣or␣anonymous␣array␣reference)
+␣␣␣␣}␣␣␣␣outdent:␣right␣structural␣curly␣brace␣or␣square␣bracket␣or␣paren
+␣␣␣␣[␣␣␣␣left␣non-structural␣square␣bracket␣(enclosing␣an␣array␣index)
+␣␣␣␣]␣␣␣␣right␣non-structural␣square␣bracket
+␣␣␣␣(␣␣␣␣left␣non-structural␣paren␣(all␣but␣a␣list␣right␣of␣an␣=)
+␣␣␣␣)␣␣␣␣right␣non-structural␣paren
+␣␣␣␣L␣␣␣␣left␣non-structural␣curly␣brace␣(enclosing␣a␣key)
+␣␣␣␣R␣␣␣␣right␣non-structural␣curly␣brace
+␣␣␣␣;␣␣␣␣terminal␣semicolon
+␣␣␣␣f␣␣␣␣indicates␣a␣semicolon␣in␣a␣"for"␣statement
+␣␣␣␣h␣␣␣␣here_doc␣operator␣<<
+␣␣␣␣#␣␣␣␣a␣comment
+␣␣␣␣Q␣␣␣␣indicates␣a␣quote␣or␣pattern
+␣␣␣␣q␣␣␣␣indicates␣a␣qw␣quote␣block
+␣␣␣␣k␣␣␣␣a␣perl␣keyword
+␣␣␣␣C␣␣␣␣user-defined␣constant␣or␣constant␣function␣(with␣void␣prototype␣=␣())
+␣␣␣␣U␣␣␣␣user-defined␣function␣taking␣parameters
+␣␣␣␣G␣␣␣␣user-defined␣function␣taking␣block␣parameter␣(like␣grep/map/eval)
+␣␣␣␣M␣␣␣␣(unused,␣but␣reserved␣for␣subroutine␣definition␣name)
+␣␣␣␣P␣␣␣␣(unused,␣but␣-html␣uses␣it␣to␣label␣pod␣text)
+␣␣␣␣t␣␣␣␣type␣indicater␣such␣as␣%,$,@,*,&,sub
+␣␣␣␣w␣␣␣␣bare␣word␣(perhaps␣a␣subroutine␣call)
+␣␣␣␣i␣␣␣␣identifier␣of␣some␣type␣(with␣leading␣%,␣$,␣@,␣*,␣&,␣sub,␣->␣)
+␣␣␣␣n␣␣␣␣a␣number
+␣␣␣␣v␣␣␣␣a␣v-string
+␣␣␣␣F␣␣␣␣a␣file␣test␣operator␣(like␣-e)
+␣␣␣␣Y␣␣␣␣File␣handle
+␣␣␣␣Z␣␣␣␣identifier␣in␣indirect␣object␣slot:␣may␣be␣file␣handle,␣object
+␣␣␣␣J␣␣␣␣LABEL:␣␣code␣block␣label
+␣␣␣␣j␣␣␣␣LABEL␣after␣next,␣last,␣redo,␣goto
+␣␣␣␣p␣␣␣␣unary␣+
+␣␣␣␣m␣␣␣␣unary␣-
+␣␣␣␣pp␣␣␣pre-increment␣operator␣++
+␣␣␣␣mm␣␣␣pre-decrement␣operator␣--
+␣␣␣␣A␣␣␣␣:␣used␣as␣attribute␣separator
+
+␣␣␣␣Here␣are␣the␣'_line_type'␣codes␣used␣internally:
+␣␣␣␣SYSTEM␣␣␣␣␣␣␣␣␣-␣system-specific␣code␣before␣hash-bang␣line
+␣␣␣␣CODE␣␣␣␣␣␣␣␣␣␣␣-␣line␣of␣perl␣code␣(including␣comments)
+␣␣␣␣POD_START␣␣␣␣␣␣-␣line␣starting␣pod,␣such␣as␣'=head'
+␣␣␣␣POD␣␣␣␣␣␣␣␣␣␣␣␣-␣pod␣documentation␣text
+␣␣␣␣POD_END␣␣␣␣␣␣␣␣-␣last␣line␣of␣pod␣section,␣'=cut'
+␣␣␣␣HERE␣␣␣␣␣␣␣␣␣␣␣-␣text␣of␣here-document
+␣␣␣␣HERE_END␣␣␣␣␣␣␣-␣last␣line␣of␣here-doc␣(target␣word)
+␣␣␣␣FORMAT␣␣␣␣␣␣␣␣␣-␣format␣section
+␣␣␣␣FORMAT_END␣␣␣␣␣-␣last␣line␣of␣format␣section,␣'.'
+␣␣␣␣DATA_START␣␣␣␣␣-␣__DATA__␣line
+␣␣␣␣DATA␣␣␣␣␣␣␣␣␣␣␣-␣unidentified␣text␣following␣__DATA__
+␣␣␣␣END_START␣␣␣␣␣␣-␣__END__␣line
+␣␣␣␣END␣␣␣␣␣␣␣␣␣␣␣␣-␣unidentified␣text␣following␣__END__
+␣␣␣␣ERROR␣␣␣␣␣␣␣␣␣␣-␣we␣are␣in␣big␣trouble,␣probably␣not␣a␣perl␣script
+END_OF_LIST
+----------
+Range: (1124737,1124864) (127)
+qw(
+␣␣␣␣␣␣..␣::␣<<␣>>␣**␣&&␣..␣||␣//␣->␣=>␣+=␣-=␣.=␣%=␣&=␣|=␣^=␣*=␣<>
+␣␣␣␣␣␣<=␣>=␣==␣=~␣!~␣!=␣++␣--␣/=␣x=␣~~␣~.␣|.␣&.␣^.
+␣␣␣␣);
+----------
+Range: (1125227,1125355) (128)
+qw#
+␣␣␣␣␣␣A␣b␣C␣G␣L␣R␣f␣h␣Q␣k␣t␣w␣i␣q␣n␣p␣m␣F␣pp␣mm␣U␣j␣J␣Y␣Z␣v
+␣␣␣␣␣␣{␣}␣(␣)␣[␣]␣;␣+␣-␣/␣*␣|␣%␣!␣x␣~␣=␣\␣?␣:␣.␣<␣>␣^␣&
+␣␣␣␣␣␣#;
+----------
+Range: (1126499,1126669) (170)
+qw(␣BEGIN␣END␣CHECK␣INIT␣AUTOLOAD␣DESTROY␣UNITCHECK␣continue␣if␣elsif␣else
+␣␣␣␣␣␣unless␣do␣while␣until␣eval␣for␣foreach␣map␣grep␣sort
+␣␣␣␣␣␣switch␣case␣given␣when␣catch);
+----------
+Range: (1127066,1129809) (2743)
+qw(
+␣␣␣␣␣␣AUTOLOAD
+␣␣␣␣␣␣BEGIN
+␣␣␣␣␣␣CHECK
+␣␣␣␣␣␣DESTROY
+␣␣␣␣␣␣END
+␣␣␣␣␣␣EQ
+␣␣␣␣␣␣GE
+␣␣␣␣␣␣GT
+␣␣␣␣␣␣INIT
+␣␣␣␣␣␣LE
+␣␣␣␣␣␣LT
+␣␣␣␣␣␣NE
+␣␣␣␣␣␣UNITCHECK
+␣␣␣␣␣␣abs
+␣␣␣␣␣␣accept
+␣␣␣␣␣␣alarm
+␣␣␣␣␣␣and
+␣␣␣␣␣␣atan2
+␣␣␣␣␣␣bind
+␣␣␣␣␣␣binmode
+␣␣␣␣␣␣bless
+␣␣␣␣␣␣break
+␣␣␣␣␣␣caller
+␣␣␣␣␣␣chdir
+␣␣␣␣␣␣chmod
+␣␣␣␣␣␣chomp
+␣␣␣␣␣␣chop
+␣␣␣␣␣␣chown
+␣␣␣␣␣␣chr
+␣␣␣␣␣␣chroot
+␣␣␣␣␣␣close
+␣␣␣␣␣␣closedir
+␣␣␣␣␣␣cmp
+␣␣␣␣␣␣connect
+␣␣␣␣␣␣continue
+␣␣␣␣␣␣cos
+␣␣␣␣␣␣crypt
+␣␣␣␣␣␣dbmclose
+␣␣␣␣␣␣dbmopen
+␣␣␣␣␣␣defined
+␣␣␣␣␣␣delete
+␣␣␣␣␣␣die
+␣␣␣␣␣␣dump
+␣␣␣␣␣␣each
+␣␣␣␣␣␣else
+␣␣␣␣␣␣elsif
+␣␣␣␣␣␣eof
+␣␣␣␣␣␣eq
+␣␣␣␣␣␣exec
+␣␣␣␣␣␣exists
+␣␣␣␣␣␣exit
+␣␣␣␣␣␣exp
+␣␣␣␣␣␣fcntl
+␣␣␣␣␣␣fileno
+␣␣␣␣␣␣flock
+␣␣␣␣␣␣for
+␣␣␣␣␣␣foreach
+␣␣␣␣␣␣formline
+␣␣␣␣␣␣ge
+␣␣␣␣␣␣getc
+␣␣␣␣␣␣getgrgid
+␣␣␣␣␣␣getgrnam
+␣␣␣␣␣␣gethostbyaddr
+␣␣␣␣␣␣gethostbyname
+␣␣␣␣␣␣getnetbyaddr
+␣␣␣␣␣␣getnetbyname
+␣␣␣␣␣␣getpeername
+␣␣␣␣␣␣getpgrp
+␣␣␣␣␣␣getpriority
+␣␣␣␣␣␣getprotobyname
+␣␣␣␣␣␣getprotobynumber
+␣␣␣␣␣␣getpwnam
+␣␣␣␣␣␣getpwuid
+␣␣␣␣␣␣getservbyname
+␣␣␣␣␣␣getservbyport
+␣␣␣␣␣␣getsockname
+␣␣␣␣␣␣getsockopt
+␣␣␣␣␣␣glob
+␣␣␣␣␣␣gmtime
+␣␣␣␣␣␣goto
+␣␣␣␣␣␣grep
+␣␣␣␣␣␣gt
+␣␣␣␣␣␣hex
+␣␣␣␣␣␣if
+␣␣␣␣␣␣index
+␣␣␣␣␣␣int
+␣␣␣␣␣␣ioctl
+␣␣␣␣␣␣join
+␣␣␣␣␣␣keys
+␣␣␣␣␣␣kill
+␣␣␣␣␣␣last
+␣␣␣␣␣␣lc
+␣␣␣␣␣␣lcfirst
+␣␣␣␣␣␣le
+␣␣␣␣␣␣length
+␣␣␣␣␣␣link
+␣␣␣␣␣␣listen
+␣␣␣␣␣␣local
+␣␣␣␣␣␣localtime
+␣␣␣␣␣␣lock
+␣␣␣␣␣␣log
+␣␣␣␣␣␣lstat
+␣␣␣␣␣␣lt
+␣␣␣␣␣␣map
+␣␣␣␣␣␣mkdir
+␣␣␣␣␣␣msgctl
+␣␣␣␣␣␣msgget
+␣␣␣␣␣␣msgrcv
+␣␣␣␣␣␣msgsnd
+␣␣␣␣␣␣my
+␣␣␣␣␣␣ne
+␣␣␣␣␣␣next
+␣␣␣␣␣␣no
+␣␣␣␣␣␣not
+␣␣␣␣␣␣oct
+␣␣␣␣␣␣open
+␣␣␣␣␣␣opendir
+␣␣␣␣␣␣or
+␣␣␣␣␣␣ord
+␣␣␣␣␣␣our
+␣␣␣␣␣␣pack
+␣␣␣␣␣␣pipe
+␣␣␣␣␣␣pop
+␣␣␣␣␣␣pos
+␣␣␣␣␣␣print
+␣␣␣␣␣␣printf
+␣␣␣␣␣␣prototype
+␣␣␣␣␣␣push
+␣␣␣␣␣␣quotemeta
+␣␣␣␣␣␣rand
+␣␣␣␣␣␣read
+␣␣␣␣␣␣readdir
+␣␣␣␣␣␣readlink
+␣␣␣␣␣␣readline
+␣␣␣␣␣␣readpipe
+␣␣␣␣␣␣recv
+␣␣␣␣␣␣redo
+␣␣␣␣␣␣ref
+␣␣␣␣␣␣rename
+␣␣␣␣␣␣require
+␣␣␣␣␣␣reset
+␣␣␣␣␣␣return
+␣␣␣␣␣␣reverse
+␣␣␣␣␣␣rewinddir
+␣␣␣␣␣␣rindex
+␣␣␣␣␣␣rmdir
+␣␣␣␣␣␣scalar
+␣␣␣␣␣␣seek
+␣␣␣␣␣␣seekdir
+␣␣␣␣␣␣select
+␣␣␣␣␣␣semctl
+␣␣␣␣␣␣semget
+␣␣␣␣␣␣semop
+␣␣␣␣␣␣send
+␣␣␣␣␣␣sethostent
+␣␣␣␣␣␣setnetent
+␣␣␣␣␣␣setpgrp
+␣␣␣␣␣␣setpriority
+␣␣␣␣␣␣setprotoent
+␣␣␣␣␣␣setservent
+␣␣␣␣␣␣setsockopt
+␣␣␣␣␣␣shift
+␣␣␣␣␣␣shmctl
+␣␣␣␣␣␣shmget
+␣␣␣␣␣␣shmread
+␣␣␣␣␣␣shmwrite
+␣␣␣␣␣␣shutdown
+␣␣␣␣␣␣sin
+␣␣␣␣␣␣sleep
+␣␣␣␣␣␣socket
+␣␣␣␣␣␣socketpair
+␣␣␣␣␣␣sort
+␣␣␣␣␣␣splice
+␣␣␣␣␣␣split
+␣␣␣␣␣␣sprintf
+␣␣␣␣␣␣sqrt
+␣␣␣␣␣␣srand
+␣␣␣␣␣␣stat
+␣␣␣␣␣␣study
+␣␣␣␣␣␣substr
+␣␣␣␣␣␣symlink
+␣␣␣␣␣␣syscall
+␣␣␣␣␣␣sysopen
+␣␣␣␣␣␣sysread
+␣␣␣␣␣␣sysseek
+␣␣␣␣␣␣system
+␣␣␣␣␣␣syswrite
+␣␣␣␣␣␣tell
+␣␣␣␣␣␣telldir
+␣␣␣␣␣␣tie
+␣␣␣␣␣␣tied
+␣␣␣␣␣␣truncate
+␣␣␣␣␣␣uc
+␣␣␣␣␣␣ucfirst
+␣␣␣␣␣␣umask
+␣␣␣␣␣␣undef
+␣␣␣␣␣␣unless
+␣␣␣␣␣␣unlink
+␣␣␣␣␣␣unpack
+␣␣␣␣␣␣unshift
+␣␣␣␣␣␣untie
+␣␣␣␣␣␣until
+␣␣␣␣␣␣use
+␣␣␣␣␣␣utime
+␣␣␣␣␣␣values
+␣␣␣␣␣␣vec
+␣␣␣␣␣␣waitpid
+␣␣␣␣␣␣warn
+␣␣␣␣␣␣while
+␣␣␣␣␣␣write
+␣␣␣␣␣␣xor
+
+␣␣␣␣␣␣switch
+␣␣␣␣␣␣case
+␣␣␣␣␣␣given
+␣␣␣␣␣␣when
+␣␣␣␣␣␣err
+␣␣␣␣␣␣say
+␣␣␣␣);
+----------
+Range: (1130517,1130843) (326)
+qw(
+␣␣␣␣␣␣endgrent
+␣␣␣␣␣␣endhostent
+␣␣␣␣␣␣endnetent
+␣␣␣␣␣␣endprotoent
+␣␣␣␣␣␣endpwent
+␣␣␣␣␣␣endservent
+␣␣␣␣␣␣fork
+␣␣␣␣␣␣getgrent
+␣␣␣␣␣␣gethostent
+␣␣␣␣␣␣getlogin
+␣␣␣␣␣␣getnetent
+␣␣␣␣␣␣getppid
+␣␣␣␣␣␣getprotoent
+␣␣␣␣␣␣getpwent
+␣␣␣␣␣␣getservent
+␣␣␣␣␣␣setgrent
+␣␣␣␣␣␣setpwent
+␣␣␣␣␣␣time
+␣␣␣␣␣␣times
+␣␣␣␣␣␣wait
+␣␣␣␣␣␣wantarray
+␣␣␣␣);
+----------
+Range: (1131642,1131893) (251)
+qw#
+␣␣␣␣␣␣L␣{␣(␣[␣~␣!~␣=~␣;␣.␣..␣...␣A␣:␣&&␣!␣||␣//␣=␣+␣-␣x
+␣␣␣␣␣␣**=␣+=␣-=␣.=␣/=␣*=␣%=␣x=␣&=␣|=␣^=␣<<=␣>>=␣&&=␣||=␣//=
+␣␣␣␣␣␣<=␣>=␣==␣!=␣=>␣\␣>␣<␣%␣*␣/␣?␣&␣|␣**␣<=>␣~~␣!~~
+␣␣␣␣␣␣f␣F␣pp␣mm␣Y␣p␣m␣U␣J␣G␣j␣>>␣<<␣^␣t
+␣␣␣␣␣␣~.␣^.␣|.␣&.␣^.=␣|.=␣&.=
+␣␣␣␣␣␣#;
+----------
+Range: (1133045,1133189) (144)
+qw(
+␣␣␣␣␣␣do
+␣␣␣␣␣␣eval
+␣␣␣␣␣␣format
+␣␣␣␣␣␣m
+␣␣␣␣␣␣package
+␣␣␣␣␣␣q
+␣␣␣␣␣␣qq
+␣␣␣␣␣␣qr
+␣␣␣␣␣␣qw
+␣␣␣␣␣␣qx
+␣␣␣␣␣␣s
+␣␣␣␣␣␣sub
+␣␣␣␣␣␣tr
+␣␣␣␣␣␣y
+␣␣␣␣);
+----------
+Range: (1133412,1134322) (910)
+qw(
+␣␣␣␣␣␣and
+␣␣␣␣␣␣chmod
+␣␣␣␣␣␣chomp
+␣␣␣␣␣␣chop
+␣␣␣␣␣␣chown
+␣␣␣␣␣␣dbmopen
+␣␣␣␣␣␣die
+␣␣␣␣␣␣elsif
+␣␣␣␣␣␣exec
+␣␣␣␣␣␣fcntl
+␣␣␣␣␣␣for
+␣␣␣␣␣␣foreach
+␣␣␣␣␣␣formline
+␣␣␣␣␣␣getsockopt
+␣␣␣␣␣␣if
+␣␣␣␣␣␣index
+␣␣␣␣␣␣ioctl
+␣␣␣␣␣␣join
+␣␣␣␣␣␣kill
+␣␣␣␣␣␣local
+␣␣␣␣␣␣msgctl
+␣␣␣␣␣␣msgrcv
+␣␣␣␣␣␣msgsnd
+␣␣␣␣␣␣my
+␣␣␣␣␣␣open
+␣␣␣␣␣␣or
+␣␣␣␣␣␣our
+␣␣␣␣␣␣pack
+␣␣␣␣␣␣print
+␣␣␣␣␣␣printf
+␣␣␣␣␣␣push
+␣␣␣␣␣␣read
+␣␣␣␣␣␣readpipe
+␣␣␣␣␣␣recv
+␣␣␣␣␣␣return
+␣␣␣␣␣␣reverse
+␣␣␣␣␣␣rindex
+␣␣␣␣␣␣seek
+␣␣␣␣␣␣select
+␣␣␣␣␣␣semctl
+␣␣␣␣␣␣semget
+␣␣␣␣␣␣send
+␣␣␣␣␣␣setpriority
+␣␣␣␣␣␣setsockopt
+␣␣␣␣␣␣shmctl
+␣␣␣␣␣␣shmget
+␣␣␣␣␣␣shmread
+␣␣␣␣␣␣shmwrite
+␣␣␣␣␣␣socket
+␣␣␣␣␣␣socketpair
+␣␣␣␣␣␣sort
+␣␣␣␣␣␣splice
+␣␣␣␣␣␣split
+␣␣␣␣␣␣sprintf
+␣␣␣␣␣␣substr
+␣␣␣␣␣␣syscall
+␣␣␣␣␣␣sysopen
+␣␣␣␣␣␣sysread
+␣␣␣␣␣␣sysseek
+␣␣␣␣␣␣system
+␣␣␣␣␣␣syswrite
+␣␣␣␣␣␣tie
+␣␣␣␣␣␣unless
+␣␣␣␣␣␣unlink
+␣␣␣␣␣␣unpack
+␣␣␣␣␣␣unshift
+␣␣␣␣␣␣until
+␣␣␣␣␣␣vec
+␣␣␣␣␣␣warn
+␣␣␣␣␣␣while
+␣␣␣␣␣␣given
+␣␣␣␣␣␣when
+␣␣␣␣);
+----------

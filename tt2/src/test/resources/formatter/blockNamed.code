@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+
+[% BLOCK
+tabrow %]
+<tr>
+<td>[% name %]
+<td>
+[% BLOCK						tmpblk %] This is OK [% END %]
+<td>[% email %]</td>
+</tr>
+[% END %]
+
+<div>
+[% BLOCK
+tabrow %]
+<tr>
+<td>[% name %]
+<td>
+[% BLOCK				tmpblk %] This is OK [% END %]
+<td>[% email %]</td>
+</tr>
+[% END %]
+<div>
+[% BLOCK
+tabrow %]
+<tr>
+<td>[% name %]
+<td>
+[% BLOCK				tmpblk %] This is OK [% END %]
+<td>[% email %]</td>
+</tr>
+[% END %]
+</div>
+</div>
+
+</body>
+</html>

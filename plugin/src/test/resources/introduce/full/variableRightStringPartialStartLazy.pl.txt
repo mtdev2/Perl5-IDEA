@@ -1,0 +1,56 @@
+my $<selection>something_vari<caret></selection> = 'something ${vari';
+$something_vari . 'able}here bla';
+"something ${variable}here bla";
+`something ${variable}here bla`;
+$something_vari . 'able}here bla';
+qq {something ${variable}here bla};
+qx fsomething ${variable}here blaf;
+qw/something ${variable}here bla/;
+something => "here bla";
+
+'something ';
+"something ";
+`something `;
+q /something /;
+qq {something };
+qx fsomething f;
+qw/something /;
+something => "";
+
+$something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ';
+"something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla ";
+`something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla `;
+$something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ' . $something_vari . 'able}here bla ';
+qq {something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla };
+qx fsomething ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla f;
+qw/something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla /;
+
+
+================ AFTER RENAME =================
+my $test_name<caret> = 'something ${vari';
+$test_name . 'able}here bla';
+"something ${variable}here bla";
+`something ${variable}here bla`;
+$test_name . 'able}here bla';
+qq {something ${variable}here bla};
+qx fsomething ${variable}here blaf;
+qw/something ${variable}here bla/;
+something => "here bla";
+
+'something ';
+"something ";
+`something `;
+q /something /;
+qq {something };
+qx fsomething f;
+qw/something /;
+something => "";
+
+$test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ';
+"something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla ";
+`something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla `;
+$test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ' . $test_name . 'able}here bla ';
+qq {something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla };
+qx fsomething ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla f;
+qw/something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla something ${variable}here bla /;
+

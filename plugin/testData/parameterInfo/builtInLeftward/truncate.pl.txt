@@ -1,2 +1,0 @@
-truncate(<caret>);
-No element

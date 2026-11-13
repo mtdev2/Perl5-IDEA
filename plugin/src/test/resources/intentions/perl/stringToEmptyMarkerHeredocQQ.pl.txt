@@ -1,0 +1,8 @@
+"this is<caret> a test";
+
+
+######################### PREVIEW #########################
+
+<<"CUSTOM_MARKER";
+this is a test
+CUSTOM_MARKER

@@ -1,2 +1,0 @@
-lock(<caret>);
-No element

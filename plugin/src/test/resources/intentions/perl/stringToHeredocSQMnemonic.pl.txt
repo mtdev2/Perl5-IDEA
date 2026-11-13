@@ -1,0 +1,10 @@
+<<'HEREDO<caret>C';
+this is a test
+HEREDOC
+
+
+######################### PREVIEW #########################
+
+<<'HEREDOC';
+this is a test
+HEREDOC

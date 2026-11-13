@@ -1,8 +1,0 @@
-PsiPodFormatIndexImpl(Perl5 POD: POD_FORMAT_INDEX) at 16562 in perlop.pod
-
-perlop: perlop
-	POD file at 0 in perlop.pod
-DESCRIPTION: perlop%2FDESCRIPTION
-	PsiHead1SectionImpl(Perl5 POD: HEAD_1_SECTION) at 65 in perlop.pod
-Multiplicative Operators: perlop%2FMultiplicative+Operators
-	PsiHead2SectionImpl(Perl5 POD: HEAD_2_SECTION) at 14182 in perlop.pod

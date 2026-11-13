@@ -1,2 +1,0 @@
-defined(<caret>);
-No element

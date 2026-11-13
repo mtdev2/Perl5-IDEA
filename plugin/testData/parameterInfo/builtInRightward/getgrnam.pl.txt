@@ -1,2 +1,0 @@
-getgrnam <caret> 
-No element

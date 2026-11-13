@@ -1,2 +1,0 @@
-getgrent(<caret>);
-No element

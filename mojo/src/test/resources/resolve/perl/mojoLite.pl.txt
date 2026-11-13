@@ -1,0 +1,46 @@
+PerlNamespaceFileReference at (4,21); text in range: 'Mojolicious::Lite' => 0 results:
+
+PerlSubReference at (24,27); text in range: 'any' => 1 results:
+	Implicit sub: any(@route_spec)(@route_spec)
+
+PerlSubReference at (29,32); text in range: 'app' => 1 results:
+	Implicit sub: app()
+
+PerlSubReference at (34,37); text in range: 'del' => 1 results:
+	Implicit sub: del(@route_spec)(@route_spec)
+
+PerlSubReference at (39,42); text in range: 'get' => 1 results:
+	Implicit sub: get(@route_spec)(@route_spec)
+
+PerlSubReference at (44,49); text in range: 'group' => 1 results:
+	Implicit sub: group(&route_group)(&route_group)
+
+PerlSubReference at (51,57); text in range: 'helper' => 1 results:
+	Implicit sub: helper($name, &handler)($name, &handler)
+
+PerlSubReference at (59,63); text in range: 'hook' => 1 results:
+	Implicit sub: hook($name, &handler)($name, &handler)
+
+PerlSubReference at (65,68); text in range: 'new' => 1 results:
+	Implicit sub: new()
+
+PerlSubReference at (70,77); text in range: 'options' => 1 results:
+	Implicit sub: options(@route_spec)(@route_spec)
+
+PerlSubReference at (79,84); text in range: 'patch' => 1 results:
+	Implicit sub: patch(@route_spec)(@route_spec)
+
+PerlSubReference at (86,92); text in range: 'plugin' => 1 results:
+	Implicit sub: plugin($name [, @plugin_args])($name, [@plugin_args])
+
+PerlSubReference at (94,98); text in range: 'post' => 1 results:
+	Implicit sub: post(@route_spec)(@route_spec)
+
+PerlSubReference at (100,103); text in range: 'put' => 1 results:
+	Implicit sub: put(@route_spec)(@route_spec)
+
+PerlSubReference at (105,110); text in range: 'under' => 1 results:
+	Implicit sub: under(@route_spec)(@route_spec)
+
+PerlSubReference at (112,121); text in range: 'websocket' => 1 results:
+	Implicit sub: websocket(@route_spec)(@route_spec)

@@ -1,0 +1,25 @@
+use builtin qw/ true false is_bool
+                       weaken unweaken is_weak
+                       blessed refaddr reftype
+                       created_as_string created_as_number
+                       ceil floor indexed
+                       trim
+                       is_tainted export_lexically/;
+
+true;
+false;
+is_bool;
+weaken;
+unweaken;
+is_weak;
+blessed;
+refaddr;
+reftype;
+created_as_string;
+created_as_number;
+ceil;
+floor;
+indexed;
+trim;
+is_tainted;
+export_lexically;

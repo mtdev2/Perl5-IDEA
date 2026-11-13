@@ -1,8 +1,0 @@
-my @list;
-@list = <>;
-@list = <FH>;
-@list = <Foo::Bar::FH>;
-@list = <Foo'Bar'FH>;
-@list = <<>>;
-@list = <$foo>;
-@list = <*.txt>;

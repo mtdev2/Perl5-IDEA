@@ -1,2 +1,0 @@
-syswrite <caret> 
-No element

@@ -1,2 +1,0 @@
-getnetbyname(<caret>);
-No element

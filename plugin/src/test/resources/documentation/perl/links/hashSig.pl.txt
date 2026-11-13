@@ -1,0 +1,20 @@
+Built-in: %SIG
+
+perlvar: perlvar
+	POD file at 0 in perlvar.pod
+SPECIAL VARIABLES: perlvar%2FSPECIAL+VARIABLES
+	PsiHead1SectionImpl(Perl5 POD: HEAD_1_SECTION) at 2173 in perlvar.pod
+General Variables: perlvar%2FGeneral+Variables
+	PsiHead2SectionImpl(Perl5 POD: HEAD_2_SECTION) at 3002 in perlvar.pod
+perlipc: perlipc
+	POD file at 0 in perlipc.pod
+perlipc: perlipc
+	POD file at 0 in perlipc.pod
+die in perlfunc: perlfunc%2Fdie
+	PsiItemSectionImpl(Perl5 POD: ITEM_SECTION) at 69461 in perlfunc.pod
+warn in perlfunc: perlfunc%2Fwarn
+	PsiItemSectionImpl(Perl5 POD: ITEM_SECTION) at 394112 in perlfunc.pod
+eval in perlfunc: perlfunc%2Feval
+	PsiItemSectionImpl(Perl5 POD: ITEM_SECTION) at 87328 in perlfunc.pod
+warnings: warnings
+	POD file at 0 in perlvar.pod

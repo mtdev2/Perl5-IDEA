@@ -1,2 +1,0 @@
-rmdir(<caret>);
-No element

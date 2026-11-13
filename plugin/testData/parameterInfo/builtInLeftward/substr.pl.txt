@@ -1,2 +1,0 @@
-substr(<caret>);
-No element

@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+
+[% CLEAR
+IF
+some.condition %]
+
+<div>
+[% CLEAR
+IF
+some.condition %]
+<div>
+[% CLEAR
+IF
+some.condition %]
+</div>
+</div>
+
+</body>
+</html>

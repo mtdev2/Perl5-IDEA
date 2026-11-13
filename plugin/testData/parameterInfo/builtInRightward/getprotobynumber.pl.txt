@@ -1,2 +1,0 @@
-getprotobynumber <caret> 
-No element

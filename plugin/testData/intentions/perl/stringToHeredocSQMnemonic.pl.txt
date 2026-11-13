@@ -1,5 +1,0 @@
-
-<<'HEREDOC';
-this is a test
-HEREDOC
-

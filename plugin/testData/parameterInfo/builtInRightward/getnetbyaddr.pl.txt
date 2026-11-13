@@ -1,2 +1,0 @@
-getnetbyaddr <caret> 
-No element

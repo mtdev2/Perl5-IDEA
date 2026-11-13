@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <pattern value="com.perl5.lang.perl.idea.copyright.PerlFileInfo" method="getPackageName" />
+    <pattern value="com.perl5.lang.perl.intellilang.PerlInjectionPatterns" method="perlString" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="jbr-25" project-jdk-type="JavaSDK" />
+  <component name="TaskProjectConfiguration">
+    <server type="YouTrack" url="https://camelcade.myjetbrains.com" />
+    <server type="GitHub" url="https://github.com" />
+  </component>
+</project>

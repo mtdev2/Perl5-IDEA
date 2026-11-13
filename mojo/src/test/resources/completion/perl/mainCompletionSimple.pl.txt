@@ -1,0 +1,45 @@
+Text: any; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: any
+	PsiElement: Implicit sub: any(@route_spec)(@route_spec)
+Text: app; Tail: null; Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: app
+	PsiElement: Implicit sub: app()
+Text: del; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: del
+	PsiElement: Implicit sub: del(@route_spec)(@route_spec)
+Text: get; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: get
+	PsiElement: Implicit sub: get(@route_spec)(@route_spec)
+Text: group; Tail: (&route_group); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: group
+	PsiElement: Implicit sub: group(&route_group)(&route_group)
+Text: helper; Tail: ($name, &handler); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: helper
+	PsiElement: Implicit sub: helper($name, &handler)($name, &handler)
+Text: hook; Tail: ($name, &handler); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: hook
+	PsiElement: Implicit sub: hook($name, &handler)($name, &handler)
+Text: new; Tail: null; Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: new
+	PsiElement: Implicit sub: new()
+Text: options; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: options
+	PsiElement: Implicit sub: options(@route_spec)(@route_spec)
+Text: patch; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: patch
+	PsiElement: Implicit sub: patch(@route_spec)(@route_spec)
+Text: plugin; Tail: ($name [, @plugin_args]); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: plugin
+	PsiElement: Implicit sub: plugin($name [, @plugin_args])($name, [@plugin_args])
+Text: post; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: post
+	PsiElement: Implicit sub: post(@route_spec)(@route_spec)
+Text: put; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: put
+	PsiElement: Implicit sub: put(@route_spec)(@route_spec)
+Text: under; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: under
+	PsiElement: Implicit sub: under(@route_spec)(@route_spec)
+Text: websocket; Tail: (@route_spec); Type: Mojolicious::Lite; Icon: /subroutine_gutter_icon.png; Type Icon: null
+	Lookups: websocket
+	PsiElement: Implicit sub: websocket(@route_spec)(@route_spec)

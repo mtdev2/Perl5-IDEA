@@ -1,0 +1,31 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.plugin.backend.main" namespace="hurricup"/>
+    <module name="perl5.lang.embedded.common.main"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+  </dependencies>
+
+  <resource-bundle>messages.EmbeddedPerlBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <stubElementRegistryExtension implementation="com.perl5.lang.embedded.stubs.EmbeddedPerlStubRegistryExtension"/>
+    <languageStubDefinition language="Embedded Perl" implementationClass="com.perl5.lang.perl.psi.stubs.PerlTemplatingStubDefinition"/>
+
+    <internalFileTemplate name="Perl5 embedded"/>
+    <lang.findUsagesProvider language="Embedded Perl"
+                             implementationClass="com.perl5.lang.embedded.idea.findusages.EmbeddedPerlFindUsagesProvider"/>
+
+    <!--<lang.formatter language="Embedded Perl"-->
+    <!--implementationClass="com.perl5.lang.perl.idea.formatter.PerlFormattingModelBuilder"/>-->
+
+    <lang.refactoringSupport language="Embedded Perl"
+                             implementationClass="com.perl5.lang.perl.idea.refactoring.PerlRefactoringSupportProvider"/>
+  </extensions>
+
+  <actions>
+    <action id="Embedded.Perl.newFile" class="com.perl5.lang.embedded.idea.actions.EmbeddedPerlCreateFileFromTemplateAction">
+      <add-to-group group-id="NewGroup" relative-to-action="Perl5.NewFile" anchor="after"/>
+    </action>
+  </actions>
+
+</idea-plugin>

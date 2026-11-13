@@ -1,0 +1,8 @@
+<p><a href="psi_element://Mojolicious%3A%3ALite">Mojolicious::Lite</a>: <a href="psi_element://Mojolicious%3A%3ALite%2FFUNCTIONS">FUNCTIONS</a></p><h2>del</h2><div style="padding-bottom: 10px;"><pre><code>  my $route = del '/:foo' =&gt; sub {...};
+  my $route = del '/:foo' =&gt; sub {...} =&gt; 'name';
+  my $route = del '/:foo' =&gt; {foo =&gt; 'bar'} =&gt; sub {...};
+  my $route = del '/:foo' =&gt; [foo =&gt; qr/\w+/] =&gt; sub {...};
+  my $route = del '/:foo' =&gt; (agent =&gt; qr/Firefox/) =&gt; sub {...};</code></pre></div>
+<p style="padding-bottom: 10px;">Generate route with <a href="psi_element://Mojolicious%3A%3ARoutes%3A%3ARoute%2Fdelete">delete in Mojolicious::Routes::Route</a>, matching only
+<code>DELETE</code> requests. See <a href="psi_element://Mojolicious%3A%3AGuides%3A%3ATutorial">Mojolicious::Guides::Tutorial</a> and
+<a href="psi_element://Mojolicious%3A%3AGuides%3A%3ARouting">Mojolicious::Guides::Routing</a> for more information.</p>

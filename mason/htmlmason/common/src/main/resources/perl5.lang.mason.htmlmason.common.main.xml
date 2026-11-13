@@ -1,0 +1,44 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.lang.mason.framework.common.main" namespace="hurricup"/>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+    <module name="intellij.xml.parser"/>
+    <module name="intellij.xml.ui.common"/>
+    <module name="intellij.xml.psi.impl"/>
+  </dependencies>
+
+  <resource-bundle>messages.HtmlMasonBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <lang.parserDefinition language="HTML::Mason Templating Language"
+                           implementationClass="com.perl5.lang.htmlmason.HTMLMasonParserDefinition"/>
+    <fileType implementationClass="com.perl5.lang.htmlmason.filetypes.HTMLMasonFileType" fieldName="INSTANCE"
+              name="HTML::Mason Component" extensions="mas" language="HTML::Mason Templating Language"/>
+    <lang.fileViewProviderFactory language="HTML::Mason Templating Language"
+                                  implementationClass="com.perl5.lang.htmlmason.HTMLMasonFileViewProviderFactory"/>
+    <errorHandler implementation="com.perl5.lang.htmlmason.HtmlMasonYoutrackErrorHandler"/>
+    <lang.foldingBuilder language="HTML::Mason Templating Language"
+                         implementationClass="com.perl5.lang.htmlmason.idea.editor.HTMLMasonFoldingBuilder"/>
+    <lang.ast.factory language="HTML::Mason Templating Language" implementationClass="com.perl5.lang.htmlmason.HtmlMasonAstFactory"/>
+    <editorHighlighterProvider filetype="HTML::Mason Component"
+                               implementationClass="com.perl5.lang.htmlmason.filetypes.HTMLMasonEditorHighlighterProvider"/>
+    <lang.braceMatcher language="HTML::Mason Templating Language"
+                       implementationClass="com.perl5.lang.htmlmason.idea.editor.HTMLMasonBraceMatcher"/>
+    <lang.formatter language="HTML::Mason Templating Language"
+                    implementationClass="com.perl5.lang.htmlmason.idea.formatter.HTMLMasonFormattingModelBuilder"/>
+    <lang.indentStrategy language="HTML::Mason Templating Language"
+                         implementationClass="com.perl5.lang.htmlmason.idea.editor.HTMLMasonIndentStrategy"/>
+    <typedHandler implementation="com.perl5.lang.htmlmason.idea.editor.HTMLMasonTypedHandler" order="first"/>
+    <lang.syntaxHighlighterFactory language="HTML::Mason Templating Language"
+                                   implementationClass="com.perl5.lang.htmlmason.idea.highlighter.HTMLMasonSyntaxHighlighterFactory"/>
+    <lang.namesValidator language="HTML::Mason Templating Language"
+                         implementationClass="com.perl5.lang.htmlmason.idea.refactoring.HTMLMasonNamesValidator"/>
+    <projectStructure.sourceRootEditHandler
+        implementation="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonSourceRootEditHandler"/>
+    <projectService serviceImplementation="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonSettings"/>
+    <projectSettings service="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonSettings"/>
+    <rdct.remoteSettingProvider implementation="com.perl5.lang.htmlmason.idea.configuration.HTMLMasonSettingsRemoteInfoProvider"/>
+    <highlightErrorFilter
+        implementation="com.perl5.lang.htmlmason.idea.highlighter.HTMLMasonTemplateLanguageErrorFilter"/>
+  </extensions>
+</idea-plugin>

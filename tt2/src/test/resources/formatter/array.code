@@ -1,0 +1,50 @@
+<html>
+<head></head>
+<body>
+
+[% cols 	=  [
+'red',
+'green',
+'blue'
+]
+%]
+
+<div>
+[% cols = [
+'red',
+'green',
+'blue'
+]
+%]
+
+[% BLOCK 	name  %]
+[% cols= 	[
+'red',
+'green',
+'blue'
+]
+%]
+[% END %]
+<div>
+[% cols = [
+'red',
+'green',
+'blue'
+]
+%]
+
+[% BLOCK 	name  %]
+[% cols= 	[
+'red',
+'green',
+'blue'
+]
+%]
+[% END %]
+
+</div>
+
+</div>
+
+</body>
+</html>

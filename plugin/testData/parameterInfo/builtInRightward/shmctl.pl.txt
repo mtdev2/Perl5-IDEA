@@ -1,2 +1,0 @@
-shmctl <caret> 
-No element

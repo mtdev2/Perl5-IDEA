@@ -1,2 +1,0 @@
-getsockopt <caret> 
-No element

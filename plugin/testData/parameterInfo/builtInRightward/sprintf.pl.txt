@@ -1,2 +1,0 @@
-sprintf <caret> 
-No element

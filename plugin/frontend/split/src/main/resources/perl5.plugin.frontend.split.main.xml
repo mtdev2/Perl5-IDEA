@@ -1,0 +1,36 @@
+<idea-plugin visibility="public">
+  <dependencies>
+    <module name="intellij.platform.frontend.split"/>
+    <module name="intellij.rd.client"/>
+    <module name="perl5.plugin.frontend.main"/>
+    <module name="perl5.plugin.common.main"/>
+    <module name="intellij.rd.ide.model.generated"/>
+  </dependencies>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <namespaceDefinitionHalder forClass="com.perl5.lang.perl.psi.PerlNamespaceDefinitionElement"
+                               implementationClass="com.perl5.lang.perl.psi.PerlDefaultFrontendNamespaceDefinitionHandler"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <rdclient.editorActionHandlerStrategyCustomizer
+        implementation="com.jetbrains.rdclient.editorActions.cwm.PerlFrontendEditorActionHandlerStrategyCustomizer"/>
+    <registryKey key="perl5.frontend.speculative.actions.enabled" defaultValue="true"
+                 description="Enable speculative actions on the client side; otherwise, they will be performed on the server side"/>
+    <rdclient.actionCustomization backend="remote" actionId="CommentByBlockComment"
+                                  implementationClass="com.jetbrains.rdclient.actions.base.PerlBackendDelegatingActionCustomization"/>
+    <rdclient.actionCustomization backend="remote" actionId="CommentByLineComment"
+                                  implementationClass="com.jetbrains.rdclient.actions.base.PerlBackendDelegatingActionCustomization"/>
+    <rdclient.highlighterSuppressionHandler
+        implementation="com.jetbrains.rdclient.daemon.com.jetbrains.rdclient.daemon.FrontendHighlighterSuppressionHandler"/>
+
+    <applicationService serviceImplementation="com.perl5.lang.perl.idea.presentations.PerlFrontendItemPresentationService"
+                        serviceInterface="com.perl5.lang.perl.idea.presentations.PerlItemPresentationService"/>
+    <applicationService serviceImplementation="com.perl5.lang.perl.util.PerlFrontendPackageService"
+                        serviceInterface="com.perl5.lang.perl.util.PerlPackageService"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.project.PerlNamesFrontendCache"
+                    serviceInterface="com.perl5.lang.perl.idea.project.PerlNamesCache"/>
+    <projectService serviceImplementation="com.perl5.lang.perl.idea.codeInsight.typeInference.value.PerlValueFrontendResolveService"
+                    serviceInterface="com.perl5.lang.perl.idea.codeInsight.typeInference.value.PerlValueResolveService"/>
+  </extensions>
+</idea-plugin>

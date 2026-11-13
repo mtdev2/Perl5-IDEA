@@ -1,0 +1,8 @@
+scalar
+value
+string
+three
+path
+pathname
+relative_path_to_three
+path_to_three

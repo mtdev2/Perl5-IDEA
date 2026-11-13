@@ -1,0 +1,4 @@
+Target: PerlLightSubDefinitionElement{myName='_underscored', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[$self, [$new_value]], myReturnValueFromCode=UNKNOWN_VALUE}($self, [$new_value]); navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooGeneratedClearerUnderscoredAll.pl
+Total usages: 1
+	PerlSubNameElementImpl(Perl5: subname) at 102 in mooGeneratedClearerUnderscoredAll.pl, via: PerlSubReference at (102,120); text in range: '_clear_underscored' => 1 results:
+	PerlLightSubDefinitionElement{myName='_clear_underscored', myNamespaceName='MySomePackage', myAnnotations=null, mySubArguments=[], myReturnValueFromCode=UNKNOWN_VALUE}; navigated to: PsiPerlStringBareImpl(Perl5: STRING_BARE) at 28 in mooGeneratedClearerUnderscoredAll.pl

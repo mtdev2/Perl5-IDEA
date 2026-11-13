@@ -1,0 +1,4 @@
+sub name  :lvalue   ($s<caret>ig)  {}                 # with signature
+
+######################### PREVIEW #########################
+NO DIFF PREVIEW

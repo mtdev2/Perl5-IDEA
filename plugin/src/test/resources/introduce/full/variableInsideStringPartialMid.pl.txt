@@ -1,0 +1,56 @@
+my $<selection>ing_he_variable_re_b<caret></selection> = 'ing he${variable}re b';
+'someth' . $ing_he_variable_re_b . 'la';
+"something he${variable}re bla";
+`something he${variable}re bla`;
+'someth' . $ing_he_variable_re_b . 'la';
+qq {something he${variable}re bla};
+qx fsomething he${variable}re blaf;
+qw/something he${variable}re bla/;
+something => "here bla";
+
+$ing_he_variable_re_b;
+"ing he${variable}re b";
+`ing he${variable}re b`;
+$ing_he_variable_re_b;
+qq {ing he${variable}re b};
+qx fing he${variable}re bf;
+qw/ing he${variable}re b/;
+something => "";
+
+'someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la ';
+"something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla ";
+`something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla `;
+'someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la someth' . $ing_he_variable_re_b . 'la ';
+qq {something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla };
+qx fsomething he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla f;
+qw/something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla /;
+
+
+================ AFTER RENAME =================
+my $test_name<caret> = 'ing he${variable}re b';
+'someth' . $test_name . 'la';
+"something he${variable}re bla";
+`something he${variable}re bla`;
+'someth' . $test_name . 'la';
+qq {something he${variable}re bla};
+qx fsomething he${variable}re blaf;
+qw/something he${variable}re bla/;
+something => "here bla";
+
+$test_name;
+"ing he${variable}re b";
+`ing he${variable}re b`;
+$test_name;
+qq {ing he${variable}re b};
+qx fing he${variable}re bf;
+qw/ing he${variable}re b/;
+something => "";
+
+'someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la ';
+"something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla ";
+`something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla `;
+'someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la someth' . $test_name . 'la ';
+qq {something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla };
+qx fsomething he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla f;
+qw/something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla something he${variable}re bla /;
+

@@ -1,5 +1,0 @@
-</
-    HTML_CODE => TEXT
-    HTML_TAG => DEFAULT_TAG => TEXT
-%
-    HTML_CODE => TEXT

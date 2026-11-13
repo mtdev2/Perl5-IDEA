@@ -1,2 +1,0 @@
-gethostbyname(<caret>);
-No element

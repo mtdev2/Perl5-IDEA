@@ -1,0 +1,56 @@
+<idea-plugin>
+  <dependencies>
+    <module name="perl5.plugin.common.main" namespace="hurricup"/>
+    <module name="intellij.xml.parser"/>
+    <module name="intellij.xml.ui.common"/>
+    <module name="intellij.xml.psi.impl"/>
+  </dependencies>
+
+  <resource-bundle>messages.MojoBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.perl5">
+    <packageProcessor key="Mojo::Base" implementationClass="com.perl5.lang.perl.extensions.mojo.MojoBaseProcessor"/>
+    <packageProcessor key="Mojolicious::Lite" implementationClass="com.perl5.lang.perl.extensions.mojo.MojoliciousLitePackageProcessor"/>
+    <settings.configurable.extension implementation="com.perl5.lang.mojolicious.idea.modules.MojoSettingsConfigurableExtension"/>
+    <implicitSubsProvider implementation="com.perl5.lang.perl.extensions.mojo.MojoLiteImplicitSubsProvider"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <lang.parserDefinition language="Mojolicious Perl"
+                           implementationClass="com.perl5.lang.mojolicious.MojoliciousParserDefinition"/>
+    <fileType implementationClass="com.perl5.lang.mojolicious.filetypes.MojoliciousFileType" fieldName="INSTANCE"
+              name="Mojolicious Perl5 Template"
+              language="Mojolicious Perl"
+              extensions="ep"/>
+    <lang.fileViewProviderFactory language="Mojolicious Perl"
+                                  implementationClass="com.perl5.lang.mojolicious.psi.MojoliciousFileViewProviderFactory"/>
+    <errorHandler implementation="com.perl5.lang.mojolicious.MojoYoutrackErrorHandler"/>
+    <lang.commenter language="Mojolicious Perl"
+                    implementationClass="com.perl5.lang.perl.idea.editor.PerlCommenter"/>
+    <multiLangCommenter
+        implementation="com.perl5.lang.mojolicious.idea.commenter.MojoliciousCommenterProvider"/>
+    <lang.namesValidator language="Mojolicious Perl"
+                         implementationClass="com.perl5.lang.perl.idea.PerlNamesValidator"/>
+    <lang.foldingBuilder language="Mojolicious Perl"
+                         implementationClass="com.perl5.lang.mojolicious.idea.folding.MojoliciousFoldingBuilder"/>
+    <enterHandlerDelegate
+        implementation="com.perl5.lang.mojolicious.idea.editor.smartkeys.MojoliciousEnterHandlerDelegate"
+        id="MojoliciousPerlEnterHandler" order="after PerlEnterHandler"/>
+    <lang.braceMatcher language="Mojolicious Perl"
+                       implementationClass="com.perl5.lang.mojolicious.idea.editor.MojoBraceMatcher"/>
+    <typedHandler implementation="com.perl5.lang.mojolicious.idea.editor.smartkeys.MojoliciousTypedHandler"
+                  order="first"/>
+    <lang.syntaxHighlighterFactory language="Mojolicious Perl"
+                                   implementationClass="com.perl5.lang.mojolicious.idea.highlighter.MojoliciousSyntaxHighlighterFactory"/>
+    <editorHighlighterProvider filetype="Mojolicious Perl5 Template"
+                               implementationClass="com.perl5.lang.mojolicious.filetypes.MojoliciousEditorHighlighterProvider"/>
+    <lang.formatter language="Mojolicious Perl"
+                    implementationClass="com.perl5.lang.mojolicious.idea.formatter.MojoliciousFormattingModelBuilder"/>
+
+    <preFormatProcessor implementation="com.perl5.lang.mojolicious.idea.formatter.MojoliciousPreFormatProcessor"/>
+    <highlightErrorFilter
+        implementation="com.perl5.lang.mojolicious.idea.highlighter.MojoliciousTemplateLanguageErrorFilter"/>
+    <elementDescriptionProvider implementation="com.perl5.lang.mojolicious.psi.MojoElementDescriptionProvider" id="perl5.mojo"
+                                order="before perl5"/>
+  </extensions>
+</idea-plugin>
